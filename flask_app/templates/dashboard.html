@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a57f5fccbf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/dashboard">broken record</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/2000">years<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/albums">andy's ratings</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/favartists">andy's favorites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/brookfield">brookfield corp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sundial">sundial</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <li id="logout" class="nav-item">
+        <a href="/">logout</a>
+      </li>
+      <div class="user-nav">
+        <img src={{user.avatar}} alt="">
+      </div>
+    </div>
+  </nav>
+  <div id="all">
+
+    <div id="left">
+      <div class="card user-prof" style="width: 18rem;">
+        <img id="user-prof-img" class="card-img-top" src={{user.avatar}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{user.username}}</h5>
+          <form action="/listening/submit" method="post">
+            <div class="form-group">
+                <input type="hidden" value={{user.username}} name="username">
+                <label id="listening-question" for="listening_to">What are you listening to?</label>
+                {% if user.listening_to == None %}
+                <p class="card-text"><b>Nothing</b></p>
+                {% endif %}
+                {% if user.listening_to != None %}
+                <p class="card-text"><b>{{user.listening_to}}</b></p>
+                {% endif %}
+                <textarea class="form-control" name="listening_to" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button id="user-prof-submit" type="submit" class="btn btn-light">Submit</button>
+        </form>
+        </div>
+        <div id="side-prof-ratingsnreviews" class="card-body">
+          <a href="ratings/{{user.id}}" class="card-link">Ratings</a>
+          <!-- <a id="prof-reviews" href="#" class="card-link">Reviews</a> -->
+        </div>
+      </div>
+      </div>
+
+  
+    <div id="reviews-dashboard">
+    {% for i in ratings %}
+    <div id="container">
+      <div class="product-details">
+        <div class="review-card-album-title">
+          <h1><a href={{i.album_link}}>{{i.album}}</a></h1>
+          <h5><a href={{i.artist_link}}>{{i.artist}}</a></h5>
+          <h6><a href="ratings/{{i.user_id}}">{{i.reviewer.username}}</a></h6>
+        </div>
+        {% if i.stars == 0 %}
+                <i class="fa-regular fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:29.5px;color:gold"></i>
+                {% endif %}
+                {% if i.stars == 1 %}
+                <i class="fa fa-star-half-stroke" style="font-size:29.5px;color:gold"></i>
+                {% endif %}
+                {% if i.stars == 2 %}
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                {% endif %}
+                {% if i.stars == 3 %}
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star-half-stroke" style="font-size:29.5px;color:gold"></i>
+                {% endif %}
+                {% if i.stars == 4 %}
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                {% endif %}
+                {% if i.stars == 5 %}
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star-half-stroke" style="font-size:29.5px;color:gold"></i>
+                {% endif %}
+                {% if i.stars == 6 %}
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                {% endif %}
+                {% if i.stars == 7 %}
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star-half-stroke" style="font-size:29.5px;color:gold"></i>
+                {% endif %}
+                {% if i.stars == 8 %}
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                {% endif %}
+                {% if i.stars == 9 %}
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star-half-stroke" style="font-size:29.5px;color:gold"></i>
+                {% endif %}
+                {% if i.stars == 10 %}
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
+                {% endif %}
+        <!-- <p class="information">"{{i.content}}"</p> -->
+      </div>
+      <div class="product-image">
+        <a target="_blank" href={{i.album_link}}><img src={{i.cover}} alt=""></a>
+      </div> 
+    </div>
+    {% endfor %}
+  </div>
+
+  <section id="other-albums-to-review">
+    <!-- <div id="other-albums-container">
+      <div class="one">One</div>
+    </div>
+    <div id="other-albums-container">
+      <div class="two">Two</div>
+    </div>
+    <div id="other-albums-container">
+      <div class="three">Three</div>
+    </div> -->
+    <div class="other-albums-container2">
+      {% for i in albums %}
+      <div id="sideAlbums" class="side-container">
+        <a target="_blank" href={{i.albums_items_external_urls_spotify}}><img class="other-albums-image" src={{i.albums_items_images_0_url}} alt=""></a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/static/js.js"></script>
+</body>
+</html>

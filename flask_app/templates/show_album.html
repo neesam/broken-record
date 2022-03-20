@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a57f5fccbf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/dashboard">broken record</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/2000">years<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/albums">andy's ratings</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/favartists">andy's favorites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/brookfield">brookfield corp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sundial">sundial</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <li id="logout" class="nav-item">
+        <a href="/">logout</a>
+      </li>
+      <div class="user-nav">
+        <img src={{user.avatar}} alt="">
+      </div>
+    </div>
+  </nav>
+  <div id="all">  
+      <div class="albums-card-2">
+        <img class="card-img-top" src={{album.albums_items_images_0_url}} alt="Card image cap">
+      </div>
+      <div class="cards">
+        {% if album.albums_items_name|length > 23 and album.albums_items_name|length < 46 %}
+            <div id="card-longer-1line" class="card card-1 mydata">
+              <div id="yearly-card-htags">
+                <h2 class="card__title">{{album.albums_items_name}}</h2>
+                <h3 class="card__title">{{album.albums_items_artists_0_name}}</h3>
+              </div>
+              <p class="card__exit"><a target="_blank" href={{album.albums_items_external_urls_spotify}}>listen on spotify</a></p>
+
+                <form action="/create-rating" method="post" id="rating">
+                  <fieldset class="rate">
+                    <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+                    <input type="hidden" value="{{album.albums_items_name}}" name="title">
+                    <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+                    <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+                    <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+                    <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+                    <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+                      <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                  </fieldset>
+                  <button id="submit-btn" type="submit">Submit Hello</button>
+                  </form>
+            </div>
+            {% endif %}
+            {% if album.albums_items_name|length > 46 and album.albums_items_name|length < 69 %}
+            <div id="card-longer-2line" class="card card-1 mydata">
+              <div id="yearly-card-htags">
+                <h2 class="card__title">{{album.albums_items_name}}</h2>
+                <h3 class="card__title">{{album.albums_items_artists_0_name}}</h3>
+              </div>
+              <p class="card__exit"><a target="_blank" href={{album.albums_items_external_urls_spotify}}>listen on spotify</a></p>
+
+                <form action="/create-rating" method="post" id="rating">
+                  <fieldset class="rate">
+                    <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+                    <input type="hidden" value="{{album.albums_items_name}}" name="title">
+                    <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+                    <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+                    <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+                    <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+                    <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+                      <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                  </fieldset>
+                  <button id="submit-btn" type="submit">Submit</button>
+                  </form>
+            </div>
+            {% endif %}
+            {% if album.albums_items_name|length > 70 and album.albums_items_name|length < 90 %}
+            <div id="card-longer-3line" class="card card-1 mydata">
+              <div id="yearly-card-htags">
+                <h2 class="card__title">{{album.albums_items_name}}</h2>
+                <h3 class="card__title">{{album.albums_items_artists_0_name}}</h3>
+              </div>
+              <p class="card__exit"><a target="_blank" href={{album.albums_items_external_urls_spotify}}>listen on spotify</a></p>
+
+                <form action="/create-rating" method="post" id="rating">
+                  <fieldset class="rate">
+                    <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+                    <input type="hidden" value="{{album.albums_items_name}}" name="title">
+                    <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+                    <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+                    <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+                    <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+                    <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+                      <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                  </fieldset>
+                  <button id="submit-btn" type="submit">Submit</button>
+                  </form>
+            </div>
+            {% endif %}
+            {% if album.albums_items_name|length < 23 %}
+            <div id="card" class="card card-1 mydata">
+              <div id="yearly-card-htags">
+                <h2 class="card__title">{{album.albums_items_name}}</h2>
+                <h3 class="card__title">{{album.albums_items_artists_0_name}}</h3>
+              </div>
+              <p class="card__exit"><a target="_blank" href={{album.albums_items_external_urls_spotify}}>listen on spotify</a></p>
+
+                <form action="/create-rating" method="post" id="rating">
+                  <fieldset class="rate">
+                    <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+                    <input type="hidden" value="{{album.albums_items_name}}" name="title">
+                    <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+                    <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+                    <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+                    <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+                    <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+                      <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                  </fieldset>
+                  <button id="submit-btn" type="submit">Submit</button>
+                  </form>
+            </div>
+            {% endif %}
+      </div>
+  </div>
+</div>
+</body>
+</html>

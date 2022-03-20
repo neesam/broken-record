@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
+    <title>broken record | registration</title>
+</head>
+<body>
+    <div id="registration-form-container">
+        <h2>Register</h2>
+        <form id="registration-form" action="/register/user" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email...">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username...">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password...">
+            </div>
+            <div class="form-group">
+                <label for="confirm">Confirm</label>
+                <input type="password" name="confirm" class="form-control" id="exampleInputPassword1" placeholder="Confirm password...">
+            </div>
+            <div class="form-group">
+                <label for="avatar">Avatar link</label>
+                <input type="text" name="avatar" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button id="sign-up-btn" type="submit" class="btn btn-light">Join</button>
+            {% with messages = get_flashed_messages(category_filter = ['register'])%}
+                {% if messages %}
+                    {% for message in messages %}
+                    {{message}}
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </form>
+    </div>
+</body>
+</html>

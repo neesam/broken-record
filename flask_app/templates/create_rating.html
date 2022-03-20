@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/dashboard">broken record</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/2000">years<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/albums">andy's ratings</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/favartists">andy's favorites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/brookfield">brookfield corp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sundial">sundial</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <li id="logout" class="nav-item">
+        <a href="/">logout</a>
+      </li>
+      <div class="user-nav">
+        <img src={{user.avatar}} alt="">
+      </div>
+    </div>
+  </nav>
+    <div id="registration-form-container">
+        <h2>Add rating</h2>
+        <form id="registration-form" action="/create-rating" method="post">
+            <input type="hidden" name="user_id" value={{user.id}}>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="artist_name">Artist</label>
+                <input type="text" name="artist_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="content">Review</label>
+                <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="descriptors">Genres</label>
+                <input type="text" name="descriptors" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <button>Add more than one</button>
+            </div>
+            <div class="form-group">
+                <label for="image">Album image</label>
+                <input type="text" name="image" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating</label>
+                <input type="text" name="rating" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button id="sign-up-btn" type="submit" class="btn btn-light">Submit</button>
+            {% with messages = get_flashed_messages(category_filter = ['add-rating'])%}
+                {% if messages %}
+                    {% for message in messages %}
+                    {{message}}
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </form>
+    </div>
+</body>
+</html>
