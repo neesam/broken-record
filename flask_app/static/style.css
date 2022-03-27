@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+html {
+  height: 100%;
+}
+
 a {
     color: white;
 }
@@ -99,7 +103,8 @@ body {
     padding: 20px;
     margin: 0px 20px 0px 20px;
     color: white;
-}
+    align-items: center;
+  }
 
     #nav ul {
         list-style-type: none;
@@ -131,14 +136,14 @@ body {
     grid-column: 2;
     margin-bottom: 40px;
     position: relative;
-    bottom: 2.3%;
+    bottom: 2px;
 }
 
 #user-reviews-dashboard {
     grid-column: 2;
     margin-bottom: 40px;
     position: relative;
-    bottom: 2.1%;
+    top: 0%;
 }
 
 .user-prof-img {
@@ -236,6 +241,328 @@ body {
     border-radius: 10px;
 }
 
+#genre {
+    background: white;
+    width: 80%;
+    height: 200px;
+    position: relative;
+    left: 13%;
+    top: 1%;
+    margin-bottom: 2em;
+    border-radius: 10px;
+}
+
+#all-2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 10px;
+}
+
+#individual-song-synthpop {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: rgb(8,9,13);
+  background: linear-gradient(129deg, rgba(8,9,13,1) 0%, rgba(217,217,217,1) 0%, rgba(174,174,244,1) 0%, rgba(212,211,221,1) 20%, rgba(144,148,217,1) 48%, rgba(177,181,207,1) 66%, rgba(157,153,193,1) 100%) fixed;  
+  color: white;
+  padding-right: 100px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 1px grey;
+}
+
+#individual-song-synthpop h5 {
+  font-size: 40px;
+}
+
+#individual-song-synthpop img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#individual-song-replay2018 {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: rgb(132,215,231);
+  background: linear-gradient(120deg, rgba(132,215,231,1) 3%, rgba(61,80,196,1) 22%, rgba(215,116,75,1) 38%, rgba(58,23,136,1) 57%, rgba(246,243,236,1) 78%) fixed;
+  color: white;
+  padding-right: 100px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 1px grey;
+}
+
+#individual-song-replay2018 h5 {
+  font-size: 40px;
+}
+
+#individual-song-replay2018 img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#individual-song-sophisti-pop {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: rgb(239,219,199);
+background: linear-gradient(190deg, rgba(239,219,199,1) 5%, rgba(152,132,113,1) 100%) fixed;
+  color: white;
+  padding-right: 100px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 1px grey;
+}
+
+#individual-song-dancerock h5 {
+  font-size: 40px;
+}
+
+#individual-song-dancerock img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#individual-song-dancerock {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: rgb(168,4,148);
+  background: linear-gradient(200deg, rgba(168,4,148,1) 5%, rgba(32,7,172,1) 17%, rgba(195,46,196,1) 43%, rgba(250,45,45,1) 78%, rgba(255,0,146,1) 100%) fixed;  
+  color: white;
+  padding-right: 100px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 1px grey;
+}
+
+
+#individual-song-sophisti-pop h5 {
+  font-size: 40px;
+}
+
+#individual-song-sophisti-pop img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#individual-song-electro {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: rgb(243,255,123);
+  background: linear-gradient(151deg, rgba(243,255,123,1) 20%, rgba(152,156,255,1) 80%) fixed;
+  color: white;
+  padding-right: 100px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 1px grey;
+}
+
+#individual-song-altemo h5 {
+  font-size: 40px;
+}
+
+#individual-song-altemo img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#individual-song-altemo {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: rgb(86,102,49);
+  background: linear-gradient(20deg, rgba(86,102,49,1) 0%, rgba(255,212,126,1) 36%, rgba(181,141,52,1) 63%, rgba(15,34,13,1) 72%, rgba(13,29,8,1) 100%) fixed; 
+  color: white;
+  padding-right: 100px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 1px grey;
+}
+
+#individual-song-freestyle {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: rgb(0,255,235);
+  background: linear-gradient(79deg, rgba(0,255,235,1) 5%, rgba(240,0,255,1) 100%) fixed;
+  color: white;
+  padding-right: 100px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 1px grey;
+}
+
+#individual-song-freestyle h5 {
+  font-size: 40px;
+}
+
+#individual-song-freestyle img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#individual-song-newromantic h5 {
+  font-size: 40px;
+}
+
+#individual-song-newromantic img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#individual-song-newromantic {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: rgb(168,142,145);
+  background: linear-gradient(3deg, rgba(168,142,145,1) 5%, rgba(217,224,211,1) 33%, rgba(223,186,190,1) 63%, rgba(219,219,219,1) 78%, rgba(239,227,183,1) 100%) fixed; 
+  color: white;
+  padding-right: 100px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 1px grey;
+}
+
+#individual-song-poppunk h5 {
+  font-size: 40px;
+}
+
+#individual-song-poppunk img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#individual-song-poppunk {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: rgb(65,181,255);
+  background: linear-gradient(190deg, rgba(65,181,255,1) 20%, rgba(176,18,13,1) 32%, rgba(226,216,146,1) 70%, rgba(255,255,255,1) 76%) fixed;
+  color: white;
+  padding-right: 100px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 1px grey;
+}
+
+#individual-song-electro h5 {
+  font-size: 40px;
+}
+
+#individual-song-electro img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#songs-container {
+  grid-column: 1 / 8;
+  grid-row:3;
+  margin-top: -50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#individual-song-rightside {
+  display: flex;
+  justify-content: space-around;
+  gap: 200px;
+  align-items: center;
+}
+
+#sos_name {
+  width: 1300px;
+}
+
+#sos_track {
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+#sos_artist {
+  width: 200px;
+  position: relative;
+  right: 100px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+#sos_pop {
+  width:100px;
+  position: relative;
+  right: 100px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+#electrobody {
+  background: rgb(243,255,123);
+  background: linear-gradient(328deg, rgba(243,255,123,1) 20%, rgba(152,156,255,1) 80%) fixed;
+}
+
+#synthpopbody {
+  background: rgb(156,160,213);
+  background: linear-gradient(135deg, rgba(156,160,213,1) 25%, rgba(211,210,221,1) 80%) fixed;
+}
+
+#altemobody {
+  background: rgb(86,102,49);
+  background: linear-gradient(218deg, rgba(86,102,49,1) 0%, rgba(255,212,126,1) 36%, rgba(181,141,52,1) 63%, rgba(15,34,13,1) 72%, rgba(13,29,8,1) 100%) fixed; 
+}
+
+#sophistibody {
+  background: rgb(207,187,168);
+background: linear-gradient(350deg, rgba(207,187,168,1) 5%, rgba(247,245,239,1) 33%, rgba(207,187,168,1) 100%) fixed;
+}
+
+#dancerockbody {
+  background: rgb(168,4,148);
+  background: linear-gradient(79deg, rgba(168,4,148,1) 5%, rgba(32,7,172,1) 17%, rgba(195,46,196,1) 43%, rgba(250,45,45,1) 78%, rgba(255,0,146,1) 100%) fixed;
+}
+
+#freestylebody {
+  background: rgb(0,255,235);
+  background: linear-gradient(130deg, rgba(0,255,235,1) 5%, rgba(240,0,255,1) 100%) fixed;
+}
+
+#replay2018body {
+  background: rgb(132,215,231);
+  background: linear-gradient(973deg, rgba(132,215,231,1) 3%, rgba(61,80,196,1) 22%, rgba(215,116,75,1) 38%, rgba(58,23,136,1) 57%, rgba(246,243,236,1) 78%) fixed;
+}
+
 /* Review */
 
 #container{
@@ -247,17 +574,16 @@ body {
 	overflow: hidden;
 	margin: 0 auto;
     position: relative;
-    top: 2.6%;
+    top: 30px;
     left: 3%;
-	height: 450px;
-	width: 1000px;
+	height: 400px;
+	width: 900px;
     word-wrap: break-word;
     overflow: auto;
     white-space: wrap;
     grid-column: 2;
     display: inline-block;
     margin-bottom: 20px;
-    margin-top: 2px;
     font-family: 'Noto Sans';
 }
 
@@ -278,10 +604,53 @@ body {
 
 }
 
-.review-card-album-title {
+.review-card-album-title-ha {
     display: flex;
     flex-direction: column;
-    height: 100px;
+    height: 140px;
+    color: white;
+}
+
+.review-card-album-title-ha2 {
+  display: flex;
+  flex-direction: column;
+  height: 135px;
+  color: white;
+}
+
+.review-card-album-title {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  color: white;
+}
+
+.review-card-album-title-1 {
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    color: white;
+}
+
+.review-card-album-title-2 {
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    color: white;
+}
+
+.review-card-album-title-3 {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    color: white;
+}
+
+.review-card-album-title-4 {
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    color: white;
 }
 
 .product-details {
@@ -289,7 +658,7 @@ body {
 	text-align: left;
 	overflow: hidden;
 	padding: 30px;
-	height: 75%;
+	height: 100%;
 	float: left;
 	width: 55%;
     word-wrap: break-word;
@@ -327,6 +696,8 @@ body {
 	display: inline-block;
 	color: gold;
 	width: 50%;
+    position: relative;
+    top: 50px;
 }
 
 
@@ -521,7 +892,7 @@ iframe{
     position: relative;
     top: 70px;
     margin-left: 50%;
-    -webkit-box-reflect:below -14px linear-gradient(transparent, transparent, #0004);
+    -webkit-box-reflect:below -42px linear-gradient(transparent, transparent, #0004);
 
   }
   .side-container:hover img {
@@ -557,6 +928,7 @@ iframe{
     color: white;
     font-family: 'Noto Sans';
 }
+
 
 .albums-card h5 {
     margin-top: 10px;
@@ -627,6 +999,7 @@ iframe{
     margin-top: 80px;
     padding: 20px 20px 0px 20px;
 }
+
 .albums-card-2 img {
     width: 100%;
     height: 100%;
@@ -651,7 +1024,7 @@ iframe{
     padding: 20px;
     width: 500px;
     min-height: 200px;
-    height: 260px;
+    height: 270px;
     display: grid;
     grid-template-rows: 20px 50px 1fr 50px;
     border-radius: 10px;
@@ -666,7 +1039,7 @@ iframe{
   #card #submit-btn {
     position: relative;
     top: -40%;
-    right: 41%;
+    right:47%;
     border-radius: 10%;
     padding: 5px;
     background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
@@ -691,6 +1064,33 @@ iframe{
     left: 10%;
   }
 
+  #mydata1 {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    height: 430px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    color: rgb(66, 66, 66);
+    position: relative;
+    top: 10%;
+    left: 10%;
+  }
+
+  #mydata1 h2 {
+    position: relative;
+    top: 20px;
+  }
+
+  #mydata1 h3 {
+    position: relative;
+    top: 20px;
+  }
+
   #card2 {
     margin: 20px;
     padding: 20px;
@@ -708,7 +1108,91 @@ iframe{
     left: 10%;
   }
 
+  #mydata2 {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    height: 410px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    color: rgb(66, 66, 66);
+    position: relative;
+    top: 10%;
+    left: 10%;
+  }
+
+  #mydata1 form {
+    position: relative;
+    top: 11em;
+    right: .3em;
+  }
+
+  #mydata1 i {
+      font-size: 40px;
+      position: relative;
+      bottom: 30px;
+      left: 10px;
+  }
+
+  #mydata1 #submit-btn {
+    position: relative;
+    right:42%;
+    top: 20%;
+    border-radius: 10%;
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+    color: white;
+    box-shadow: 5px 5px 5px gray;
+  }
+
+  #mydata2 form {
+    position: relative;
+    top: 12em;
+    right: .3em;
+  }
+
+  #mydata2 i {
+      font-size: 40px;
+      position: relative;
+      bottom: 30px;
+      left: 10px;
+  }
+
+  #mydata2 #submit-btn {
+    position: relative;
+    right:42%;
+    top: 12%;
+    border-radius: 10%;
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+    color: white;
+    box-shadow: 5px 5px 5px gray;
+  }
+
+  
+
   #card3 {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    height: 230px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    color: rgb(66, 66, 66);
+    position: relative;
+    top: 10%;
+    left: 10%;
+  }
+
+  #mydata3 {
     margin: 20px;
     padding: 20px;
     width: 500px;
@@ -740,6 +1224,128 @@ iframe{
     position: relative;
     top: 10%;
     left: 10%;
+  }
+
+  #mydata_ {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 100px;
+    height: 440px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    color: rgb(66, 66, 66);
+    position: relative;
+    top: 10%;
+    left: 10%;
+  }
+
+  #mydata_ form {
+    position: relative;
+    top: 12em;
+    right: .3em;
+  }
+
+  #mydata_ i {
+      font-size: 40px;
+      position: relative;
+      bottom: 30px;
+      left: 10px;
+  }
+
+  #mydata_ #submit-btn {
+    position: relative;
+    right:42%;
+    top: 18%;
+    border-radius: 10%;
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+    color: white;
+    box-shadow: 5px 5px 5px gray;
+  }
+
+  #mydata4 {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 100px;
+    height:380px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    color: rgb(66, 66, 66);
+    position: relative;
+    top: 10%;
+    left: 10%;
+  }
+
+  #mydata4 form {
+    position: relative;
+    top: 8.7em;
+    right: .3em;
+  }
+
+  #mydata4 h2 {
+    position: relative;
+    top: 10px;
+  }
+
+  #mydata4 h3 {
+    position: relative;
+    top: 10px;
+  }
+
+  #mydata4 i {
+      font-size: 40px;
+      position: relative;
+      bottom: 30px;
+      left: 10px;
+  }
+
+  #mydata_ .card__exit {
+    position: relative;
+    left: 410px;
+    bottom: 110px;
+  }
+
+  #mydata1 .card__exit {
+    position: relative;
+    left: 410px;
+    bottom: 145px;
+  }
+
+  #mydata2 .card__exit {
+    position: relative;
+    left: 410px;
+    bottom: 110px;
+  }
+
+  #mydata3 .card__exit {
+    position: relative;
+    left: 410px;
+    bottom: 110px;
+  }
+
+  #mydata4 .card__exit {
+    position: relative;
+    left: 410px;
+    bottom: 110px;
+  }
+
+  #mydata4 #submit-btn {
+    position: relative;
+    right:42%;
+    top: 18%;
+    border-radius: 10%;
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+    color: white;
+    box-shadow: 5px 5px 5px gray;
   }
 
   #card4 form {
@@ -788,15 +1394,22 @@ iframe{
     left: 10%;
   }
 
+  #card-longer-1line #rating {
+    position: relative;
+    bottom: 100px;
+  }
+
   #card-longer-1line #submit-btn {
     position: relative;
-    top: 12%;
-    right: 40%;
-    border-radius: 10%;
-    padding: 5px;
-    background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
-    color: white;
-    box-shadow: 5px 5px 5px gray;
+    top: 19px;
+right: 210px;
+height: 40px;
+width: 80px;
+border-radius: 10%;
+padding: 5px;
+background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+color: white;
+box-shadow: 5px 5px 5px gray;
 }
 
   #card-longer-2line {
@@ -804,7 +1417,7 @@ iframe{
     padding: 20px;
     width: 500px;
     min-height: 200px;
-    height: 320px;
+    height: 330px;
     display: grid;
     grid-template-rows: 20px 50px 1fr 50px;
     border-radius: 10px;
@@ -818,13 +1431,20 @@ iframe{
 
   #card-longer-2line #submit-btn {
     position: relative;
-    top: 14%;
-    right: 40%;
-    border-radius: 10%;
-    padding: 5px;
-    background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
-    color: white;
-    box-shadow: 5px 5px 5px gray;
+bottom: 10px;
+right: 185px;
+height: 40px;
+width: 80px;
+border-radius: 10%;
+padding: 5px;
+background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+color: white;
+box-shadow: 5px 5px 5px gray;
+}
+
+#card-longer-2line fieldset {
+    position: relative;
+    bottom: 25px;
 }
 
   #card-longer-3line {
@@ -846,13 +1466,21 @@ iframe{
 
   #card-longer-3line #submit-btn {
     position: relative;
-    top: 14%;
-    right: 40%;
-    border-radius: 10%;
-    padding: 5px;
-    background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
-    color: white;
-    box-shadow: 5px 5px 5px gray;
+bottom: 40px;
+right: 185px;
+height: 40px;
+width: 80px;
+border-radius: 10%;
+padding: 5px;
+background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+color: white;
+box-shadow: 5px 5px 5px gray;
+}
+
+#card-longer-3line fieldset {
+  position: relative;
+  bottom: 70px;
+
 }
 
   #card-longer-4line {
@@ -874,8 +1502,118 @@ iframe{
 
   #card-longer-4line #submit-btn {
     position: relative;
-    top: 14%;
-    right: 40%;
+top: 70px;
+right: 210px;
+height: 40px;
+width: 80px;
+border-radius: 10%;
+padding: 5px;
+background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+color: white;
+box-shadow: 5px 5px 5px gray;
+}
+
+
+#fav-artist-album-1 {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 220px;
+  height:300px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  color: rgb(66, 66, 66);
+  position: relative;
+  top: 10%;
+  left: 10%;
+}
+
+#fav-artist-album-1 fieldset {
+  position: relative;
+  bottom: 30px;
+  right: 7px
+}
+
+#fav-artist-album-1 #submit-btn {
+  position: relative;
+  bottom: 10px;
+right: 187px;
+height: 40px;
+width: 80px;
+border-radius: 10%;
+padding: 5px;
+background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+color: white;
+box-shadow: 5px 5px 5px gray;
+}
+
+#fav-artist-album {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 220px;
+  height: 270px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  color: rgb(66, 66, 66);
+  position: relative;
+  top: 10%;
+  left: 10%;
+}
+
+#fav-artist-album fieldset {
+  position: relative;
+  bottom: 60px;
+}
+
+#fav-artist-album #submit-btn {
+  position: relative;
+  bottom: 40px;
+right: 182px;
+height: 40px;
+width: 80px;
+border-radius: 10%;
+padding: 5px;
+background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+color: white;
+box-shadow: 5px 5px 5px gray;
+}
+
+#already-rated {
+        margin: 20px;
+        padding: 20px;
+        width: 500px;
+        min-height: 200px;
+        height: 298px;
+        display: grid;
+        grid-template-rows: 20px 50px 1fr 50px;
+        border-radius: 10px;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+        transition: all 0.2s;
+        color: rgb(66, 66, 66);
+        position: relative;
+        top: 10%;
+        left: 10%;
+}
+
+#already-rated form {
+    position: relative;
+    top: 140px;
+    right: 8px;
+}
+
+#already-rated button {
+    position: relative;
+    top: 70px;
+    right: 210px;
+    height: 40px;
+    width: 80px;
     border-radius: 10%;
     padding: 5px;
     background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
@@ -883,12 +1621,83 @@ iframe{
     box-shadow: 5px 5px 5px gray;
 }
 
-  #artist-card {
+#already-rated-1 {
     margin: 20px;
     padding: 20px;
     width: 500px;
     min-height: 200px;
-    height: 200px;
+    height: 330px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    color: rgb(66, 66, 66);
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+
+#already-rated-1 form {
+position: relative;
+top: 190px;
+right: 8px;
+}
+
+#already-rated-1 button {
+position: relative;
+top: 70px;
+right: 210px;
+height: 40px;
+width: 80px;
+border-radius: 10%;
+padding: 5px;
+background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+color: white;
+box-shadow: 5px 5px 5px gray;
+}
+
+#already-rated-2 {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    height: 350px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    color: rgb(66, 66, 66);
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+
+#already-rated-2 form {
+position: relative;
+top: 230px;
+right: 8px;
+}
+
+#already-rated-2 button {
+position: relative;
+top: 70px;
+right: 210px;
+height: 40px;
+width: 80px;
+border-radius: 10%;
+padding: 5px;
+background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+color: white;
+box-shadow: 5px 5px 5px gray;
+}
+  #artist-card {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 120px;
+    height: 140px;
     display: grid;
     grid-template-rows: 20px 50px 1fr 50px;
     border-radius: 10px;
@@ -898,6 +1707,42 @@ iframe{
     position: relative;
     top: 40%;
     right: 5%;
+}
+
+#already-rated-3 {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    height: 320px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    color: rgb(66, 66, 66);
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+
+#already-rated-3 form {
+position: relative;
+top: 140px;
+right: 8px;
+}
+
+#already-rated-3 button {
+position: relative;
+top: 70px;
+right: 210px;
+height: 40px;
+width: 80px;
+border-radius: 10%;
+padding: 5px;
+background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+color: white;
+box-shadow: 5px 5px 5px gray;
 }
 
 #artist-card:hover {
@@ -913,8 +1758,8 @@ iframe{
     margin: 20px;
     padding: 20px;
     width: 500px;
-    min-height: 200px;
-    height: 250px;
+    min-height: 150px;
+    height: 170px;
     display: grid;
     grid-template-rows: 20px 50px 1fr 50px;
     border-radius: 10px;
@@ -924,28 +1769,6 @@ iframe{
     position: relative;
     top: 40%;
     right: 5%;
-}
-
-#artist-card-41 {
-    margin: 20px;
-    padding: 20px;
-    width: 500px;
-    min-height: 200px;
-    height: 242px;
-    display: grid;
-    grid-template-rows: 20px 50px 1fr 50px;
-    border-radius: 10px;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
-    transition: all 0.2s;
-    color: rgb(66, 66, 66);
-    position: relative;
-    top: 40%;
-    right: 5%;
-}
-
-#artist-card-41 form {
-    position: relative;
-    top: 4.7em;
 }
 
 
@@ -970,8 +1793,8 @@ iframe{
     margin: 20px;
     padding: 20px;
     width: 500px;
-    min-height: 200px;
-    height: 290px;
+    min-height: 150px;
+    height: 200px;
     display: grid;
     grid-template-rows: 20px 50px 1fr 50px;
     border-radius: 10px;
@@ -1002,7 +1825,7 @@ iframe{
 
   #card-longer-1line form {
     position: relative;
-    top: 6em;
+    top: 5em;
     right: .4em
 }
 
@@ -1162,18 +1985,78 @@ input:checked + label:hover, input:checked ~ label:hover, /* highlight current a
 input:checked ~ label:hover ~ label, /* highlight previous selected stars for new rating */
 label:hover ~ input:checked ~ label /* highlight previous selected stars */ { color: gold;  } 
 
+
+
+/* Ratings widget */
+.rate2 {
+    display: inline-block;
+    border: 0;
+    position: relative;
+    left: 6px;
+    top: 20px
+}
+/* Hide radio */
+.rate2 > input {
+    display: none;
+}
+/* Order correctly by floating highest to the right */
+.rate2 > label {
+    float: right;
+}
+/* The star of the show */
+.rate2 > label:before {
+    display: inline-block;
+    font-size:2.3rem;
+    padding: .3rem .14rem;
+    margin: 0;
+    cursor: pointer;
+    font-family: FontAwesome;
+    content: "\f005 "; /* full star */
+}
+
+/* Half star trick */
+.rate2 .half:before {
+    content: "\f089 "; /* half star no outline */
+    position: absolute;
+    padding-right: 0;
+}
+
+/* Click + hover color */
+input:checked ~ label, /* color current and previous stars on checked */
+label:hover, label:hover ~ label { color: gold;  } /* color previous stars on hover */
+
+/* Hover highlights */
+input:checked + label:hover, input:checked ~ label:hover, /* highlight current and previous stars */
+input:checked ~ label:hover ~ label, /* highlight previous selected stars for new rating */
+label:hover ~ input:checked ~ label /* highlight previous selected stars */ { color: gold;  } 
+
+
 #rating {
     position: relative;
+    top: 8em;
+}
+
+#my-rating {
+    position: relative;
     top: 7.7em;
+    background: rgb(240, 240, 240);
+    height: 60px;
+    border-radius:  15px;
+    width: 203px;
+}
+
+#my-rating .my-rating-tag {
+    position: relative;
+    bottom: 30px;
 }
 
 .mydata {
-    height: 290px;
-    font-family: 'Noto Sans'
+    height: 295px;
+    font-family: 'Noto Sans';
 }
 
 .card-1 {
-    height: 200px;
+    height: 150px;
 }
 
 /* Ratings widget */
@@ -1188,7 +2071,7 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
 
 .my-rating-tag {
     position: relative;
-    bottom: 40%;
+    bottom: 38%;
     left: 1.7%;
 }
 
@@ -1206,6 +2089,68 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     height: 290px;
 }
 
+#genresbody {
+  background: rgb(8,9,13);
+background: linear-gradient(90deg, rgba(8,9,13,1) 0%, rgba(217,217,217,1) 0%, rgba(174,239,244,1) 0%, rgba(144,217,172,1) 33%, rgba(146,189,215,1) 55%, rgba(185,153,193,1) 87%);
+}
+
+#altemo {
+  background: rgb(86,102,49);
+background: linear-gradient(218deg, rgba(86,102,49,1) 0%, rgba(255,212,126,1) 36%, rgba(181,141,52,1) 63%, rgba(15,34,13,1) 72%, rgba(13,29,8,1) 100%) fixed; 
+}
+
+#glitchcorebody {
+  background: rgb(8,9,13);
+background: linear-gradient(270deg, rgba(8,9,13,1) 0%, rgba(217,217,217,1) 0%, rgba(162,162,162,1) 0%, rgba(0,0,0,1) 33%, rgba(255,255,255,1) 64%, rgba(176,176,176,1) 70%, rgba(0,0,0,1) 98%);
+}
+
+#pluggbody {
+  background: rgb(241,241,241);
+background: linear-gradient(18deg, rgba(241,241,241,1) 0%, rgba(241,241,241,1) 1%, rgba(0,0,0,1) 63%, rgba(213,50,45,1) 82%, rgba(30,43,49,1) 84%) fixed;
+}
+
+#mathrock {
+  background: rgb(185,125,72);
+background: linear-gradient(302deg, rgba(185,125,72,1) 0%, rgba(10,81,99,1) 36%, rgba(181,141,52,1) 63%, rgba(71,33,51,1) 74%, rgba(30,43,49,1) 84%) fixed;
+}
+
+#vaporbody {
+  background: rgb(189,109,193);
+background: linear-gradient(220deg, rgba(189,109,193,1) 13%, rgba(77,84,215,1) 24%, rgba(199,112,197,1) 37%, rgba(62,39,210,1) 100%) fixed;
+}
+
+#poppunkbody {
+  background: rgb(65,181,255);
+background: linear-gradient(34deg, rgba(65,181,255,1) 20%, rgba(176,18,13,1) 32%, rgba(226,216,146,1) 70%, rgba(255,255,255,1) 76%) fixed;
+}
+
+#indierockbody {
+  background: rgb(80,137,173);
+background: linear-gradient(63deg, rgba(80,137,173,1) 20%, rgba(167,142,160,1) 32%, rgba(226,216,146,1) 70%, rgba(231,199,150,1) 76%) fixed;
+}
+
+#midwestemobody {
+  background: rgb(0,0,0);
+background: linear-gradient(143deg, rgba(0,0,0,1) 20%, rgba(0,68,23,1) 80%) fixed;
+}
+
+#newromanticbody {
+  background: rgb(168,142,145);
+  background: linear-gradient(79deg, rgba(168,142,145,1) 5%, rgba(217,224,211,1) 33%, rgba(223,186,190,1) 63%, rgba(219,219,219,1) 78%, rgba(239,227,183,1) 100%);
+}
+
+#delete-rating-btn {
+  position: relative;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: .8;
+  top: 280px;
+  right: 10px;
+  font-size: 17px;
+  opacity: .5
+}
+
+
 /* Ratings widget */
 .my-rate {
     display: flex;
@@ -1220,6 +2165,8 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     position: relative;
     bottom: 40%;
     left: 1.7%;
+    font-weight: bold;
+    margin-bottom: 20px;
 }over */
 
 /* Hover highlights */
@@ -1251,6 +2198,8 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     bottom: 40%;
     left: 1.7%;
 }
+
+
 
 /* Artist page */
 
@@ -1294,8 +2243,8 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     margin: 20px;
     padding: 20px;
     width: 500px;
-    min-height: 200px;
-    height: 200px;
+    min-height: 150px;
+    height: 150px;
     display: grid;
     grid-template-rows: 20px 50px 1fr 50px;
     border-radius: 10px;
@@ -1364,6 +2313,38 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     position: relative;
     top: 10%;
     left: 10%;
+  }
+
+  #people-to-message {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: 20px;
+    left: 20px;
+    width: 290px;
+  }
+
+  #message-this-person {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    gap: 50px;
+    background: white;
+    border-radius: 5px;
+    width: 290px;
+    margin-bottom: 10px;
+  }
+
+  #message-this-person img {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  #messages-tag {
+    margin-left: 20px;
+    margin-top: 40px;
+    color: white;
   }
 
 /* Top tracks */
@@ -1478,6 +2459,7 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     font-weight: 900;
     backface-visibility: hidden;
     box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
+    font-family: 'EB Garamond';
   }
   
   .twothou-years-card h1 {
@@ -1493,6 +2475,9 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     display: inline-block;
     transform: translate(-1px, 1px) scale(0.75);
     transform-origin: right center;
+    font-family: 'EB Garamond';
+    margin-right: 4px;
+    font-size: 60px;
   }
   
   .years-wrapper:before {
@@ -1529,6 +2514,8 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     flex-wrap: wrap;
     gap: 100px;
     justify-content: center;
+    position: relative;
+    top:5em;
   }
 
 /* 1980 */
@@ -1602,7 +2589,7 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     padding: 20px;
     width: 500px;
     min-height: 200px;
-    height: 260px;
+    height: 210px;
     display: grid;
     grid-template-rows: 20px 50px 1fr 50px;
     border-radius: 10px;
@@ -1619,22 +2606,6 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     top: 6.7em;
 }
 
-#artist-card-longer3 {
-    margin: 20px;
-    padding: 20px;
-    width: 500px;
-    min-height: 200px;
-    height: 290px;
-    display: grid;
-    grid-template-rows: 20px 50px 1fr 50px;
-    border-radius: 10px;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
-    transition: all 0.2s;
-    color: rgb(66, 66, 66);
-    position: relative;
-    top: 40%;
-    right: 5%;
-}
 
 /* Messages */
 
@@ -1728,9 +2699,29 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
 
   #message-card {
       display: flex;
+      height: 100%;
+      width: 30vw;
+      position: relative;
+      left: 10%;
   }
 
   .message-content {
       display: flex;
-      gap: 7px
+      gap: 20px;
+      font-size: 30px;
+  }
+
+  .p-2 {
+    width: 25vw;
+    position: fixed;
+    left: 74%;
+    bottom: 530px;
+  }
+
+  .p-2 .btn {
+    margin-top: 5px;
+  }
+
+  #message-cards {
+    display: flex;
   }

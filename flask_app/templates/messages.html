@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
+<body id="messages-body">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/dashboard">broken record</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,8 +24,14 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="/2000">years<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/years">years<span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/discover">genres</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sos">sounds of spotify</a>
+    </li>
         <li class="nav-item">
           <a class="nav-link" href="/albums">andy's ratings</a>
         </li>
@@ -45,13 +51,14 @@
         <a href="/">logout</a>
       </li>
       <div class="user-nav">
-        <img src={{user.avatar}} alt="">
-      </div>
+<a href="/ratings/{{user.id}}"><img src={{user.avatar}} alt=""></a>      </div>
     </div>
-  </nav>  
-    <div id="message-card">
-        <div id="card" class="card card-1 mydata message">
+  </nav>
+  
+      <div id="message-cards">
+        <div id="message-card" class="card card-1 mydata message">
             {% for message in messages %}
+            {% if message.sender_id == otherUser.id %}
             <a href="/{{message.id}}">
                 <div>
                   <div>
@@ -60,17 +67,41 @@
                     <p>{{message.sender}}</p>
                     <p>{{message.content}}</p>
                   </div>
+                  <div>
+
+                  </div>
                 </div>
-                </a>
+                </a>  
                 <div>
-                    <form class=" p-2"action="/post_message" method="post">
-                       <input type="hidden" name="sender_id" value={{session.user_id}}>
-                       <input type="hidden" name="receiver_id" value={{messages.receiver_id}}>
-                       <textarea class="form-control" name="content" id="" cols="30" rows="3"></textarea>
-                       <input type="submit" value="Message" class="btn btn-warning">
-                   </form>
-               </div>     
+             </div>   
+              {% endif %}
             {% endfor %}
-          </div> 
+          </div>
+          <form class="p-2" action="/post_message" method="post">
+            <input type="hidden" name="sender_id" value={{session.user_id}}>
+            <input type="hidden" name="receiver_id" value={{otherUser.id}}>
+            <textarea class="form-control" name="content" id="" cols="30" rows="3"></textarea>
+            <input type="submit" value="Message" class="btn btn-warning">
+        </form>
+        <div id="message-card" class="card card-1 mydata message">
+          {% for message in myMessages %}
+          <a href="/{{message.id}}">
+              <div>
+                <div>
+                </div>
+                <div class="message-content">
+                  <p>{{message.sender}}</p>
+                  <p>{{message.content}}</p>
+                </div>
+                <div>
+
+                </div>
+              </div>
+              </a>  
+              <div>
+           </div>   
+          {% endfor %}
+        </div>
+      </div>
 </body>
 </html>

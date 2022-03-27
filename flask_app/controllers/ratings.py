@@ -25,18 +25,32 @@ def create_rating():
         'artist': request.form['name'],
         'album': request.form['title'],
         'cover': request.form['cover'],
+        'year': request.form['year'],
         'artist_link': request.form['artist_link'],
         'album_link': request.form['album_link'],
         'release_date': request.form['release_date'],
         'tracks': request.form['tracks'],
-        'user_id': session['user_id']
+        'album_id': request.form['album_id'],
+        'user_id': session['user_id'],
+        'bunk': request.form['bunk'],
+        'artist_id': request.form['artist_id']
     }
 
     Rating.save(data)
     
     return redirect('/dashboard')
 
-@app.route('/create-rating-yearly', methods=['POST'])
+@app.route('/destroy/<id>')
+def delete_rating(id):
+
+    data = {
+        'id': id
+    }
+
+    Rating.destroy(data) 
+    return redirect('/dashboard')
+
+@app.route('/edit-rating', methods=['POST'])
 def create_rating_yearly():
 
     data = {
@@ -44,12 +58,16 @@ def create_rating_yearly():
         'artist': request.form['name'],
         'album': request.form['title'],
         'cover': request.form['cover'],
+        'year': request.form['year'],
         'artist_link': request.form['artist_link'],
         'album_link': request.form['album_link'],
-        'user_id': session['user_id']
+        'release_date': request.form['release_date'],
+        'tracks': request.form['tracks'],
+        'album_id': request.form['album_id'],
+        'id': request.form['rating_id']
     }
 
-    Rating.save(data)
+    Rating.update_rating(data)
     
     return redirect('/dashboard')
     

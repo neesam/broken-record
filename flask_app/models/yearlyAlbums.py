@@ -20,6 +20,7 @@ class yearlyAlbums:
         self.album_name = data['albums_items_name']
         self.album_release_date = data['albums_items_release_date']
         self.albums_items_release_date_precision = data['albums_items_release_date_precision']
+        self.year = data['year']
         self.total_tracks = data['albums_items_total_tracks']
         self.albums_items_type = data['albums_items_type']
         self.albums_items_uri = data['albums_items_uri']
@@ -29,6 +30,26 @@ class yearlyAlbums:
         self.albums_offset = data['albums_offset']
         self.albums_previous = data['albums_previous']
         self.albums_total = data['albums_total']
+
+    @classmethod
+
+    def get_twothousand(cls):
+
+        query = 'SELECT * FROM twothousand ORDER BY RAND()'
+
+        results = connectToMySQL(cls.db).query_db(query)
+
+        return results
+
+    @classmethod 
+
+    def get_twothousand_by_id(cls, data):
+
+        query = 'SELECT * FROM twothousand WHERE albums_items_id = %(id)s'
+
+        results = connectToMySQL(cls.db).query_db(query, data)
+
+        return cls(results[0])
 
     @classmethod 
 
@@ -179,7 +200,7 @@ class yearlyAlbums:
     
     def get_side_albums(cls):
 
-        query = 'SELECT * FROM twothousandone UNION SELECT * FROM twothousandfive ORDER BY RAND() LIMIT 5'
+        query = 'SELECT * FROM all_albums ORDER BY RAND() LIMIT 5'
 
         results = connectToMySQL(cls.db).query_db(query)
 

@@ -21,16 +21,22 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="/2000">years<span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="/years">years<span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/discover">genres</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sos">sounds of spotify</a>
+    </li>
         <li class="nav-item">
           <a class="nav-link" href="/albums">andy's ratings</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/favartists">andy's favorites</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="/brookfield">brookfield corp</a>
         </li>
         <li class="nav-item">
@@ -43,10 +49,10 @@
         <a href="/">logout</a>
       </li>
       <div class="user-nav">
-        <img src={{user.avatar}} alt="">
-      </div>
+<a href="/ratings/{{user.id}}"><img src={{user.avatar}} alt=""></a>      </div>
     </div>
   </nav>
+  
   <div id="all">  
       <div class="albums-card-2">
         <img class="card-img-top" src={{album.image}} alt="Card image cap">

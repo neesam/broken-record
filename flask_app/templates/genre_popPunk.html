@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
+<body id="poppunkbody">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/dashboard">broken record</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,9 +22,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="/2000">years<span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="/years">years<span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/discover">genres</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sos">sounds of spotify</a>
+    </li>
         <li class="nav-item">
           <a class="nav-link" href="/albums">andy's ratings</a>
         </li>
@@ -43,10 +50,10 @@
         <a href="/">logout</a>
       </li>
       <div class="user-nav">
-        <img src={{user.avatar}} alt="">
-      </div>
+<a href="/ratings/{{user.id}}"><img src={{user.avatar}} alt=""></a>      </div>
     </div>
   </nav>
+  
   <h1 class="year">pop punk</h1>
   <div class="card-container">
     {% for i in artists %}

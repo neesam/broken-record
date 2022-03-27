@@ -27,9 +27,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="/2000">years<span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="/years">years<span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/discover">genres</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sos">sounds of spotify</a>
+    </li>
         <li class="nav-item">
           <a class="nav-link" href="/albums">andy's ratings</a>
         </li>
@@ -49,10 +55,10 @@
         <a href="/">logout</a>
       </li>
       <div class="user-nav">
-        <img src={{user.avatar}} alt="">
-      </div>
+<a href="/ratings/{{user.id}}"><img src={{user.avatar}} alt=""></a>      </div>
     </div>
   </nav>
+  
   <div id="all">
 
     <div id="left">
@@ -64,6 +70,17 @@
         </form>
         </div>
       </div>
+      <h4 id="messages-tag">Messages</h4>
+      <div id="people-to-message">
+        {% for u in users %}
+        {% if u.id != session['user_id'] %}
+          <div id="message-this-person">
+            <img src={{u.avatar}} alt="">
+            <a href="/messages/{{u.id}}"><p>{{u.username}}</p></a>
+          </div>
+        {% endif %}
+        {% endfor %}
+        </div>
       </div>
 
   
@@ -71,11 +88,307 @@
     {% for i in userRatings %}
     <div id="container">
       <div class="product-details">
-        <div class="review-card-album-title">
-          <h1><a target="_blank" href={{i.album_link}}>{{i.album}}</a></h1>
-          <h5><a target="_blank" href={{i.artist_link}}>{{i.artist}}</a></h5>
-          <h6>{{i.reviewer.username}}</h6>
+        {% if i.album == 'ペルソナ3 オリジナル・サウンドトラック' %}
+        <div class="review-card-album-title-2">
+          {% if i.year == 1960 %}
+          <h1><a href="/1950/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}
+          {% if i.year == 2000 %}
+          <h1><a href="/2000/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2001 %}
+          <h1><a href="/2001/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2002 %}
+          <h1><a href="/2002/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2003 %}
+          <h1><a href="/2003/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2004 %}
+          <h1><a href="/2004/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2005 %}
+          <h1><a href="/2005/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2006 %}
+          <h1><a href="/2006/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2007 %}
+          <h1><a href="/2007/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 9898 %}
+          <h1><a href="/album/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 8888 %}
+          <h1><a href="/favartists/albums/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a href="/favartists/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}
+          {% if i.year == 2223 %}
+          <h1><a href="/sos/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a target="_blank" href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %} 
+          {% if i.bunk != 'myfavBunk' and i.bunk != 'ratingsBunk' and i.bunk != 'topBunk' and i.bunk != 'sosBunk' and i.bunk != 'yearlyBunk' %}
+          <h5>{{i.artist}}</h5>
+          {% endif%}
+          <h6><a href="ratings/{{i.user_id}}">{{i.reviewer.username}}</a></h6>
+          {% if i.user_id == session['user_id']%}
+            <a href="/destroy/{{i.id}}"><h5 id="delete-rating-btn">delete</h5></a>
+          {% endif %}
         </div>
+        {% endif %}
+        {% if i.album|length > 31 and i.album|length < 62 %}
+        <div class="review-card-album-title-1">
+          {% if i.year == 1960 %}
+          <h1><a href="/1950/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}
+          {% if i.year == 2000 %}
+          <h1><a href="/2000/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2001 %}
+          <h1><a href="/2001/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2002 %}
+          <h1><a href="/2002/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2003 %}
+          <h1><a href="/2003/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2004 %}
+          <h1><a href="/2004/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2005 %}
+          <h1><a href="/2005/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2006 %}
+          <h1><a href="/2006/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2007 %}
+          <h1><a href="/2007/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 9898 %}
+          <h1><a href="/album/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 8888 %}
+          <h1><a href="/favartists/albums/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a href="/favartists/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}
+          {% if i.year == 2223 %}
+          <h1><a href="/sos/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a target="_blank" href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %} 
+          {% if i.bunk != 'myfavBunk' and i.bunk != 'ratingsBunk' and i.bunk != 'topBunk' and i.bunk != 'sosBunk' and i.bunk != 'yearlyBunk' %}
+          <h5>{{i.artist}}</h5>
+          {% endif%}
+          <h6><a href="ratings/{{i.user_id}}">{{i.reviewer.username}}</a></h6>
+          {% if i.user_id == session['user_id']%}
+            <a href="/destroy/{{i.id}}"><h5 id="delete-rating-btn">delete</h5></a>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if i.album|length > 63 and i.album|length < 96 %}
+        <div class="review-card-album-title-2">
+          {% if i.year == 1960 %}
+          <h1><a href="/1950/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}
+          {% if i.year == 2000 %}
+          <h1><a href="/2000/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2001 %}
+          <h1><a href="/2001/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2002 %}
+          <h1><a href="/2002/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2003 %}
+          <h1><a href="/2003/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2004 %}
+          <h1><a href="/2004/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2005 %}
+          <h1><a href="/2005/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2006 %}
+          <h1><a href="/2006/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2007 %}
+          <h1><a href="/2007/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 9898 %}
+          <h1><a href="/album/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 8888 %}
+          <h1><a href="/favartists/albums/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a href="/favartists/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}
+          {% if i.year == 2223 %}
+          <h1><a href="/sos/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a target="_blank" href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %} 
+          {% if i.bunk != 'myfavBunk' and i.bunk != 'ratingsBunk' and i.bunk != 'topBunk' and i.bunk != 'sosBunk' and i.bunk != 'yearlyBunk' %}
+          <h5>{{i.artist}}</h5>
+          {% endif%}
+          <h6><a href="ratings/{{i.user_id}}">{{i.reviewer.username}}</a></h6>
+          {% if i.user_id == session['user_id']%}
+            <a href="/destroy/{{i.id}}"><h5 id="delete-rating-btn">delete</h5></a>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if i.album|length > 97 and i.album|length < 127 %}
+        <div class="review-card-album-title-3">
+          {% if i.year == 1960 %}
+          <h1><a href="/1950/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}
+          {% if i.year == 2000 %}
+          <h1><a href="/2000/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2001 %}
+          <h1><a href="/2001/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2002 %}
+          <h1><a href="/2002/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2003 %}
+          <h1><a href="/2003/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2004 %}
+          <h1><a href="/2004/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2005 %}
+          <h1><a href="/2005/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2006 %}
+          <h1><a href="/2006/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2007 %}
+          <h1><a href="/2007/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 9898 %}
+          <h1><a href="/album/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 8888 %}
+          <h1><a href="/favartists/albums/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a href="/favartists/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}
+          {% if i.year == 2223 %}
+          <h1><a href="/sos/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a target="_blank" href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %} 
+          {% if i.bunk != 'myfavBunk' and i.bunk != 'ratingsBunk' and i.bunk != 'topBunk' and i.bunk != 'sosBunk' and i.bunk != 'yearlyBunk' %}
+          <h5>{{i.artist}}</h5>
+          {% endif%}
+          <h6><a href="ratings/{{i.user_id}}">{{i.reviewer.username}}</a></h6>
+          {% if i.user_id == session['user_id']%}
+            <a href="/destroy/{{i.id}}"><h5 id="delete-rating-btn">delete</h5></a>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if i.album|length > 128 and i.album|length < 158 %}
+        <div class="review-card-album-title-4">
+          {% if i.year == 1960 %}
+          <h1><a href="/1950/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}
+          {% if i.year == 2000 %}
+          <h1><a href="/2000/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2001 %}
+          <h1><a href="/2001/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2002 %}
+          <h1><a href="/2002/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2003 %}
+          <h1><a href="/2003/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2004 %}
+          <h1><a href="/2004/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2005 %}
+          <h1><a href="/2005/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2006 %}
+          <h1><a href="/2006/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2007 %}
+          <h1><a href="/2007/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 9898 %}
+          <h1><a href="/album/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 8888 %}
+          <h1><a href="/favartists/albums/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a href="/favartists/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}
+          {% if i.year == 2223 %}
+          <h1><a href="/sos/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a target="_blank" href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %} 
+          {% if i.bunk != 'myfavBunk' and i.bunk != 'ratingsBunk' and i.bunk != 'topBunk' and i.bunk != 'sosBunk' and i.bunk != 'yearlyBunk' %}
+          <h5>{{i.artist}}</h5>
+          {% endif%}
+          <h6><a href="ratings/{{i.user_id}}">{{i.reviewer.username}}</a></h6>
+          {% if i.user_id == session['user_id']%}
+            <a href="/destroy/{{i.id}}"><h5 id="delete-rating-btn">delete</h5></a>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if i.album|length <= 31 and not i.album == 'ペルソナ3 オリジナル・サウンドトラック' %}
+        <div class="review-card-album-title">
+          {% if i.year == 1960 %}
+          <h1><a href="/1950/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}
+          {% if i.year == 2000 %}
+          <h1><a href="/2000/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2001 %}
+          <h1><a href="/2001/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2002 %}
+          <h1><a href="/2002/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2003 %}
+          <h1><a href="/2003/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2004 %}
+          <h1><a href="/2004/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2005 %}
+          <h1><a href="/2005/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2006 %}
+          <h1><a href="/2006/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 2007 %}
+          <h1><a href="/2007/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 9898 %}
+          <h1><a href="/album/{{i.album_id}}">{{i.album}}</a></h1>
+          {% endif %}
+          {% if i.year == 8888 %}
+          <h1><a href="/favartists/albums/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a href="/favartists/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}
+          {% if i.year == 2223 %}
+          <h1><a href="/sos/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a target="_blank" href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %} 
+          {% if i.bunk != 'myfavBunk' and i.bunk != 'ratingsBunk' and i.bunk != 'topBunk' and i.bunk != 'sosBunk' and i.bunk != 'yearlyBunk' %}
+          <h5>{{i.artist}}</h5>
+          {% endif%}
+          <h6><a href="ratings/{{i.user_id}}">{{i.reviewer.username}}</a></h6>
+          {% if i.user_id == session['user_id']%}
+            <a href="/destroy/{{i.id}}"><h5 id="delete-rating-btn">delete</h5></a>
+          {% endif %}
+        </div>
+        {% endif %}
+          
         {% if i.stars == 0 %}
                 <i class="fa-regular fa-star" style="font-size:29.5px;color:gold"></i>
                 <i class="fa-regular fa-star" style="font-size:29.5px;color:gold"></i>

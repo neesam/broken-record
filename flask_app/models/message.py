@@ -31,6 +31,20 @@ class Message:
         return messages
 
     @classmethod
+
+    def get_my_messages_too(cls, data):
+
+        query = 'SELECT users.username as sender, users2.username as receiver, messages.* FROM users LEFT JOIN messages ON users.id = messages.sender_id LEFT JOIN users as users2 ON users2.id = messages.receiver_id WHERE users.id = %(id)s'
+
+        results = connectToMySQL(cls.db).query_db(query, data)
+
+        messages = []
+
+        for message in results:
+            messages.append(cls(message))
+        return messages
+
+    @classmethod
     
     def time_span(self):
 
@@ -56,7 +70,10 @@ class Message:
 
         query = "INSERT INTO messages (content,sender_id,receiver_id, created_at, updated_at) VALUES (%(content)s,%(sender_id)s,%(receiver_id)s, NOW(), NOW());"
 
-        return connectToMySQL(cls.db).query_db(query,data)
+        results = connectToMySQL(cls.db).query_db(query,data)
+        print(results)
+
+        return results
 
     @classmethod
     def destroy(cls,data):

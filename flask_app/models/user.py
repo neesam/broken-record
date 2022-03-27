@@ -104,7 +104,7 @@ class User:
 
     def get_user_who_posted(cls):
 
-        query = 'SELECT * FROM rym.ratings LEFT JOIN users ON rym.ratings.user_id = users.id LEFT JOIN favartistsalbums ON rym.ratings.album =  favartistsalbums.albums_items_name ORDER BY RAND()'
+        query = 'SELECT * FROM rym.ratings LEFT JOIN users ON rym.ratings.user_id = users.id LEFT JOIN favartistsalbums ON rym.ratings.album =  favartistsalbums.albums_items_name ORDER BY ratings.created_at DESC'
 
         results = connectToMySQL(cls.db).query_db(query)
         print(results)
@@ -123,7 +123,11 @@ class User:
                 'tracks': row['tracks'],
                 'created_at': row['created_at'],
                 'updated_at': row['updated_at'],
-                'user_id': row['user_id']
+                'user_id': row['user_id'],
+                'album_id': row['album_id'],
+                'year': row['year'],
+                'bunk': row['bunk'],
+                'artist_id': row['artist_id']
             }
 
             user_info = {
@@ -141,7 +145,7 @@ class User:
 
     def get_user_ratings(cls, data):
 
-        query = 'SELECT * FROM users LEFT JOIN ratings ON users.id = ratings.user_id WHERE users.id = %(id)s ORDER BY RAND()' 
+        query = 'SELECT * FROM users LEFT JOIN ratings ON users.id = ratings.user_id WHERE users.id = %(id)s ORDER BY ratings.created_at DESC' 
 
         results = connectToMySQL(cls.db).query_db(query, data)
         print(results)
@@ -160,7 +164,11 @@ class User:
                 'tracks': row['tracks'],
                 'created_at': row['created_at'],
                 'updated_at': row['updated_at'],
-                'user_id': row['user_id']
+                'user_id': row['user_id'],
+                'album_id': row['album_id'],
+                'year': row['year'],
+                'bunk': row['bunk'],
+                'artist_id': row['artist_id']
             }
 
             user_info = {
@@ -178,6 +186,53 @@ class User:
             all.append(one_rating)
             print(all)
         return all
+
+    @classmethod
+
+    def get_user_ratings_for_one_album_page(cls, data):
+
+        query = 'SELECT * FROM users LEFT JOIN ratings ON users.id = ratings.user_id WHERE users.id = %(id)s AND ratings.album_id = %(id2)s' 
+
+        results = connectToMySQL(cls.db).query_db(query, data)
+        print(results)
+        all = []
+
+        for row in results:
+            rating_info = {
+                'id': row['ratings.id'],
+                'stars': row['stars'],
+                'artist': row['artist'],
+                'album': row['album'],
+                'cover': row['cover'],
+                'artist_link': row['artist_link'],
+                'album_link': row['album_link'],
+                'release_date': row['release_date'],
+                'tracks': row['tracks'],
+                'created_at': row['created_at'],
+                'updated_at': row['updated_at'],
+                'user_id': row['user_id'],
+                'album_id': row['album_id'],
+                'year': row['year'],
+                'bunk': row['bunk'],
+                'artist_id': row['artist_id']
+            }
+
+            user_info = {
+                'id': row['id'],
+                'email': row['email'],
+                'username': row['username'],
+                'password': row['password'],
+                'avatar': row['avatar'],
+                'listening_to': row['listening_to']
+            }
+
+            one_rating = Rating(rating_info)
+            one_reviewer = user_info
+            one_rating.reviewer = one_reviewer
+            all.append(one_rating)
+            print(all)
+        return all
+
 
     @classmethod
 

@@ -54,3 +54,53 @@ class Genre:
         results = connectToMySQL(cls.db).query_db(query)
 
         return results
+
+    @classmethod
+
+    def get_indie_rock(cls):
+
+        query = 'SELECT * FROM genre_indie_rock ORDER BY RAND()'
+        
+        results = connectToMySQL(cls.db).query_db(query)
+
+        return results
+
+    @classmethod
+
+    def get_glitchcore(cls):
+
+        query = 'SELECT * FROM genre_glitchcore ORDER BY RAND()'
+        
+        results = connectToMySQL(cls.db).query_db(query)
+
+        return results
+
+    @classmethod
+
+    def get_mathrock(cls):
+
+        query = 'SELECT * FROM genre_math_rock ORDER BY RAND()'
+        
+        results = connectToMySQL(cls.db).query_db(query)
+
+        return results
+
+    @classmethod
+
+    def get_plugg(cls):
+
+        query = 'SELECT * FROM genre_plugg ORDER BY RAND()'
+        
+        results = connectToMySQL(cls.db).query_db(query)
+
+        return results
+
+    @classmethod
+
+    def get_vaporwave(cls):
+
+        query = 'SELECT * FROM genre_vaporwave ORDER BY RAND()'
+        
+        results = connectToMySQL(cls.db).query_db(query)
+
+        return results

@@ -9,6 +9,8 @@ class Album:
         self.Release_Date = data['Release_Date']
         self.Rating = data['Rating']
         self.image = data['image']
+        self.album_link = data['album_link']
+        self.artist_link = data['artist_link']
 
     @classmethod
 

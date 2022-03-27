@@ -8,14 +8,18 @@ from flask_app.models.brookfield import Brookfield
 from flask_app.models.yearlyAlbums import yearlyAlbums
 from flask_app.models.message import Message
 
-@app.route('/messages')
-def messages():
+@app.route('/messages/<id>')
+def messages(id):
+
+    dataForSender = {
+        'id': id
+    }
 
     data = {
         'id': session['user_id']
     }
 
-    return render_template('messages.html', user = User.get_by_id(data), users = User.get_all_users(), messages = Message.get_user_messages(data))
+    return render_template('messages.html', user = User.get_by_id(data), users = User.get_all_users(), messages = Message.get_user_messages(data), otherUser = User.get_by_id(dataForSender), myMessages = Message.get_my_messages_too(data))
 
 @app.route('/post_message',methods=['POST'])
 def post_message():
@@ -29,7 +33,8 @@ def post_message():
     }
     Message.save(data)
 
-    return redirect('/messages')
+    return redirect('/dashboard')
+
 @app.route('/destroy/message/<int:id>')
 def destroy_message(id):
     data = {

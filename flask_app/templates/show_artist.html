@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/fav_artist_body.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
@@ -22,13 +23,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="/2000">years<span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="/years">years<span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/discover">genres</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sos">sounds of spotify</a>
+    </li>
         <li class="nav-item">
           <a class="nav-link" href="/albums">andy's ratings</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link" href="/favartists">andy's favorites</a>
         </li>
         <li class="nav-item">
@@ -44,10 +51,10 @@
         <a href="/">logout</a>
       </li>
       <div class="user-nav">
-        <img src={{user.avatar}} alt="">
-      </div>
+<a href="/ratings/{{user.id}}"><img src={{user.avatar}} alt=""></a>      </div>
     </div>
   </nav>
+  
   <div id="all"> 
     <div id="fav-artist-page-picnhead">
      <h1 id="artist-name">{{artist.artists_items_0_name}}</h1>
@@ -84,21 +91,6 @@
             <h3 class="card__title">{{i.artist_name}}</h3>
           </div>
           <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
-
-            <form id="fav-artist-album-your-rating">
-              <fieldset class="rate">
-                  <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                  <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                  <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                  <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                  <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                  <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                  <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                  <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                  <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                  <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
-              </fieldset>
-              </form>
         </div>
         {% endif %}
         {% if i.albums_items_name|length >= 46 and i.albums_items_name|length < 69 %}
@@ -108,21 +100,6 @@
             <h3 class="card__title">{{i.artist_name}}</h3>
           </div>
           <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
-
-            <form id="fav-artist-album-your-rating">
-              <fieldset class="rate">
-                  <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                  <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                  <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                  <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                  <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                  <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                  <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                  <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                  <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                  <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
-              </fieldset>
-              </form>
         </div>
         {% endif %}
         {% if i.albums_items_name|length >= 70 and i.albums_items_name|length < 90 %}
@@ -132,21 +109,6 @@
             <h3 class="card__title">{{i.artist_name}}</h3>
           </div>
           <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
-
-            <form id="fav-artist-album-your-rating">
-              <fieldset class="rate">
-                  <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                  <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                  <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                  <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                  <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                  <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                  <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                  <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                  <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                  <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
-              </fieldset>
-              </form>
         </div>
         {% endif %}
         {% if i.albums_items_name|length >= 90 and i.albums_items_name|length < 120 %}
@@ -156,21 +118,6 @@
             <h3 class="card__title">{{i.artist_name}}</h3>
           </div>
           <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
-
-            <form id="fav-artist-album-your-rating">
-              <fieldset class="rate">
-                  <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                  <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                  <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                  <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                  <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                  <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                  <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                  <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                  <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                  <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
-              </fieldset>
-              </form>
         </div>
         {% endif %}
         {% if i.albums_items_name|length <= 31 %}
@@ -180,21 +127,6 @@
             <h3 class="card__title">{{i.artist_name}}</h3>
           </div>
           <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
-
-            <form id="fav-artist-album-your-rating">
-              <fieldset class="rate">
-                  <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                  <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                  <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                  <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                  <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                  <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                  <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                  <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                  <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                  <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
-              </fieldset>
-              </form>
         </div>
         {% endif %}
         {% if i.albums_items_name|length == 41 %}
@@ -204,21 +136,6 @@
             <h3 class="card__title">{{i.artist_name}}</h3>
           </div>
           <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
-
-            <form id="fav-artist-album-your-rating">
-              <fieldset class="rate">
-                  <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                  <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                  <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                  <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                  <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                  <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                  <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                  <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                  <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                  <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
-              </fieldset>
-              </form>
         </div>
         {% endif %}
         {% if i.albums_items_name|length == 37 %}
@@ -228,21 +145,6 @@
             <h3 class="card__title">{{i.artist_name}}</h3>
           </div>
           <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
-
-            <form id="fav-artist-album-your-rating">
-              <fieldset class="rate">
-                  <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                  <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                  <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                  <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                  <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                  <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                  <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                  <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                  <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                  <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
-              </fieldset>
-              </form>
         </div>
         {% endif %}
         {% if i.albums_items_name|length == 33 %}
@@ -252,21 +154,6 @@
             <h3 class="card__title">{{i.artist_name}}</h3>
           </div>
           <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
-
-            <form id="fav-artist-album-your-rating">
-              <fieldset class="rate">
-                  <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                  <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                  <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                  <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                  <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                  <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                  <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                  <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                  <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                  <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
-              </fieldset>
-              </form>
         </div>
         {% endif %}
         {% if i.albums_items_name|length == 35 %}
@@ -276,69 +163,42 @@
             <h3 class="card__title">{{i.artist_name}}</h3>
           </div>
           <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
-
-            <form id="fav-artist-album-your-rating">
-              <fieldset class="rate">
-                  <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                  <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                  <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                  <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                  <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                  <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                  <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                  <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                  <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                  <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
-              </fieldset>
-              </form>
         </div>
         {% endif %}
-        {% if albums.albums_items_name|length == 10 %}
-        <div id="artist-card-longer-" class="card card-1 mydata">
+        {% if i.albums_items_name|length == 40 %}
+        <div id="artist-card-longer2" class="card card-1 mydata">
           <div id="yearly-card-htags">
             <h2 class="card__title">{{i.albums_items_name}}</h2>
             <h3 class="card__title">{{i.artist_name}}</h3>
           </div>
           <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
-
-            <form id="fav-artist-album-your-rating">
-              <fieldset class="rate">
-                  <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                  <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                  <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                  <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                  <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                  <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                  <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                  <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                  <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                  <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
-              </fieldset>
-              </form>
         </div>
         {% endif %}
-        {% if albums.albums_items_name|length == 40 %}
-        <div id="artist-card-longer-2" class="card card-1 mydata">
+        {% if i.albums_items_name|length == 34 %}
+        <div id="artist-card-longer2" class="card card-1 mydata">
           <div id="yearly-card-htags">
             <h2 class="card__title">{{i.albums_items_name}}</h2>
             <h3 class="card__title">{{i.artist_name}}</h3>
           </div>
           <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
-
-            <form id="fav-artist-album-your-rating">
-              <fieldset class="rate">
-                  <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                  <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                  <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                  <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                  <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                  <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                  <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                  <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                  <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                  <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
-              </fieldset>
-              </form>
+        </div>
+        {% endif %}
+        {% if i.albums_items_name|length == 57 %}
+        <div id="artist-card-longer2" class="card card-1 mydata">
+          <div id="yearly-card-htags">
+            <h2 class="card__title">{{i.albums_items_name}}</h2>
+            <h3 class="card__title">{{i.artist_name}}</h3>
+          </div>
+          <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
+        </div>
+        {% endif %}
+        {% if i.albums_items_name|length == 32 %}
+        <div id="artist-card-longer2" class="card card-1 mydata">
+          <div id="yearly-card-htags">
+            <h2 class="card__title">{{i.albums_items_name}}</h2>
+            <h3 class="card__title">{{i.artist_name}}</h3>
+          </div>
+          <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
         </div>
         {% endif %}
       </div>
