@@ -99,6 +99,15 @@ def solo_altemo(id):
     }
 
     return render_template('show_sos.html', album = SOS2.get_sos_by_id(albumID), user = User.get_by_id(data))
+
+@app.route('/sos')
+def sos():
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('sos.html', playlists = SOSGenre.get_all(), user = User.get_by_id(data))
     
 @app.route('/sos/electro')
 def sos_electro():

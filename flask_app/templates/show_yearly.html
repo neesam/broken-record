@@ -13,7 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/ufjdm1ebz6px20j3zzumetb2scikv37mdsuffw9sl4hpuvpq/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <title>Document</title>
+    <script>
+      tinymce.init({
+        selector: 'textarea'
+      })
+    </script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -387,6 +394,7 @@
                   </fieldset>
                   <button id="submit-btn" type="submit">Submit</button>
                   </form>
+                  <button id="review-btn">Write a review</button>
                 {% endif %}
 
 
@@ -1719,5 +1727,6 @@
         </div>
   </div>
   </div>
+  <script src="/static/js.js"></script>
 </body>
 </html>

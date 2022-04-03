@@ -127,7 +127,8 @@ class User:
                 'album_id': row['album_id'],
                 'year': row['year'],
                 'bunk': row['bunk'],
-                'artist_id': row['artist_id']
+                'artist_id': row['artist_id'],
+                'content': row['content']
             }
 
             user_info = {
@@ -168,7 +169,8 @@ class User:
                 'album_id': row['album_id'],
                 'year': row['year'],
                 'bunk': row['bunk'],
-                'artist_id': row['artist_id']
+                'artist_id': row['artist_id'],
+                'content': row['content']
             }
 
             user_info = {
@@ -214,7 +216,8 @@ class User:
                 'album_id': row['album_id'],
                 'year': row['year'],
                 'bunk': row['bunk'],
-                'artist_id': row['artist_id']
+                'artist_id': row['artist_id'],
+                'content': row['content']
             }
 
             user_info = {

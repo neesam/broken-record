@@ -924,7 +924,7 @@ iframe{
     transform-origin:center;
     transform:perspective(800px) rotateY(17deg);
     transition:0.5s;
-    -webkit-box-reflect:below -14px linear-gradient(transparent, transparent, #0004);
+    -webkit-box-reflect:below -1px linear-gradient(transparent, transparent, #0004);
     color: white;
     font-family: 'Noto Sans';
 }
@@ -1417,7 +1417,7 @@ box-shadow: 5px 5px 5px gray;
     padding: 20px;
     width: 500px;
     min-height: 200px;
-    height: 330px;
+    height: 340px;
     display: grid;
     grid-template-rows: 20px 50px 1fr 50px;
     border-radius: 10px;
@@ -1431,8 +1431,8 @@ box-shadow: 5px 5px 5px gray;
 
   #card-longer-2line #submit-btn {
     position: relative;
-bottom: 10px;
-right: 185px;
+bottom: 5px;
+right: 210px;
 height: 40px;
 width: 80px;
 border-radius: 10%;
@@ -2281,7 +2281,7 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     transition:0.5s;
     width: 170%;
     margin-bottom: 70px;
-    margin-left: 70px;
+    margin-left: 50px;
     left: 7%;
     position: relative;
     font-family: 'Marcellus';
@@ -2333,6 +2333,7 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     border-radius: 5px;
     width: 290px;
     margin-bottom: 10px;
+    color: black;
   }
 
   #message-this-person img {
@@ -2346,6 +2347,49 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     margin-top: 40px;
     color: white;
   }
+
+  #message-this-person a {
+    color: black;
+    font-size: 20px;
+    position: relative;
+    right: 10%;
+  }
+
+  .right-side-msg {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+}
+
+#review-btn {
+    position: relative;
+    top: 22%;
+    left: 67%;
+    border-radius: 10%;
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+    color: white;
+    box-shadow: 5px 5px 5px gray;
+    height: 40px;
+    width: 150px;
+}
+
+#textbox { 
+  margin-top: 20px;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+#review-content {
+  position: relative;
+  top: 40%;
+}
 
 /* Top tracks */
 
@@ -2369,6 +2413,7 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
 .tracklist {
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
     width: 200px;
+    margin-bottom: 50px;
 }
 
 #track a {
@@ -2557,6 +2602,157 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     transform-origin: right center;
   }
 
+/* Sixties */
+
+.sixties-years-card {
+  grid-area: 1 / 1;
+  height: 200px;
+  width: 400px;
+  transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+  background-image: url('https://i.pinimg.com/originals/98/30/d3/9830d32d61134d92b58955d2372ee971.jpg');
+  background-size: cover ;
+  font-family: 'Boogaloo';
+  object-fit:fill;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 90px;
+  font-weight: 900;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
+}
+
+.sixties-years-card h1 {
+  font-size: 90px;
+  font-weight: 900;
+  color: rgb(226, 237, 202)
+}
+
+.sixties-years-card .years-year {
+  line-height: 1;
+  color: #0eb0b6;
+  padding: 0 5px;
+  display: inline-block;
+  transform: translate(-1px, 1px) scale(0.75);
+  font-size: 90px;
+  transform-origin: right center;
+}
+
+.seventies-years-card {
+  grid-area: 1 / 1;
+  height: 200px;
+  width: 400px;
+  transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+  background-image: url('https://www.atrafloor.com/app/uploads/2020/05/Swatch_orange-blue-wave-70s-retro-vinyl-flooring-scaled.jpg');
+  background-size: cover ;
+  font-family: 'Monoton';
+  object-fit:fill;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 90px;
+  font-weight: 900;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
+}
+
+.seventies-years-card h1 {
+  font-size: 90px;
+  font-weight: 900;
+  color: #d37a5a
+}
+
+.seventies-years-card .years-year {
+  line-height: 1;
+  color: #E4B33F;
+  padding: 0 5px;
+  display: inline-block;
+  transform: translate(-1px, 1px) scale(0.75);
+  font-size: 90px;
+  transform-origin: right center;
+}
+
+.nineties-years-card {
+  grid-area: 1 / 1;
+  height: 200px;
+  width: 400px;
+  transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+  background-image: url('https://img.buzzfeed.com/buzzfeed-static/static/2017-04/14/21/campaign_images/buzzfeed-prod-fastlane-03/this-90s-pattern-quiz-will-determine-how-well-you-2-14359-1492219073-0_dblbig.jpg?resize=1200:*');
+  background-size: cover ;
+  font-family: 'Playfair Display';
+  object-fit:fill;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 90px;
+  font-weight: 900;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
+}
+
+.nineties-years-card h1 {
+  font-size: 90px;
+  font-weight: 900;
+  color: white
+}
+
+.nineties-years-card .years-year {
+  line-height: 1;
+  color: #FF6FAA;
+  padding: 0 5px;
+  display: inline-block;
+  transform: translate(-1px, 1px) scale(0.75);
+  font-size: 90px;
+  transform-origin: right center;
+}
+
+.twentytens-years-card {
+  grid-area: 1 / 1;
+  height: 200px;
+  width: 400px;
+  transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+  background-image: url('https://www.psdgraphics.com/file/diamond-plate.jpg');
+  background-size: cover ;
+  font-family: 'Playfair Display';
+  object-fit:fill;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 90px;
+  font-weight: 900;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
+}
+
+.twentytens-years-card h1 {
+  font-size: 90px;
+  font-weight: 900;
+  color: #aca6c0;
+  text-shadow: 2px 2px rgba(0,0,0,.5)
+}
+
+.twentytens-years-card .years-year {
+  line-height: 1;
+  color: #AEADB1;
+  padding: 0 5px;
+  display: inline-block;
+  transform: translate(-1px, 1px) scale(0.75);
+  font-size: 90px;
+  transform-origin: right center;
+}
+
 #sideAlbums img {
     height: 190px;
     width: 100%;
@@ -2725,3 +2921,27 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
   #message-cards {
     display: flex;
   }
+
+  #artist-gallery-card {
+      background-color:#ddc;
+      border:solid 5vmin #eee;
+      border-bottom-color:#fff;
+      border-left-color:#eee;
+      border-radius:2px;
+      border-right-color:#eee;
+      border-top-color:#ddd;
+      box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+      padding:2vmin;
+      position:relative;
+      text-align:center;
+    }
+
+    .carousel-item img {
+      height: 300px;
+      margin-top: 5rem
+    }
+
+    #carouselExampleInterval {
+      display: flex;
+      justify-content: center;
+    }

@@ -59,7 +59,7 @@
     <div id="fav-artist-page-picnhead">
      <h1 id="artist-name">{{artist.artists_items_0_name}}</h1>
       <div class="albums-card-favs">
-        <img id="artist-pic-on-individual" class="card-img-top" src={{artist.artists_items_0_images_0_url}} alt="Card image cap">
+        <img id="artist-gallery-card" class="card-img-top" src={{artist.artists_items_0_images_0_url}} alt="Card image cap">
       </div>
     </div>
     <div class="top-tracks">
@@ -193,6 +193,42 @@
         </div>
         {% endif %}
         {% if i.albums_items_name|length == 32 %}
+        <div id="artist-card-longer2" class="card card-1 mydata">
+          <div id="yearly-card-htags">
+            <h2 class="card__title">{{i.albums_items_name}}</h2>
+            <h3 class="card__title">{{i.artist_name}}</h3>
+          </div>
+          <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
+        </div>
+        {% endif %}
+        {% if i.albums_items_name|length == 36 %}
+        <div id="artist-card" class="card card-1 mydata">
+          <div id="yearly-card-htags">
+            <h2 class="card__title">{{i.albums_items_name}}</h2>
+            <h3 class="card__title">{{i.artist_name}}</h3>
+          </div>
+          <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
+        </div>
+        {% endif %}
+        {% if i.albums_items_name|length == 42 %}
+        <div id="artist-card-longer2" class="card card-1 mydata">
+          <div id="yearly-card-htags">
+            <h2 class="card__title">{{i.albums_items_name}}</h2>
+            <h3 class="card__title">{{i.artist_name}}</h3>
+          </div>
+          <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
+        </div>
+        {% endif %}
+        {% if i.albums_items_name|length == 43 %}
+        <div id="artist-card-longer2" class="card card-1 mydata">
+          <div id="yearly-card-htags">
+            <h2 class="card__title">{{i.albums_items_name}}</h2>
+            <h3 class="card__title">{{i.artist_name}}</h3>
+          </div>
+          <p class="card__exit"><a target="_blank" href={{i.albums_items_external_urls_spotify}}>listen on spotify</a></p>
+        </div>
+        {% endif %}
+        {% if i.albums_items_name|length == 44 %}
         <div id="artist-card-longer2" class="card card-1 mydata">
           <div id="yearly-card-htags">
             <h2 class="card__title">{{i.albums_items_name}}</h2>

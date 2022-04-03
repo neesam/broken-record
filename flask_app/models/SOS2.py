@@ -147,7 +147,7 @@ class SOS2:
 
     def get_all_top_albums(cls):
 
-        query = 'SELECT * FROM top_albums_playlists ORDER BY RAND()'
+        query = 'SELECT * FROM top_albums_playlists ORDER BY RAND() LIMIT 250'
 
         return connectToMySQL(cls.db).query_db(query)
 

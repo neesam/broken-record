@@ -59,7 +59,7 @@
     {% for i in artists %}
     <div class="other-albums-container">
       <div class="albums-card">
-        <a href="/favartists/{{i.artists_items_0_id}}"><img class="card-img-top" src={{i.artists_items_0_images_0_url}} alt="Card image cap"></a>
+        <a href="/favartists/{{i.artists_items_0_id}}"><img id="artist-gallery-card" class="card-img-top" src={{i.artists_items_0_images_0_url}} alt="Card image cap"></a>
         <div class="card-body">
          <h5 class="card-title"><a href="/favartists/{{i.artists_items_0_id}}">{{i.albums_items_name}}</a></h5>
         </div>

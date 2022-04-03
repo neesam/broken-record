@@ -1,13 +1,22 @@
-let rate = document.querySelector('.rate')
+let btn = document.querySelector('#review-btn');
 
-let nav = document.querySelector('nav')
+let form = document.querySelector('form')
 
-let form = document.querySelector('.rating-form')
+btn.addEventListener('click', () => {
+  let textBox = document.createElement('textarea');
 
-let stars = document.getElementsByTagName('input')
+  textBox.id = 'textbox'
+  textBox.name = 'content'
 
-let cont = document.querySelectorAll('#track-container')
+  textBox.style.height = '100px';
+  textBox.style.width = '100%'
+  textBox.style.marginTop = '50px'
+  btn.style.display = 'none'
 
-// form.addEventListener('click', () => {
-//     form.submit()
-// })
+  tinymce.init({
+    selector: 'textarea'
+  })
+
+  form.appendChild(textBox)
+  
+})

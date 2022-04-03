@@ -30,4 +30,54 @@ def years_1980():
 
     return render_template('years1980.html', user = User.get_by_id(data))
 
+@app.route('/years/1960')
+def years_1960():
+
+    if 'user_id' not in session:
+        return redirect('/')
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('years1960.html', user = User.get_by_id(data))
+
+@app.route('/years/1970')
+def years_1970():
+
+    if 'user_id' not in session:
+        return redirect('/')
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('years1970.html', user = User.get_by_id(data))
+
+@app.route('/years/1990')
+def years_1990():
+
+    if 'user_id' not in session:
+        return redirect('/')
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('years1990.html', user = User.get_by_id(data))
+    
+@app.route('/years/2010')
+def years_2010():
+
+    if 'user_id' not in session:
+        return redirect('/')
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('years2010.html', user = User.get_by_id(data))
+
+
+
 

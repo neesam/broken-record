@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -59,9 +60,9 @@
     {% for i in playlists %}
     <div class="other-albums-container">
       <div class="albums-card">
-        <a href="/sos/{{i.url_genre}}"><img class="card-img-top" src={{i.image}} alt="Card image cap"></a>
+        <a href="/sos/{{i.url}}"><h1 style="font-family: 'Playfair Display'">{{i.name}}</h1></a>
         <div class="card-body">
-          <h5 class="card-title"><a href="/genres/{{i.url_genre}}">{{i.genre}}</a></h5>
+          <h5 class="card-title"><a href="/genres/{{i.url}}">{{i.genre}}</a></h5>
         </div>
       </div>
       </div>

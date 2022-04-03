@@ -72,6 +72,24 @@ class allTheYear:
 
     @classmethod
 
+    def get_sixtytwo(cls):
+
+        query = 'SELECT * FROM sixties_years WHERE input_query = "1962" ORDER BY RAND()'
+
+        return connectToMySQL(cls.db).query_db(query)
+
+    @classmethod
+
+    def get_sixtytwo_by_id(cls, data):
+
+        query = 'SELECT * FROM sixties_years WHERE  input_query = "1962" and albums_items_id = %(id)s' 
+
+        results = connectToMySQL(cls.db).query_db(query, data)
+
+        return cls(results[0])
+
+    @classmethod
+
     def get_sixtythree(cls):
 
         query = 'SELECT * FROM sixties_years WHERE input_query = "1963" ORDER BY RAND()'

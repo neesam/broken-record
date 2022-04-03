@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,15 +54,15 @@
     </div>
   </nav>
 
-<h1 class="year">top albums</h1>
+<h1 class="year">1994</h1>
   <div class="card-container">
     {% for i in albums %}
     <div class="other-albums-container">
       <div class="albums-card">
-        <a href="/top-albums/{{i.items_track_album_id}}"><img class="card-img-top" src={{i.items_track_album_images_0_url}} alt="Card image cap"></a>
+        <a href="/1994/{{i.albums_items_id}}"><img class="card-img-top" src={{i.albums_items_images_0_url}} alt="Card image cap"></a>
         <div class="card-body">
-         <h5 class="card-title"><a href="/top-albums/{{i.items_track_album_id}}">{{i.items_track_album_name}}</a></h5>
-          <h6 class="card-title">{{i.items_track_album_artists_name}}</h6>
+         <h5 class="card-title"><a href="/1994/{{i.albums_items_id}}">{{i.albums_items_name}}</a></h5>
+          <h6 class="card-title">{{i.albums_items_artists_0_name}}</h6>
         </div>
       </div>
       </div>
