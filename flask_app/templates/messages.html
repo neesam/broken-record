@@ -56,27 +56,6 @@
   </nav>
   
       <div id="message-cards">
-        <div id="message-card" class="card card-1 mydata message">
-            {% for message in messages %}
-            {% if message.sender_id == otherUser.id %}
-            <a href="/{{message.id}}">
-                <div>
-                  <div>
-                  </div>
-                  <div class="message-content">
-                    <p>{{message.sender}}</p>
-                    <p>{{message.content}}</p>
-                  </div>
-                  <div>
-
-                  </div>
-                </div>
-                </a>  
-                <div>
-             </div>   
-              {% endif %}
-            {% endfor %}
-          </div>
           <form class="p-2" action="/post_message" method="post">
             <input type="hidden" name="sender_id" value={{session.user_id}}>
             <input type="hidden" name="receiver_id" value={{otherUser.id}}>

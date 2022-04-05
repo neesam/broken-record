@@ -34,7 +34,7 @@ class Message:
 
     def get_my_messages_too(cls, data):
 
-        query = 'SELECT users.username as sender, users2.username as receiver, messages.* FROM users LEFT JOIN messages ON users.id = messages.sender_id LEFT JOIN users as users2 ON users2.id = messages.receiver_id WHERE users.id = %(id)s'
+        query = 'SELECT users.username as sender, users2.username as receiver, messages.* FROM users LEFT JOIN messages ON users.id = messages.sender_id LEFT JOIN users as users2 ON users2.id = messages.receiver_id WHERE users.id = %(id)s and users2.id = %(id2)s OR users.id = %(id2)s and users2.id = %(id)s ORDER BY messages.created_at '
 
         results = connectToMySQL(cls.db).query_db(query, data)
 

@@ -16,7 +16,8 @@ def messages(id):
     }
 
     data = {
-        'id': session['user_id']
+        'id': session['user_id'],
+        'id2': id
     }
 
     return render_template('messages.html', user = User.get_by_id(data), users = User.get_all_users(), messages = Message.get_user_messages(data), otherUser = User.get_by_id(dataForSender), myMessages = Message.get_my_messages_too(data))

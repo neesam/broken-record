@@ -1,5 +1,6 @@
 from ..config.mysqlconnection import connectToMySQL
 from flask_app.models import genre
+from flask import flash
 
 
 class Rating:
@@ -112,3 +113,14 @@ class Rating:
             }
             rating.genres.append(genre.Genre(genre_data))
         return rating
+
+    @staticmethod
+
+    def validate_content_length(rating):
+
+        is_valid = True
+
+        if len(rating['content']) > 295:
+            flash('Only 295 characters.', 'content')
+            is_valid = False
+        return is_valid

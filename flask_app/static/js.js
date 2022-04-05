@@ -1,22 +1,50 @@
-let btn = document.querySelector('#review-btn');
+const buttons = document.querySelectorAll(
+  '[data-carousel-button]'
+);
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const offset =
+      button.dataset.carouselButton === 'next'
+        ? 1
+        : -1;
+    const slides = button
+      .closest('[data-carousel]')
+      .querySelector('[data-slides]');
+
+    const activeSlide = slides.querySelector(
+      '[data-active]'
+    );
+    let newIndex =
+      [...slides.children].indexOf(activeSlide) +
+      offset;
+    if (newIndex < 0)
+      newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length)
+      newIndex = 0;
+
+    slides.children[
+      newIndex
+    ].dataset.active = true;
+    delete activeSlide.dataset.active;
+  });
+});
+
+let textBox = document.createElement('textarea')
+textBox.name = 'content'
+textBox.style.position = 'relative'
+textBox.style.top = '50px'
+textBox.style.width = '100%'
 
 let form = document.querySelector('form')
 
+let btn = document.querySelector('#review-btn')
+
 btn.addEventListener('click', () => {
-  let textBox = document.createElement('textarea');
-
-  textBox.id = 'textbox'
-  textBox.name = 'content'
-
-  textBox.style.height = '100px';
-  textBox.style.width = '100%'
-  textBox.style.marginTop = '50px'
+  form.appendChild(textBox)
   btn.style.display = 'none'
 
-  tinymce.init({
-    selector: 'textarea'
-  })
+  let tooLong = document.querySelector('#content-too-long')
 
-  form.appendChild(textBox)
-  
+  tooLong.style.display = 'none'
 })

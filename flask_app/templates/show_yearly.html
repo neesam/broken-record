@@ -16,11 +16,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.tiny.cloud/1/ufjdm1ebz6px20j3zzumetb2scikv37mdsuffw9sl4hpuvpq/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <title>Document</title>
-    <script>
-      tinymce.init({
-        selector: 'textarea'
-      })
-    </script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -439,6 +434,7 @@
                           <input type="radio" checked="checked" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                       </fieldset>
                       <button id="submit-btn" type="submit">Submit</button>
+
                       </form>
                     {% endif %}
                     {% if i.stars == 2 %}
@@ -468,6 +464,7 @@
                           <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                       </fieldset>
                       <button id="submit-btn" type="submit">Submit</button>
+
                       </form>
                     {% endif %}
                     {% if i.stars == 3 %}
@@ -496,6 +493,7 @@
                           <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                       </fieldset>
                       <button id="submit-btn" type="submit">Submit</button>
+
                       </form>
                     {% endif %}
                     {% if i.stars == 4 %}
@@ -524,6 +522,7 @@
                           <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                       </fieldset>
                       <button id="submit-btn" type="submit">Submit</button>
+
                       </form>
                     {% endif %}
                     {% if i.stars == 5 %}
@@ -552,6 +551,7 @@
                           <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                       </fieldset>
                       <button id="submit-btn" type="submit">Submit</button>
+
                       </form>
                     {% endif %}
                     {% if i.stars == 6 %}
@@ -580,6 +580,7 @@
                           <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                       </fieldset>
                       <button id="submit-btn" type="submit">Submit</button>
+
                       </form>
                     {% endif %}
                     {% if i.stars == 7 %}
@@ -608,6 +609,7 @@
                           <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                       </fieldset>
                       <button id="submit-btn" type="submit">Submit</button>
+
                       </form>
                     {% endif %}
                     {% if i.stars == 8 %}
@@ -636,6 +638,7 @@
                           <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                       </fieldset>
                       <button id="submit-btn" type="submit">Submit</button>
+
                       </form>
                     {% endif %}
                     {% if i.stars == 9 %}
@@ -664,6 +667,7 @@
                           <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                       </fieldset>
                       <button id="submit-btn" type="submit">Submit</button>
+
                       </form>
                     {% endif %}
                     {% if i.stars == 10 %}
@@ -692,6 +696,7 @@
                           <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                       </fieldset>
                       <button id="submit-btn" type="submit">Submit</button>
+
                       </form>
                     {% endif %}
                 </fieldset>
@@ -729,7 +734,7 @@
                     <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
                     <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 </fieldset>
-                <button id="submit-btn" type="submit">Submit</button>
+                <button id="submit-btn" type="submit">Submit</butto
                 </form>
                 </div>
                 {% endif %}
@@ -1059,7 +1064,7 @@
                     <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
                     <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 </fieldset>
-                <button id="submit-btn" type="submit">Submit</button>
+                <button id="submit-btn" type="submit">Submit</butto
                 </form>
                 </div>
                 {% endif %}
@@ -1390,7 +1395,7 @@
                     <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
                     <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 </fieldset>
-                <button id="submit-btn" type="submit">Submit</button>
+                <button id="submit-btn" type="submit">Submit</butto
                 </form>
                 </div>
                 {% endif %}
@@ -1724,6 +1729,15 @@
                 </div>
                 {% endif %}
           </div>
+          {% with messages = get_flashed_messages(category_filter = ['content'])%}
+                {% if messages %}
+                    {% for message in messages %}
+                    <div id="content-too-long" class="alert alert-primary" role="alert">
+                      {{message}}
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
         </div>
   </div>
   </div>

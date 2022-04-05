@@ -247,6 +247,7 @@ class Seventy:
         query = 'SELECT * FROM eighties_years WHERE  input_query = "1981" and albums_items_id = %(id)s' 
 
         results = connectToMySQL(cls.db).query_db(query, data)
+        print(results)
 
         return cls(results[0])
 
