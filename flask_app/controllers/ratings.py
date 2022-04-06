@@ -36,9 +36,6 @@ def create_rating():
         'artist_id': request.form['artist_id']
     }
 
-    # if not Rating.validate_content_length(request.form):
-    #     return redirect(f"/{request.form['year']}/{request.form['album_id']}")
-
     Rating.save(data)
     
     return redirect('/dashboard')
