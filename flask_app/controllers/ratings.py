@@ -38,7 +38,7 @@ def create_rating():
     }
 
     if not Rating.validate_content_length(request.form):
-        return redirect('/1960/1QxZ6BkEToSpD16tUYKkY9')
+        return redirect(f"/{request.form['year']}/{request.form['album_id']}")
 
     Rating.save(data)
     

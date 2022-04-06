@@ -30,21 +30,11 @@ buttons.forEach((button) => {
   });
 });
 
-let textBox = document.createElement('textarea')
-textBox.name = 'content'
-textBox.style.position = 'relative'
-textBox.style.top = '50px'
-textBox.style.width = '100%'
-
-let form = document.querySelector('form')
+let textBox = document.querySelector('#write-a-review')
 
 let btn = document.querySelector('#review-btn')
 
 btn.addEventListener('click', () => {
-  form.appendChild(textBox)
-  btn.style.display = 'none'
-
-  let tooLong = document.querySelector('#content-too-long')
-
-  tooLong.style.display = 'none'
+  btn.style.display = 'none';
+  textBox.style.display = 'block'
 })
