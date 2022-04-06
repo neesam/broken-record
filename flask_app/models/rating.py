@@ -113,13 +113,13 @@ class Rating:
             rating.genres.append(genre.Genre(genre_data))
         return rating
 
-    @staticmethod
+    # @staticmethod
 
-    def validate_content_length(rating):
+    # def validate_content_length(rating):
 
-        is_valid = True
+    #     is_valid = True
 
-        if len(rating['content']) > 295:
-            flash('Only 295 characters.', 'content')
-            is_valid = False
-        return is_valid
+    #     if len(rating['content']) > 295:
+    #         flash('Only 295 characters.', 'content')
+    #         is_valid = False
+    #     return is_valid

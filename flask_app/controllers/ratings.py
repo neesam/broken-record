@@ -33,12 +33,11 @@ def create_rating():
         'album_id': request.form['album_id'],
         'user_id': session['user_id'],
         'bunk': request.form['bunk'],
-        'artist_id': request.form['artist_id'],
-        'content': request.form['content']
+        'artist_id': request.form['artist_id']
     }
 
-    if not Rating.validate_content_length(request.form):
-        return redirect(f"/{request.form['year']}/{request.form['album_id']}")
+    # if not Rating.validate_content_length(request.form):
+    #     return redirect(f"/{request.form['year']}/{request.form['album_id']}")
 
     Rating.save(data)
     
@@ -68,8 +67,7 @@ def create_rating_yearly():
         'release_date': request.form['release_date'],
         'tracks': request.form['tracks'],
         'album_id': request.form['album_id'],
-        'id': request.form['rating_id'],
-        'content': request.form['content']
+        'id': request.form['rating_id']
     }
 
     Rating.update_rating(data)
