@@ -1120,7 +1120,7 @@ iframe{
     padding: 20px;
     width: 500px;
     min-height: 200px;
-    height: 410px;
+    height: 470px;
     display: grid;
     grid-template-rows: 20px 50px 1fr 50px;
     border-radius: 10px;
@@ -1158,7 +1158,7 @@ iframe{
 
   #mydata2 form {
     position: relative;
-    top: 12em;
+    top: 14em;
     right: .3em;
   }
 
@@ -1172,7 +1172,7 @@ iframe{
   #mydata2 #submit-btn {
     position: relative;
     right:42%;
-    top: 12%;
+    top: 40%;
     border-radius: 10%;
     padding: 5px;
     background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
@@ -1327,13 +1327,13 @@ iframe{
   #mydata1 .card__exit {
     position: relative;
     left: 410px;
-    bottom: 145px;
+    bottom: 105px;
   }
 
   #mydata2 .card__exit {
     position: relative;
     left: 410px;
-    bottom: 110px;
+    bottom: 190px;
   }
 
   #mydata3 .card__exit {
