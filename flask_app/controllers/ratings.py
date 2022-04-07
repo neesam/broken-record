@@ -83,8 +83,3 @@ def user_ratings(id):
     }
 
     return render_template('user_ratings.html', userRatings = User.get_user_ratings(data), user = User.get_by_id(sessionID), ratingProfile = User.get_by_id(data), users = User.get_all_users(), ratings = User.get_user_who_posted())
-
-@app.route('/i')
-def i():
-
-    return render_template('i.html')

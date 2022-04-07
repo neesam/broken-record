@@ -66,8 +66,16 @@
       <li id="logout" class="nav-item">
         <a href="/">logout</a>
       </li>
+      {% if userRatings|length < 2 %}
       <div class="user-nav">
-<a href="/ratings/{{user.id}}"><img src={{user.avatar}} alt=""></a>      </div>
+<img src={{user.avatar}} alt="">     
+ </div>
+ {% endif %}
+ {% if userRatings|length > 1 %}
+      <div class="user-nav">
+<a href="/ratings/{{user.id}}"><img src={{user.avatar}} alt=""></a>     
+ </div>
+ {% endif %}
     </div>
   </nav>
   
@@ -93,10 +101,12 @@
             <button id="user-prof-submit" class="btn btn-light">Submit</button>
         </form>
         </div>
+        {% if userRatings|length > 1 %}
         <div id="side-prof-ratingsnreviews" class="card-body">
           <a href="ratings/{{user.id}}" class="card-link">Ratings</a>
           <!-- <a id="prof-reviews" href="#" class="card-link">Reviews</a> -->
         </div>
+        {% endif %}
       </div>
       </div>
 

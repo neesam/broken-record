@@ -19,7 +19,7 @@ def dashboard():
         'id': session['user_id']
     }
 
-    return render_template('dashboard.html', user = User.get_by_id(data), users = User.get_all_users(), ratings = User.get_user_who_posted(), albums = yearlyAlbums.get_side_albums()) 
+    return render_template('dashboard.html', user = User.get_by_id(data), users = User.get_all_users(), userRatings = User.get_user_ratings(data), ratings = User.get_user_who_posted(), albums = yearlyAlbums.get_side_albums()) 
 
 @app.route('/listening/submit', methods=['POST'])
 def listening_submit():
