@@ -34,7 +34,7 @@ def post_message():
     }
     Message.save(data)
 
-    return redirect('/dashboard')
+    return redirect(f"/messages/{request.form['receiver_id']}")
 
 @app.route('/destroy/message/<int:id>')
 def destroy_message(id):
