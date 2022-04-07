@@ -87,6 +87,9 @@ class User:
         if user['password'] != user['confirm']:
             flash('Passwords must match.', 'register')
             is_valid = False
+        if len(user['avatar']) == 0:
+            flash('Please include an avatar', 'register')
+            is_valid = False
         return is_valid
         
     @staticmethod
