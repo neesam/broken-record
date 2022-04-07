@@ -1148,7 +1148,7 @@ iframe{
   #mydata1 #submit-btn {
     position: relative;
     right:42%;
-    top: 20%;
+    top: 46%;
     border-radius: 10%;
     padding: 5px;
     background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
@@ -1233,12 +1233,16 @@ iframe{
     left: 10%;
   }
 
+  #another-one {
+    margin-top: 10px;
+  }
+
   #mydata_ {
     margin: 20px;
     padding: 20px;
-    width: 500px;
+    width: 550px;
     min-height: 100px;
-    height: 440px;
+    height: 480px;
     display: grid;
     grid-template-rows: 20px 50px 1fr 50px;
     border-radius: 10px;
@@ -1252,7 +1256,7 @@ iframe{
 
   #mydata_ form {
     position: relative;
-    top: 12em;
+    top: 15em;
     right: .3em;
   }
 
@@ -1265,8 +1269,8 @@ iframe{
 
   #mydata_ #submit-btn {
     position: relative;
-    right:42%;
-    top: 18%;
+    right:38%;
+    top: 40%;
     border-radius: 10%;
     padding: 5px;
     background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
@@ -1316,8 +1320,8 @@ iframe{
 
   #mydata_ .card__exit {
     position: relative;
-    left: 410px;
-    bottom: 110px;
+    left: 450px;
+    bottom: 193px;
   }
 
   #mydata1 .card__exit {
@@ -1347,7 +1351,7 @@ iframe{
   #mydata4 #submit-btn {
     position: relative;
     right:42%;
-    top: 18%;
+    top: 40%;
     border-radius: 10%;
     padding: 5px;
     background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);

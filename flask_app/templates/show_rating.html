@@ -529,8 +529,10 @@
             {% if album.Title|length == 23 %}
             <div id="mydata_" class="card card-1 mydata">
           <div id="yearly-card-htags">
-            <h2 class="card__title">{{album.Title}}</h2>
-            <h3 class="card__title">{{album.Name}}</h3>
+            <div id="another-one">
+              <h2 class="card__title">{{album.Title}}</h2>
+              <h3 class="card__title">{{album.Name}}</h3>
+            </div>
             <p class="card__exit"><a target="_blank" href={{album.album_link}}>listen</a></p>
           </div>
           <form id="my-rating">
