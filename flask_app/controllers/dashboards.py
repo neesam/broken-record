@@ -45,7 +45,7 @@ def albums():
         'id': session['user_id']
     }
 
-    return render_template('all_albums.html', user = User.get_by_id(data), albums = Album.get_all())
+    return render_template('all_albums.html',  userRatings = User.get_user_ratings(data), user = User.get_by_id(data), albums = Album.get_all())
 
 
 @app.route('/brookfield')
@@ -55,7 +55,7 @@ def brookfield():
         'id': session['user_id']
     }
 
-    return render_template('all_my_albums.html', user = User.get_by_id(data), brookfield = Brookfield.get_my_albums())
+    return render_template('all_my_albums.html',  userRatings = User.get_user_ratings(data), user = User.get_by_id(data), brookfield = Brookfield.get_my_albums())
 
 @app.route('/brookfield/<int:id>')
 def brookfield_individual(id):
@@ -69,7 +69,7 @@ def brookfield_individual(id):
         'id': id
     }
 
-    return render_template('show_brookfield.html', user = User.get_by_id(userID), album = Brookfield.get_brookfield_by_id(idData))
+    return render_template('show_brookfield.html',  userRatings = User.get_user_ratings(data), user = User.get_by_id(userID), album = Brookfield.get_brookfield_by_id(idData))
 
 @app.route('/years')
 def years():
@@ -78,7 +78,7 @@ def years():
         'id': session['user_id']
     }
 
-    return render_template('years.html', user = User.get_by_id(data))
+    return render_template('years.html',  userRatings = User.get_user_ratings(data), user = User.get_by_id(data))
 
 @app.route('/favartists')
 def favartists():
@@ -87,7 +87,7 @@ def favartists():
         'id': session['user_id']
     }
 
-    return render_template('fav_artists.html', user = User.get_by_id(data), artists = favArtist.get_all())
+    return render_template('fav_artists.html',  userRatings = User.get_user_ratings(data), user = User.get_by_id(data), artists = favArtist.get_all())
 
 @app.route('/favartists/<id>')
 def individual_artist(id):
@@ -100,7 +100,7 @@ def individual_artist(id):
         'id': id
     }
 
-    return render_template('show_artist.html', artist = favArtist.get_by_id(idData), user = User.get_by_id(userID), albums = favArtist.get_artist_with_albums(idData), tracks = favArtist.get_artist_tracks(idData))
+    return render_template('show_artist.html',  userRatings = User.get_user_ratings(data), artist = favArtist.get_by_id(idData), user = User.get_by_id(userID), albums = favArtist.get_artist_with_albums(idData), tracks = favArtist.get_artist_tracks(idData))
 
 @app.route('/favartists/albums/<id>')
 def favartists_album(id):
@@ -113,7 +113,7 @@ def favartists_album(id):
         'id': id
     }
 
-    return render_template('show_album.html', user = User.get_by_id(userID), album = favArtistAlbum.get_by_id(idData))
+    return render_template('show_album.html',  userRatings = User.get_user_ratings(data), user = User.get_by_id(userID), album = favArtistAlbum.get_by_id(idData))
 
 @app.route('/sundial')
 def sundial():
@@ -122,7 +122,7 @@ def sundial():
         'id': session['user_id']
     }
 
-    return render_template('sundial.html',user = User.get_by_id(userID), sundial = Album.get_sundial_albums())
+    return render_template('sundial.html', user = User.get_by_id(userID),  userRatings = User.get_user_ratings(data), sundial = Album.get_sundial_albums())
 
 @app.route('/sundial/<int:id>')
 def sundial_individual(id):
@@ -135,4 +135,4 @@ def sundial_individual(id):
         'id': id
     }
 
-    return render_template('show_sundial.html', user = User.get_by_id(userID), album = Brookfield.get_sundial_by_id(data))
+    return render_template('show_sundial.html',  userRatings = User.get_user_ratings(data), user = User.get_by_id(userID), album = Brookfield.get_sundial_by_id(data))

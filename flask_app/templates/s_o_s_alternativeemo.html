@@ -30,33 +30,52 @@
         <li class="nav-item">
           <a class="nav-link" href="/years">years<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/discover">genres</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/sos">sounds of spotify</a>
-    </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/albums">andy's ratings</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/favartists">andy's favorites</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/brookfield">brookfield corp</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sundial">sundial</a>
-        </li>
-      </ul>
+        <div id="nav-dropdowns">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            discovery
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/discover">genres</a>
+            <a class="dropdown-item" href="/sos">sounds of spotify</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            andy's corner
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/albums">andy's ratings</a>
+            <a class="dropdown-item" href="/favartists">andy's favorites</a>
+          </div>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              my music
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/brookfield">brookfield corp</a>
+              <a class="dropdown-item" href="/sundial">sundial</a>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
     </div>
     <div class="nav-right">
       <li id="logout" class="nav-item">
         <a href="/">logout</a>
       </li>
+      {% if userRatings|length < 2 %}
       <div class="user-nav">
-<a href="/ratings/{{user.id}}"><img src={{user.avatar}} alt=""></a>      </div>
-    </div>
+<img src={{user.avatar}} alt="">     
+ </div>
+ {% endif %}
+ {% if userRatings|length > 1 %}
+      <div class="user-nav">
+<a href="/ratings/{{user.id}}"><img src={{user.avatar}} alt=""></a>     
+ </div>
+ {% endif %}
   </nav>
   
   <div id="all-2">
