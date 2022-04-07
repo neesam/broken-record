@@ -604,6 +604,13 @@ background: linear-gradient(350deg, rgba(207,187,168,1) 5%, rgba(247,245,239,1) 
 
 }
 
+.review-card-album-title-og {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    color: white;
+}
+
 .review-card-album-title-ha {
     display: flex;
     flex-direction: column;
@@ -621,7 +628,7 @@ background: linear-gradient(350deg, rgba(207,187,168,1) 5%, rgba(247,245,239,1) 
 .review-card-album-title {
   display: flex;
   flex-direction: column;
-  height: 100px;
+  height: 130px;
   color: white;
 }
 
