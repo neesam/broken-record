@@ -82,9 +82,8 @@
         {% if album.Title|length > 23 and album.Title|length < 46 %}
         <div id="mydata1" class="card card-1 mydata">
           <div id="yearly-card-htags">
-            <h2 class="card__title">{{album.Title}}</h2>
+            <h2 class="card__title"><a href={{album.album_link}}>{{album.Title}}</a></h2>
             <h3 class="card__title">{{album.Name}}</h3>
-            <p class="card__exit"><a target="_blank" href={{album.album_link}}>listen</a></p>
           </div>
           <form id="my-rating">
             <p class="my-rating-tag">My rating:</p>
