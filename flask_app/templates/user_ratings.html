@@ -362,9 +362,6 @@
               {% if i.content|length > 0 %}
               <p id="review-content">"{{i.content}}"</p>
               {% endif %}
-              {% if i.user_id == session['user_id']%}
-                <a href="/destroy/{{i.id}}"><h5 id="delete-rating-btn">delete</h5></a>
-              {% endif %}
               <div id="review-stars-container">
             {% if i.stars == 0 %}
                     <i class="fa-regular fa-star" style="font-size:29.5px;color:gold"></i>
