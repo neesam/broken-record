@@ -1119,7 +1119,7 @@ iframe{
     position: relative;
     top: 10%;
     left: 10%;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
   }
 
   #mydata1 #yearly-card-htags {
@@ -1150,8 +1150,8 @@ iframe{
     position: relative;
     top: 8vh;
     height: fit-content;
-
   }
+  
 
   #mydata1 #submit-btn {
     position: relative;
