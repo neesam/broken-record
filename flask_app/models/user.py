@@ -77,7 +77,6 @@ class User:
         if len(results1) >= 1:
             flash('Email already taken. Please choose another.', 'register')
             is_valid = False
-            print('I love dick')
         if not EMAIL_REGEX.match(request.form['email']):
             flash('Use the correct format for emails.', 'register')
             is_valid = False

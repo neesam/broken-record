@@ -3000,3 +3000,7 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
 #nav-dropdowns button {
   margin-top: 2px;
 }
+
+.sos-genre {
+  font-size: 50px
+}

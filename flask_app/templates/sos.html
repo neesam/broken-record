@@ -13,6 +13,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+3D&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -76,16 +91,109 @@
   
   <h1 class="year">sounds of spotify</h1>
   <div class="card-container">
-    {% for i in playlists %}
     <div class="other-albums-container">
       <div class="albums-card">
-        <a href="/sos/{{i.url}}"><h1 style="font-family: 'Playfair Display'; text-shadow: 5px 5px 5px black">{{i.name}}</h1></a>
         <div class="card-body">
-          <h5 class="card-title"><a href="/genres/{{i.url}}">{{i.genre}}</a></h5>
+          <h5 style="font-family: 'Roboto Condensed'; font-size: 50px" class="card-title sos-genre"><a href="/sos/alternative-emo">alternative emo</a></h5>
         </div>
       </div>
       </div>
-    {% endfor %}
+ 
+      <div class="other-albums-container">
+      <div class="albums-card">
+        <div class="card-body">
+          <h5 style="font-family: 'PT Serif'" class="card-title sos-genre"><a href="/sos/synthpop">synthpop</a></h5>
+          </div>
+        </div>
+        </div>
+        <div class="other-albums-container">
+        <div class="albums-card">
+          
+        <div class="card-body">
+          <h5 style="font-family: 'Limelight'" class="card-title sos-genre"><a href="/sos/dance-rock">dance rock</a></h5>
+          </div>
+        </div>
+        </div>
+        <div class="other-albums-container">
+        <div class="albums-card">
+          
+        <div class="card-body">
+          <h5 style="font-family: 'Rubik Glitch'" class="card-title sos-genre"><a href="/sos/electro">electro</a></h5>
+          </div>
+        </div>
+        </div>
+        <div class="other-albums-container">
+
+        <div class="albums-card">
+          
+        <div class="card-body">
+          <h5 style="font-family: 'Playfair Display'" class="card-title sos-genre"><a href="/sos/sophisti-pop">sophisti-pop</a></h5>
+          </div>
+        </div>
+        </div>
+        <div class="other-albums-container">
+
+        <div class="albums-card">
+          
+        <div class="card-body">
+          <h5 style="font-family: 'Emilys Candy'" class="card-title sos-genre"><a href="/sos/new-romantic">new romantic</a></h5>
+          </div>
+        </div>
+        </div>
+        <div class="other-albums-container">
+        <div class="albums-card">
+          
+        <div class="card-body">
+          <h5 style="font-family: 'Special Elite'" class="card-title sos-genre"><a href="/sos/pop-punk">pop punk</a></h5>
+          </div>
+        </div>
+        </div>
+        <div class="other-albums-container">
+        
+        <div class="albums-card">
+          
+        <div class="card-body">
+          <h5 style="font-family: 'Cinzel Decorative'" class="card-title sos-genre"><a href="/sos/freestyle">freestyle</a></h5>
+          </div>
+        </div>
+        </div>
+        <div class="other-albums-container">
+        
+          <div class="albums-card">
+            
+          <div class="card-body">
+            <h5 style="font-family: 'Rock 3D'" class="card-title sos-genre"><a href="/sos/midwest-emo">midwest emo</a></h5>
+            </div>
+          </div>
+          </div>
+          <div class="other-albums-container">
+        
+            <div class="albums-card">
+              
+            <div class="card-body">
+              <h5 style="font-family: 'Baloo 2'" class="card-title sos-genre"><a href="/sos/italian-disco">italian disco</a></h5>
+              </div>
+            </div>
+            </div>
+            <div class="other-albums-container">
+        
+              <div class="albums-card">
+                
+              <div class="card-body">
+                <h5 style="font-family: 'Nixie One'" class="card-title sos-genre"><a href="/sos/math-rock">math rock</a></h5>
+                </div>
+              </div>
+              </div>
+              <div class="other-albums-container">
+        
+                <div class="albums-card">
+                  
+                <div class="card-body">
+                  <h5 style="font-family: 'Stardos Stencil'" class="card-title sos-genre"><a href="/sos/instrumental-post-rock">instrumental post-rock</a></h5>
+                  </div>
+                </div>
+                </div>
+      </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

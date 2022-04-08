@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body id="dancerockbody">
@@ -79,27 +80,27 @@
   </nav>
   
   <div id="all-2">
-    <h1 id="sos_name" class="year">the sound of dance rock</h1>
+    <h1 style="font-family: 'Limelight'; width: 400%" id="sos_name" class="year">the sound of dance rock</h1>
     <div id="songs-container">
         {% for i in songs %}
         <div id="individual-song-dancerock">
           <a href="/sos/{{i.items_track_album_id}}"><img src={{i.items_track_album_images_0_url}}></a>
             <div id="individual-song-rightside">
               <div id="sos_track">
-                <h5><b><a target="_blank" href={{i.items_track_external_urls_spotify}}>{{i.items_track_name}}</a></b></h5>
+                <h5 style="font-family: 'Limelight'"><b><a target="_blank" href={{i.items_track_external_urls_spotify}}>{{i.items_track_name}}</a></b></h5>
               </div>
               <div id="sos_artist">
-                <h5><b><a target="_blank" href="https://open.spotify.com/artist/{{i.items_track_artists_0_id}}">{{i.items_track_album_artists_name}}</a></b></h5>
+                <h5 style="font-family: 'Limelight'"><b><a target="_blank" href="https://open.spotify.com/artist/{{i.items_track_artists_0_id}}">{{i.items_track_album_artists_name}}</a></b></h5>
               </div>
               <div id="sos_pop">
                 {% if i.items_track_popularity > 80 %}
-                <h5><span style="color: green" id="popularity">{{i.items_track_popularity}}</span></h5>
+                <h5 style="font-family: 'Limelight'"><span style="color: green" id="popularity">{{i.items_track_popularity}}</span></h5>
                 {% endif %}
                 {% if i.items_track_popularity > 40 and i.items_track_popularity < 80 %}
-                <h5><span style="color: yellow" id="popularity"><b>{{i.items_track_popularity}}</span></b></h5>
+                <h5 style="font-family: 'Limelight'"><span style="color: yellow" id="popularity"><b>{{i.items_track_popularity}}</span></b></h5>
                 {% endif %}
                 {% if i.items_track_popularity < 40 %}
-                <h5><b><span style="color: red" id="popularity">{{i.items_track_popularity}}</span></b></h5>
+                <h5 style="font-family: 'Limelight'"><b><span style="color: red" id="popularity">{{i.items_track_popularity}}</span></b></h5>
                 {% endif %}
               </div>
           </div>
