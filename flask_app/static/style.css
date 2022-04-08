@@ -574,22 +574,30 @@ background: linear-gradient(350deg, rgba(207,187,168,1) 5%, rgba(247,245,239,1) 
 	overflow: hidden;
 	margin: 0 auto;
     position: relative;
-    top: 30px;
+    top: 3vh;
     left: 3%;
-	height: 400px;
+	height: fit-content;
 	width: 900px;
-    word-wrap: break-word;
     overflow: auto;
-    white-space: wrap;
-    grid-column: 2;
-    display: inline-block;
     margin-bottom: 20px;
     font-family: 'Noto Sans';
+    display: flex;
+    border: 3px solid orange;
 }
 
 #container h6 a {
     color:#e6e6e6
 }
+
+
+
+
+
+
+
+
+
+
 
 
 .information {
@@ -667,13 +675,19 @@ background: linear-gradient(350deg, rgba(207,187,168,1) 5%, rgba(247,245,239,1) 
 .product-details {
 	position: relative;
 	text-align: left;
-	overflow: hidden;
 	padding: 30px;
-	height: 100%;
+	height: fit-content;
 	float: left;
 	width: 55%;
     word-wrap: break-word;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#review-stars-container {
+  margin-top: -10%;
 }
 
 #container .product-details h1{
@@ -1636,41 +1650,84 @@ box-shadow: 5px 5px 5px gray;
     box-shadow: 5px 5px 5px gray;
 }
 
-#already-rated-1 {
+#album-card {
     margin: 20px;
     padding: 20px;
     width: 500px;
     min-height: 200px;
-    height: 330px;
-    display: grid;
-    grid-template-rows: 20px 50px 1fr 50px;
+    height: fit-content;
     border-radius: 10px;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
     transition: all 0.2s;
     color: rgb(66, 66, 66);
-    position: relative;
-    top: 10%;
-    left: 10%;
+    margin-top: 9vh;
+    margin-left: 2vw;
+    overflow:visible;
 }
 
-#already-rated-1 form {
-position: relative;
-top: 190px;
-right: 8px;
+.cards {
+  height: auto;
 }
 
-#already-rated-1 button {
+#album-card form {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: space-around;
 position: relative;
-top: 70px;
-right: 210px;
-height: 40px;
-width: 80px;
+top: -1vh;
+grid-column: 1/3;
+margin-top: 3%;
+} 
+
+#album-card #submit-btn {
 border-radius: 10%;
 padding: 5px;
 background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
 color: white;
 box-shadow: 5px 5px 5px gray;
+margin-top: 20px;
 }
+
+#album-card fieldset {
+  margin-bottom: -20px;
+  position: relative;
+  right: 1%;
+}
+
+
+
+#album-card #yearly-card-htags {
+  margin-top: 7%;
+  grid-column: 1/3;
+  padding-bottom: -50px;
+}
+
+#album-card h2 {
+  color: black;
+}
+
+#album-card h3 {
+  color: black;
+}
+
+#album-card h2:hover {
+  color:#604BE0
+}
+
+#album-card h3:hover {
+  color:#604BE0
+}
+
+#album-card .card__exit {
+  position: relative;
+  left: 22vw;
+  bottom:20vh;
+}
+
+
 
 #already-rated-2 {
     margin: 20px;
@@ -1904,11 +1961,6 @@ box-shadow: 5px 5px 5px gray;
     width: 100%;
   }
   
-  .card__exit {
-    grid-row: 1/2;
-    justify-self: end;
-  }
-  
   .card__icon {
     grid-row: 2/3;
     font-size: 30px;
@@ -1950,7 +2002,6 @@ box-shadow: 5px 5px 5px gray;
   #yearly-card-htags {
       display: flex;
       flex-direction: column;
-      margin-top: 20px;
       font-family: 'Noto Sans';
   }
 
