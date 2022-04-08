@@ -18,7 +18,12 @@ def show_album(id):
         'id': id
     }
 
-    return render_template('show_rating.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Album.get_by_id(data)) 
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_rating.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Album.get_by_id(data),allUserRatings = User.get_user_ratings_for_one_album_page(both)) 
 
 #SIXTIES
 
