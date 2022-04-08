@@ -16,7 +16,7 @@ def years_2000():
         'id': session['user_id']
     }
 
-    return render_template('years2000.html', user = User.get_by_id(data))
+    return render_template('years2000.html', userRatings = User.get_user_ratings(data), user = User.get_by_id(data))
 
 @app.route('/years/1980')
 def years_1980():
@@ -28,7 +28,7 @@ def years_1980():
         'id': session['user_id']
     }
 
-    return render_template('years1980.html', user = User.get_by_id(data))
+    return render_template('years1980.html', userRatings = User.get_user_ratings(data), user = User.get_by_id(data))
 
 @app.route('/years/1960')
 def years_1960():
@@ -40,7 +40,7 @@ def years_1960():
         'id': session['user_id']
     }
 
-    return render_template('years1960.html', user = User.get_by_id(data))
+    return render_template('years1960.html', userRatings = User.get_user_ratings(data), user = User.get_by_id(data))
 
 @app.route('/years/1970')
 def years_1970():
@@ -52,7 +52,7 @@ def years_1970():
         'id': session['user_id']
     }
 
-    return render_template('years1970.html', user = User.get_by_id(data))
+    return render_template('years1970.html', userRatings = User.get_user_ratings(data), user = User.get_by_id(data))
 
 @app.route('/years/1990')
 def years_1990():
@@ -64,7 +64,7 @@ def years_1990():
         'id': session['user_id']
     }
 
-    return render_template('years1990.html', user = User.get_by_id(data))
+    return render_template('years1990.html', userRatings = User.get_user_ratings(data), user = User.get_by_id(data))
     
 @app.route('/years/2010')
 def years_2010():
@@ -76,7 +76,7 @@ def years_2010():
         'id': session['user_id']
     }
 
-    return render_template('years2010.html', user = User.get_by_id(data))
+    return render_template('years2010.html', userRatings = User.get_user_ratings(data), user = User.get_by_id(data))
 
 
 

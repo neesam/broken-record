@@ -20,9 +20,13 @@ def messages(id):
         'id2': id
     }
 
-    return render_template('messages.html', user = User.get_by_id(data), users = User.get_all_users(), messages = Message.get_user_messages(data), otherUser = User.get_by_id(dataForSender), myMessages = Message.get_my_messages_too(data))
+    userID = {
+        'id': session['user_id']
+    }
 
-@app.route('/post_message',methods=['POST'])
+    return render_template('messages.html', userRatings = User.get_user_ratings(userID), user = User.get_by_id(data), users = User.get_all_users(), messages = Message.get_user_messages(data), otherUser = User.get_by_id(dataForSender), myMessages = Message.get_my_messages_too(data))
+
+@app.route('/post_message', methods=['POST'])
 def post_message():
     if 'user_id' not in session:
         return redirect('/')

@@ -13,7 +13,7 @@ def alternative_emo():
         'id': session['user_id']
     }
 
-    return render_template('genre_altEmo.html', artists = Genre.get_alt_emo(), user = User.get_by_id(data))
+    return render_template('genre_altEmo.html',  userRatings = User.get_user_ratings(data), artists = Genre.get_alt_emo(), user = User.get_by_id(data))
 
 @app.route('/genres/pop-punk')
 def pop_punk():
@@ -22,7 +22,7 @@ def pop_punk():
         'id': session['user_id']
     }
 
-    return render_template('genre_popPunk.html', artists = Genre.get_pop_punk(), user = User.get_by_id(data))
+    return render_template('genre_popPunk.html', artists = Genre.get_pop_punk(),  userRatings = User.get_user_ratings(data), user = User.get_by_id(data))
 
 @app.route('/genres/midwest-emo')
 def midwest_emo(): 
@@ -31,7 +31,7 @@ def midwest_emo():
         'id': session['user_id']
     }
 
-    return render_template('genre_midEmo.html', artists = Genre.get_midwest_emo(), user = User.get_by_id(data))
+    return render_template('genre_midEmo.html', userRatings = User.get_user_ratings(data), artists = Genre.get_midwest_emo(), user = User.get_by_id(data))
 
 @app.route('/genres/indie-rock')
 def indie_rock():
@@ -40,7 +40,7 @@ def indie_rock():
         'id': session['user_id']
     }
 
-    return render_template('genre_indieRock.html', artists = Genre.get_indie_rock(), user = User.get_by_id(data))
+    return render_template('genre_indieRock.html', userRatings = User.get_user_ratings(data), artists = Genre.get_indie_rock(), user = User.get_by_id(data))
 
 @app.route('/genres/glitchcore')
 def glitchcore():
@@ -49,7 +49,7 @@ def glitchcore():
         'id': session['user_id']
     }
 
-    return render_template('genre_glitchcore.html', artists = Genre.get_glitchcore(), user = User.get_by_id(data))
+    return render_template('genre_glitchcore.html', userRatings = User.get_user_ratings(data), artists = Genre.get_glitchcore(), user = User.get_by_id(data))
 
 @app.route('/genres/math-rock')
 def mathrock():
@@ -58,7 +58,7 @@ def mathrock():
         'id': session['user_id']
     }
 
-    return render_template('genre_mathRock.html', artists = Genre.get_mathrock(), user = User.get_by_id(data))
+    return render_template('genre_mathRock.html', userRatings = User.get_user_ratings(data), artists = Genre.get_mathrock(), user = User.get_by_id(data))
 
 @app.route('/genres/plugg')
 def plugg():
@@ -67,7 +67,7 @@ def plugg():
         'id': session['user_id']
     }
 
-    return render_template('genre_plugg.html', artists = Genre.get_plugg(), user = User.get_by_id(data))
+    return render_template('genre_plugg.html', userRatings = User.get_user_ratings(data), artists = Genre.get_plugg(), user = User.get_by_id(data))
 
 @app.route('/genres/vaporwave')
 def vaporwave():
@@ -76,7 +76,7 @@ def vaporwave():
         'id': session['user_id']
     }
 
-    return render_template('genre_vaporwave.html', artists = Genre.get_vaporwave(), user = User.get_by_id(data))
+    return render_template('genre_vaporwave.html', userRatings = User.get_user_ratings(data), artists = Genre.get_vaporwave(), user = User.get_by_id(data))
 
 @app.route('/sos/synthpop')
 def sos_synthpop():
@@ -85,7 +85,7 @@ def sos_synthpop():
         'id': session['user_id']
     }
 
-    return render_template('s_o_s_synthpop.html', songs = SOS2.get_songs_from_synthpop(), user = User.get_by_id(data))
+    return render_template('s_o_s_synthpop.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_songs_from_synthpop(), user = User.get_by_id(data))
 
 @app.route('/sos/<id>')
 def solo_altemo(id):
@@ -98,7 +98,7 @@ def solo_altemo(id):
         'id': session['user_id']
     }
 
-    return render_template('show_sos.html', album = SOS2.get_sos_by_id(albumID), user = User.get_by_id(data))
+    return render_template('show_sos.html', userRatings = User.get_user_ratings(data), album = SOS2.get_sos_by_id(albumID), user = User.get_by_id(data))
 
 @app.route('/sos')
 def sos():
@@ -107,7 +107,7 @@ def sos():
         'id': session['user_id']
     }
 
-    return render_template('sos.html', playlists = SOSGenre.get_all(), user = User.get_by_id(data))
+    return render_template('sos.html', userRatings = User.get_user_ratings(data), playlists = SOSGenre.get_all(), user = User.get_by_id(data))
     
 @app.route('/sos/electro')
 def sos_electro():
@@ -116,7 +116,7 @@ def sos_electro():
         'id': session['user_id']
     }
 
-    return render_template('s_o_s_electro.html', songs = SOS2.get_songs_from_electro(), user = User.get_by_id(data))
+    return render_template('s_o_s_electro.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_songs_from_electro(), user = User.get_by_id(data))
 
 @app.route('/sos/midwest-emo')
 def sos_midwest(): 
@@ -125,7 +125,7 @@ def sos_midwest():
         'id': session['user_id']
     }
 
-    return render_template('s_o_s_midwestemo.html', songs = SOS2.get_all_midwest(), user = User.get_by_id(data))
+    return render_template('s_o_s_midwestemo.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_midwest(), user = User.get_by_id(data))
 
 @app.route('/sos/italian-disco')
 def sos_italiandisco(): 
@@ -134,7 +134,7 @@ def sos_italiandisco():
         'id': session['user_id'] 
     }
 
-    return render_template('s_o_s_italiandisco.html', songs = SOS2.get_all_italiandisco(), user = User.get_by_id(data))
+    return render_template('s_o_s_italiandisco.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_italiandisco(), user = User.get_by_id(data))
 
 @app.route('/sos/pop-punk')
 def sos_poppunk(): 
@@ -143,7 +143,7 @@ def sos_poppunk():
         'id': session['user_id'] 
     }
 
-    return render_template('s_o_s_poppunk.html', songs = SOS2.get_all_poppunk(), user = User.get_by_id(data))
+    return render_template('s_o_s_poppunk.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_poppunk(), user = User.get_by_id(data))
 
 @app.route('/sos/instrumental-post-rock') 
 def sos_instrumentalpostrock(): 
@@ -152,7 +152,7 @@ def sos_instrumentalpostrock():
         'id': session['user_id']
     }
 
-    return render_template('s_o_s_instrumentalpostrock.html', songs = SOS2.get_all_instrumentalpostrock(), user = User.get_by_id(data))
+    return render_template('s_o_s_instrumentalpostrock.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_instrumentalpostrock(), user = User.get_by_id(data))
 
 @app.route('/electro/<id>')
 def solo_electro(id):
@@ -165,7 +165,7 @@ def solo_electro(id):
         'id': session['user_id']
     }
 
-    return render_template('show_old_sos.html', album = SOS2.get_electro_by_id(albumID), user = User.get_by_id(data))
+    return render_template('show_old_sos.html', userRatings = User.get_user_ratings(data), album = SOS2.get_electro_by_id(albumID), user = User.get_by_id(data))
     
 @app.route('/sos/alternative-emo')
 def sos_altemo():
@@ -174,7 +174,7 @@ def sos_altemo():
         'id': session['user_id']
     }
 
-    return render_template('s_o_s_alternativeemo.html', songs = SOS2.get_songs_from_altemo(), user = User.get_by_id(data))
+    return render_template('s_o_s_alternativeemo.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_songs_from_altemo(), user = User.get_by_id(data))
 
 @app.route('/sos/sophisti-pop')
 def sos_sophisti():
@@ -183,7 +183,7 @@ def sos_sophisti():
         'id': session['user_id']
     }
 
-    return render_template('s_o_s_sophistipop.html', songs = SOS2.get_songs_from_sophisti(), user = User.get_by_id(data))
+    return render_template('s_o_s_sophistipop.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_songs_from_sophisti(), user = User.get_by_id(data))
 
 @app.route('/sos/new-romantic')
 def sos_newromantic():
@@ -192,7 +192,7 @@ def sos_newromantic():
         'id': session['user_id']
     }
 
-    return render_template('s_o_s_newromantic.html', songs = SOS2.get_all_new_romantic(), user = User.get_by_id(data))
+    return render_template('s_o_s_newromantic.html',  userRatings = User.get_user_ratings(data), songs = SOS2.get_all_new_romantic(), user = User.get_by_id(data))
 
 @app.route('/sos/dance-rock')
 def sos_dancerock():
@@ -201,7 +201,7 @@ def sos_dancerock():
         'id': session['user_id']
     }
 
-    return render_template('s_o_s_dancerock.html', allSOS = SOS2.get_all(), songs = SOS2.get_all_dance_rock(), user = User.get_by_id(data))
+    return render_template('s_o_s_dancerock.html', userRatings = User.get_user_ratings(data), allSOS = SOS2.get_all(), songs = SOS2.get_all_dance_rock(), user = User.get_by_id(data))
 
 @app.route('/sos/freestyle')
 def sos_freestyle():
@@ -210,7 +210,7 @@ def sos_freestyle():
         'id': session['user_id']
     }
 
-    return render_template('s_o_s_freestyle.html', songs = SOS2.get_all_freestyle(), user = User.get_by_id(data))
+    return render_template('s_o_s_freestyle.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_freestyle(), user = User.get_by_id(data))
 
 @app.route('/sos/math-rock')
 def sos_mathrock():
@@ -219,7 +219,7 @@ def sos_mathrock():
         'id': session['user_id'] 
     }
 
-    return render_template('s_o_s_mathrock.html', songs = SOS2.get_all_math_rock(), user = User.get_by_id(data))
+    return render_template('s_o_s_mathrock.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_math_rock(), user = User.get_by_id(data))
 
 @app.route('/replay/2018')
 def replay2018():
@@ -228,7 +228,7 @@ def replay2018():
         'id': session['user_id']
     }
 
-    return render_template('replay2018.html', songs = SOS2.get_all_replay2018(), user = User.get_by_id(data))
+    return render_template('replay2018.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_replay2018(), user = User.get_by_id(data))
 
 @app.route('/top-albums')
 def topalbums():
@@ -237,7 +237,7 @@ def topalbums():
         'id': session['user_id']
     }
 
-    return render_template('top_albums.html', albums = SOS2.get_all_top_albums(), user = User.get_by_id(data))
+    return render_template('top_albums.html', userRatings = User.get_user_ratings(data), albums = SOS2.get_all_top_albums(), user = User.get_by_id(data))
 
 @app.route('/top-albums/<id>')
 def solo_topalbums(id):
@@ -250,7 +250,7 @@ def solo_topalbums(id):
         'id': session['user_id']
     }
 
-    return render_template('show_topalbum.html', album = SOS2.get_top_by_id(albumID), user = User.get_by_id(data))
+    return render_template('show_topalbum.html', userRatings = User.get_user_ratings(data), album = SOS2.get_top_by_id(albumID), user = User.get_by_id(data))
 
 
 @app.route('/discover')
@@ -260,4 +260,4 @@ def sounds_of_spotify():
         'id': session['user_id']
     }
 
-    return render_template('discovery.html', user = User.get_by_id(data), genres = allGenre.get_all())
+    return render_template('discovery.html', userRatings = User.get_user_ratings(data), user = User.get_by_id(data), genres = allGenre.get_all())
