@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">  <title>Document</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -75,16 +75,15 @@
   
   <div id="all">  
       <div class="albums-card-2">
-        <img class="card-img-top" src={{album.image}} alt="Card image cap">
+        <a target="_blank" href="{{album.link}}"><img class="card-img-top" src={{album.image}} alt="Card image cap"></a>
       </div>  
-          <div class="cards">
-            <div id="me-n-ryan-cards" class="card card-1 mydata">
-              <div id="yearly-card-htags">
-                <h2 class="card__title">{{album.name}}</h2>
-              </div>
-              <p class="card__exit"><a target="_blank" href={{album.link}}>listen on bandcamp</a></p>
-            </div>
+      <div class="cards">
+        <div style="height: fit-content; width: 100%; background: url('https://film-grab.com/wp-content/uploads/photo-gallery/Alice_in_the_Cities_005.jpg?bwg=1569515809') no-repeat; background-size: cover; padding-right: 20px;" id="album-card" class="card">
+          <div id="favartists-card-htags">
+            <h2 class="card__title"><a style="color: black; font-family: 'Special Elite'" target="_blank" href={{album.link}}>{{album.name}}</a></h2>
           </div>
+        </div>
+      </div>
         </div>
   </div>
   </div>
