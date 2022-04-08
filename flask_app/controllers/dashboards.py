@@ -100,7 +100,12 @@ def individual_artist(id):
         'id': id
     }
 
-    return render_template('show_artist.html',  userRatings = User.get_user_ratings(userID), artist = favArtist.get_by_id(idData), user = User.get_by_id(userID), albums = favArtist.get_artist_with_albums(idData), tracks = favArtist.get_artist_tracks(idData))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_artist.html',  userRatings = User.get_user_ratings(userID), artist = favArtist.get_by_id(idData), user = User.get_by_id(userID), albums = favArtist.get_artist_with_albums(idData), tracks = favArtist.get_artist_tracks(idData), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/favartists/albums/<id>')
 def favartists_album(id):
