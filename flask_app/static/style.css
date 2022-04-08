@@ -1110,10 +1110,8 @@ iframe{
     margin: 20px;
     padding: 20px;
     width: 500px;
-    min-height: 200px;
-    height: 430px;
-    display: grid;
-    grid-template-rows: 20px 50px 1fr 50px;
+    min-height: 100px;
+    height: fit-content;
     border-radius: 10px;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
     transition: all 0.2s;
@@ -1121,16 +1119,41 @@ iframe{
     position: relative;
     top: 10%;
     left: 10%;
+    padding-bottom: 40px;
   }
 
-  #mydata1 h2 {
-    position: relative;
-    top: 20px;
+  #mydata1 #yearly-card-htags {
+    padding-bottom: 10%;
   }
 
-  #mydata1 h3 {
+  #mydata1 form {
     position: relative;
-    top: 20px;
+    top: -.1vh;
+    padding-bottom: 10%;
+  }
+
+  #mydata1 i {
+      font-size: 40px;
+      position: relative;
+      bottom: 30px;
+      left: 10px;
+  }
+
+  #mydata1 .fa-regular {
+    position: relative;
+    bottom: 5.7vh;
+  }
+
+  #mydata1 #submit-btn {
+    position: relative;
+    right:42%;
+    top: 78%;
+    border-radius: 10%;
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
+    color: white;
+    box-shadow: 5px 5px 5px gray;
+    
   }
 
   #card2 {
@@ -1165,30 +1188,6 @@ iframe{
     position: relative;
     top: 10%;
     left: 10%;
-  }
-
-  #mydata1 form {
-    position: relative;
-    top: 11em;
-    right: .3em;
-  }
-
-  #mydata1 i {
-      font-size: 40px;
-      position: relative;
-      bottom: 30px;
-      left: 10px;
-  }
-
-  #mydata1 #submit-btn {
-    position: relative;
-    right:42%;
-    top: 46%;
-    border-radius: 10%;
-    padding: 5px;
-    background: linear-gradient(90deg, rgba(0,11,153,1) 0%, rgba(56,56,154,1) 35%, rgba(108,84,226,1) 74%);
-    color: white;
-    box-shadow: 5px 5px 5px gray;
   }
 
   #mydata2 form {
