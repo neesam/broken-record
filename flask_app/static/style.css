@@ -575,13 +575,14 @@ background: linear-gradient(350deg, rgba(207,187,168,1) 5%, rgba(247,245,239,1) 
 	margin: 0 auto;
     position: relative;
     top: 3vh;
-    left: 3%;
+    right: 3vw;
 	height: fit-content;
 	width: 900px;
     overflow: auto;
     margin-bottom: 20px;
     font-family: 'Noto Sans';
     display: flex;
+    margin-left: 150px;
 }
 
 #container h6 a {
@@ -1003,8 +1004,25 @@ iframe{
     right: 15%;
 }
 
+.other-albums-container3 {
+  max-width:600px;
+  max-height:350px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  flex-direction: column;
+  margin-top: 16%;
+  margin-bottom: 20%;
+  position: relative;
+  right: 15%;
+  top: 7vh;
+  margin-left: -60%;
+}
+
 .other-albums-container2 img {
     object-fit: contain;
+    height: 200px;
 }
 
 /* Individual album page */
@@ -2836,7 +2854,7 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
 }
 
 #sideAlbums img {
-    height: 190px;
+    position: relative;
     width: 100%;
 }
 
