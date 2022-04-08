@@ -6,7 +6,7 @@ from flask import flash
 class Rating:
     db = 'rym'
     def __init__(self, data): 
-        self.id = data['id']
+        self.rating_id = data['rating_id']
         self.stars = data['stars']
         self.artist = data['artist']
         self.album = data['album']
@@ -38,7 +38,7 @@ class Rating:
 
     def get_by_id(cls, data):
 
-        query = 'SELECT * FROM ratings WHERE id = %(id)s'
+        query = 'SELECT * FROM ratings WHERE rating_id = %(id)s'
 
         results = connectToMySQL(cls.db).query_db(query, data)
 
@@ -67,7 +67,7 @@ class Rating:
 
     def destroy(cls, data):
 
-        query = 'DELETE FROM ratings WHERE ratings.id = %(id)s'
+        query = 'DELETE FROM ratings WHERE ratings.rating_id = %(id)s'
 
         return connectToMySQL(cls.db).query_db(query, data)
 
@@ -75,8 +75,7 @@ class Rating:
     
     def update_rating(cls, data):
 
-        query = 'UPDATE ratings SET stars=%(stars)s, artist=%(artist)s, album=%(album)s, cover=%(cover)s, year=%(year)s, artist_link=%(artist_link)s, album_link=%(album_link)s, release_date=%(release_date)s, tracks=%(tracks)s, album_id=%(album_id)s, artist_id=%(artist_id)s, bunk=%(bunk)s, updated_at=NOW() WHERE ratings.id = %(id)s'
-        
+        query = 'UPDATE ratings SET stars=%(stars)s, updated_at=NOW() WHERE ratings.rating_id = %(rating_id)s'   
 
         results = connectToMySQL(cls.db).query_db(query, data)
 
@@ -96,7 +95,7 @@ class Rating:
 
     def get_all_rating_genres(cls, data):
 
-        query = 'SELECT * FROM ratings LEFT JOIN ratings_has_genres ON ratings.id = ratings_has_genres.rating_id LEFT JOIN genres ON genres.id = ratings_has_genres.genre_id WHERE ratings.id = %(id)s'
+        query = 'SELECT * FROM ratings LEFT JOIN ratings_has_genres ON ratings.rating_id = ratings_has_genres.rating_id LEFT JOIN genres ON genres.id = ratings_has_genres.genre_id WHERE ratings.rating_id = %(id)s'
 
         results = connectToMySQL(cls.db).query_db(query, data)
 

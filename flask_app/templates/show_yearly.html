@@ -103,10 +103,10 @@
 
               {% if allUserRatings|length > 0 %}
               {% for i in allUserRatings %}
-              <form id="rating">
+              <form id="edit-rating">
                 <fieldset class="my-rate">
                   {% if i.stars == 1 %}
-                  <form action="/edit-rating" method="post" id="rating">
+                  <form action="/edit-rating" method="post">
                     <fieldset class="rate">
                       <input type="hidden" name="year" value={{album.input_query}}>
                       <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
@@ -119,6 +119,7 @@
                       <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
                       <input type="hidden" name="bunk" value="yearlyBunk">
                       <input type="hidden" name="artist_id" value={{album.albums_items_artists_0_id}}>
+                      <input type="hidden" name="rating_id" value={{allUserRatings.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -149,6 +150,7 @@
                       <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
                       <input type="hidden" name="bunk" value="yearlyBunk">
                       <input type="hidden" name="artist_id" value={{album.albums_items_artists_0_id}}>
+                      <input type="hidden" name="rating_id" value={{allUserRatings.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -179,6 +181,7 @@
                       <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
                       <input type="hidden" name="bunk" value="yearlyBunk">
                       <input type="hidden" name="artist_id" value={{album.albums_items_artists_0_id}}>
+                      <input type="hidden" name="rating_id" value={{allUserRatings.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -209,6 +212,7 @@
                       <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
                       <input type="hidden" name="bunk" value="yearlyBunk">
                       <input type="hidden" name="artist_id" value={{album.albums_items_artists_0_id}}>
+                      <input type="hidden" name="rating_id" value={{allUserRatings.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -239,6 +243,7 @@
                       <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
                       <input type="hidden" name="bunk" value="yearlyBunk">
                       <input type="hidden" name="artist_id" value={{album.albums_items_artists_0_id}}>
+                      <input type="hidden" name="rating_id" value={{allUserRatings.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -269,6 +274,7 @@
                       <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
                       <input type="hidden" name="bunk" value="yearlyBunk">
                       <input type="hidden" name="artist_id" value={{album.albums_items_artists_0_id}}>
+                      <input type="hidden" name="rating_id" value={{allUserRatings.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -299,6 +305,7 @@
                       <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
                       <input type="hidden" name="bunk" value="yearlyBunk">
                       <input type="hidden" name="artist_id" value={{album.albums_items_artists_0_id}}>
+                      <input type="hidden" name="rating_id" value={{allUserRatings.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -329,6 +336,7 @@
                       <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
                       <input type="hidden" name="bunk" value="yearlyBunk">
                       <input type="hidden" name="artist_id" value={{album.albums_items_artists_0_id}}>
+                      <input type="hidden" name="rating_id" value={{allUserRatings.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" checked="checked" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -359,6 +367,7 @@
                       <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
                       <input type="hidden" name="bunk" value="yearlyBunk">
                       <input type="hidden" name="artist_id" value={{album.albums_items_artists_0_id}}>
+                      <input type="hidden" name="rating_id" value={{allUserRatings.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" checked="checked" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -389,6 +398,7 @@
                       <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
                       <input type="hidden" name="bunk" value="yearlyBunk">
                       <input type="hidden" name="artist_id" value={{album.albums_items_artists_0_id}}>
+                      <input type="hidden" name="rating_id" value={{allUserRatings.rating_id}}>
                         <input type="radio" checked="checked" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -435,12 +445,8 @@
                         <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                     </fieldset>
                     <button id="submit-btn" type="submit">Submit</button>
-                     <textarea name="content" id="write-a-review" cols="" rows="10"></textarete-a-review" cols="30" rows="10"></textarea>
                   </form>
-                    
                     </div>
-                </fieldset>
-                </form>
                 {% endif %}
 
               

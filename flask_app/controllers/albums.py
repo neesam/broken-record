@@ -961,7 +961,7 @@ def twothousandone():
         'id': session['user_id']
     }
 
-    return render_template('yearly_page.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), albums = Seventy.get_twothousandone())
+    return render_template('yearly_page.html', userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), albums = Seventy.get_twothousandone())
 
 @app.route('/2001/<id>')
 def twothousandone_individual(id):

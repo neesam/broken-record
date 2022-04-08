@@ -55,16 +55,7 @@ def create_rating_yearly():
 
     data = {
         'stars': int(request.form['rating']),
-        'artist': request.form['name'],
-        'album': request.form['title'],
-        'cover': request.form['cover'],
-        'year': request.form['year'],
-        'artist_link': request.form['artist_link'],
-        'album_link': request.form['album_link'],
-        'release_date': request.form['release_date'],
-        'tracks': request.form['tracks'],
-        'album_id': request.form['album_id'],
-        'id': request.form['rating_id']
+        'rating_id': request.form['rating_id']
     }
 
     Rating.update_rating(data)

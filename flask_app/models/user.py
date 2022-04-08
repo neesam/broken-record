@@ -114,7 +114,7 @@ class User:
 
         for row in results:
             rating_info = {
-                'id': row['id'],
+                'rating_id': row['id'],
                 'stars': row['stars'],
                 'artist': row['artist'],
                 'album': row['album'],
@@ -155,7 +155,7 @@ class User:
 
         for row in results:
             rating_info = {
-                'id': row['ratings.id'],
+                'rating_id': row['rating_id'],
                 'stars': row['stars'],
                 'artist': row['artist'],
                 'album': row['album'],
@@ -201,7 +201,7 @@ class User:
 
         for row in results:
             rating_info = {
-                'id': row['ratings.id'],
+                'rating_id': row['rating_id'],
                 'stars': row['stars'],
                 'artist': row['artist'],
                 'album': row['album'],
