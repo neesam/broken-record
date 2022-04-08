@@ -582,7 +582,6 @@ background: linear-gradient(350deg, rgba(207,187,168,1) 5%, rgba(247,245,239,1) 
     margin-bottom: 20px;
     font-family: 'Noto Sans';
     display: flex;
-    border: 3px solid orange;
 }
 
 #container h6 a {
