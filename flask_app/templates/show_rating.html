@@ -82,7 +82,7 @@
         {% if album.Title|length > 23 and album.Title|length < 46 %}
         <div id="mydata1" class="card card-1 mydata">
           <div id="yearly-card-htags">
-            <h2 class="card__title"><a style="color: black;" href={{album.album_link}}>{{album.Title}}</a></h2>
+            <h2 class="card__title"><a target="_blank" style="color: black;" href={{album.album_link}}>{{album.Title}}</a></h2>
             <h3 class="card__title">{{album.Name}}</h3>
           </div>
           <form id="my-rating">
@@ -198,7 +198,7 @@
             {% if album.Title|length > 46 and album.Title|length < 69 %}
             <div id="mydata2" class="card card-1 mydata">
           <div id="yearly-card-htags">
-            <h2 class="card__title"><a style="color: black;" href={{album.album_link}}>{{album.Title}}</a></h2>
+            <h2 class="card__title"><a target="_blank" style="color: black;" href={{album.album_link}}>{{album.Title}}</a></h2>
             <h3 class="card__title">{{album.Name}}</h3>
           </div>
           <form id="my-rating">
@@ -313,7 +313,7 @@
             {% if album.Title|length > 70 and album.Title|length < 90 %}
             <div id="mydata3" class="card card-1 mydata">
           <div id="yearly-card-htags">
-            <h2 class="card__title"><a style="color: black;" href={{album.album_link}}>{{album.Title}}</a></h2>
+            <h2 class="card__title"><a target="_blank" style="color: black;" href={{album.album_link}}>{{album.Title}}</a></h2>
             <h3 class="card__title">{{album.Name}}</h3>
           </div>
           <form id="my-rating">
@@ -428,7 +428,7 @@
             {% if album.Title|length < 23 %}
             <div id="mydata4" class="card card-1 mydata">
           <div id="yearly-card-htags">
-            <h2 class="card__title"><a style="color: black;" href={{album.album_link}}>{{album.Title}}</a></h2>
+            <h2 class="card__title"><a target="_blank" style="color: black;" href={{album.album_link}}>{{album.Title}}</a></h2>
             <h3 class="card__title">{{album.Name}}</h3>
           </div>
           <form action="/create-rating" id="my-rating">
@@ -662,7 +662,7 @@
             {% if album.Title|length == 70 %}
             <div id="mydata_" class="card card-1 mydata">
           <div id="yearly-card-htags">
-            <h2 class="card__title"><a style="color: black;" href={{album.album_link}}>{{album.Title}}</a></h2>
+            <h2 class="card__title"><a target="_blank" style="color: black;" href={{album.album_link}}>{{album.Title}}</a></h2>
             <h3 class="card__title">{{album.Name}}</h3>
           </div>
           <form id="my-rating">
