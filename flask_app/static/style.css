@@ -1716,13 +1716,11 @@ margin-top: 3%;
   top: -1vh;
   margin-top: 3%;
   right: 2%;
-  padding-bottom: 3%;
   } 
 
 #album-card #edit-rating button {
   position: relative;
-  margin-top: 22%;
-  right: 75%;
+  margin-left: 1%;
 }
 
 #album-card #submit-btn {
@@ -1734,10 +1732,15 @@ box-shadow: 5px 5px 5px gray;
 margin-top: 20px;
 }
 
-#album-card fieldset {
+#album-card #edit-rating fieldset {
   margin-bottom: -20px;
   position: relative;
-  right: 1%;
+  margin-left: 1%;
+}
+
+#album-card #rating fieldset {
+  margin-bottom: -20px;
+  position: relative;
 }
 
 
@@ -2052,7 +2055,6 @@ box-shadow: 5px 5px 5px gray;
 .rate {
     display: inline-block;
     border: 0;
-    margin-left: 1.4%;
 }
 /* Hide radio */
 .rate > input {
