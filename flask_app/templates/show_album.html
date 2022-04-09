@@ -91,10 +91,21 @@
 
           {% if allUserRatings|length > 0 %}
           {% for i in allUserRatings %}
-          <form id="edit-rating">
+          <form id="edit-rating" action="/edit-rating" method="post">
             <fieldset class="rate">
               {% if i.stars == 1 %}
-}
+              <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+              <input type="hidden" value="{{album.albums_items_name}}" name="title">
+              <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+              <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+              <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+              <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+              <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+              <input type="hidden" name="year" value="8888">
+              <input type="hidden" name="album_id" value="{{album.albums_items_id}}">
+              <input type="hidden" name="bunk" value="myfavBunk">
+              <input type="hidden" name="artist_id" value="{{album.albums_items_artists_0_id}}">
+              <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -111,6 +122,18 @@
                     
                   {% endif %}
                   {% if i.stars == 2 %}
+                  <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+              <input type="hidden" value="{{album.albums_items_name}}" name="title">
+              <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+              <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+              <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+              <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+              <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+              <input type="hidden" name="year" value="8888">
+              <input type="hidden" name="album_id" value="{{album.albums_items_id}}">
+              <input type="hidden" name="bunk" value="myfavBunk">
+              <input type="hidden" name="artist_id" value="{{album.albums_items_artists_0_id}}">
+              <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -127,7 +150,18 @@
                     
                   {% endif %}
                   {% if i.stars == 3 %}
-
+                  <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+                  <input type="hidden" value="{{album.albums_items_name}}" name="title">
+                  <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+                  <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+                  <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+                  <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+                  <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+                  <input type="hidden" name="year" value="8888">
+                  <input type="hidden" name="album_id" value="{{album.albums_items_id}}">
+                  <input type="hidden" name="bunk" value="myfavBunk">
+                  <input type="hidden" name="artist_id" value="{{album.albums_items_artists_0_id}}">
+                  <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -144,7 +178,18 @@
                     
                   {% endif %}
                   {% if i.stars == 4 %}
-
+                  <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+                  <input type="hidden" value="{{album.albums_items_name}}" name="title">
+                  <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+                  <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+                  <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+                  <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+                  <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+                  <input type="hidden" name="year" value="8888">
+                  <input type="hidden" name="album_id" value="{{album.albums_items_id}}">
+                  <input type="hidden" name="bunk" value="myfavBunk">
+                  <input type="hidden" name="artist_id" value="{{album.albums_items_artists_0_id}}">
+                  <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -161,7 +206,18 @@
                     
                   {% endif %}
                   {% if i.stars == 5 %}
-
+                  <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+                  <input type="hidden" value="{{album.albums_items_name}}" name="title">
+                  <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+                  <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+                  <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+                  <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+                  <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+                  <input type="hidden" name="year" value="8888">
+                  <input type="hidden" name="album_id" value="{{album.albums_items_id}}">
+                  <input type="hidden" name="bunk" value="myfavBunk">
+                  <input type="hidden" name="artist_id" value="{{album.albums_items_artists_0_id}}">
+                  <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -178,7 +234,18 @@
                     
                   {% endif %}
                   {% if i.stars == 6 %}
-
+                  <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+                  <input type="hidden" value="{{album.albums_items_name}}" name="title">
+                  <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+                  <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+                  <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+                  <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+                  <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+                  <input type="hidden" name="year" value="8888">
+                  <input type="hidden" name="album_id" value="{{album.albums_items_id}}">
+                  <input type="hidden" name="bunk" value="myfavBunk">
+                  <input type="hidden" name="artist_id" value="{{album.albums_items_artists_0_id}}">
+                  <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -195,7 +262,18 @@
                     
                   {% endif %}
                   {% if i.stars == 7 %}
-
+                  <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+                  <input type="hidden" value="{{album.albums_items_name}}" name="title">
+                  <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+                  <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+                  <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+                  <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+                  <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+                  <input type="hidden" name="year" value="8888">
+                  <input type="hidden" name="album_id" value="{{album.albums_items_id}}">
+                  <input type="hidden" name="bunk" value="myfavBunk">
+                  <input type="hidden" name="artist_id" value="{{album.albums_items_artists_0_id}}">
+                  <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -212,7 +290,18 @@
                     
                   {% endif %}
                   {% if i.stars == 8 %}
-
+                  <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+                  <input type="hidden" value="{{album.albums_items_name}}" name="title">
+                  <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+                  <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+                  <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+                  <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+                  <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+                  <input type="hidden" name="year" value="8888">
+                  <input type="hidden" name="album_id" value="{{album.albums_items_id}}">
+                  <input type="hidden" name="bunk" value="myfavBunk">
+                  <input type="hidden" name="artist_id" value="{{album.albums_items_artists_0_id}}">
+                  <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" checked="checked" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -229,7 +318,18 @@
                     
                   {% endif %}
                   {% if i.stars == 9 %}
-
+                  <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+                  <input type="hidden" value="{{album.albums_items_name}}" name="title">
+                  <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+                  <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+                  <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+                  <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+                  <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+                  <input type="hidden" name="year" value="8888">
+                  <input type="hidden" name="album_id" value="{{album.albums_items_id}}">
+                  <input type="hidden" name="bunk" value="myfavBunk">
+                  <input type="hidden" name="artist_id" value="{{album.albums_items_artists_0_id}}">
+                  <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" checked="checked" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -246,7 +346,18 @@
                       </form>
                   {% endif %}
                   {% if i.stars == 10 %}
-
+                  <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
+                  <input type="hidden" value="{{album.albums_items_name}}" name="title">
+                  <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">
+                  <input type="hidden" name="artist_link" value="{{album.albums_items_artists_0_external_urls_spotify}}">
+                  <input type="hidden" name="release_date" value="{{album.albums_items_release_dateYES}}">
+                  <input type="hidden" name="tracks" value="{{album.albums_items_total_tracks}}">
+                  <input type="hidden" name="album_link" value="{{album.albums_items_external_urls_spotify}}">
+                  <input type="hidden" name="year" value="8888">
+                  <input type="hidden" name="album_id" value="{{album.albums_items_id}}">
+                  <input type="hidden" name="bunk" value="myfavBunk">
+                  <input type="hidden" name="artist_id" value="{{album.albums_items_artists_0_id}}">
+                  <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" checked="checked" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>

@@ -213,7 +213,7 @@
             {% if allUserRatings|length > 0 %}
               {% for i in allUserRatings %}
                   {% if i.stars == 1 %}
-                  <form id="rymedit-rating">
+                  <form id="rymedit-rating" action="/edit-rating" method="post">
                     <fieldset class="rate">
                      <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
@@ -227,6 +227,7 @@
                       <input type="hidden" name="album_id" value="{{album.id}}">
                       <input type="hidden" name="artist_id" value="N/A">
                       <input type="hidden" name="bunk" value="ratingsBunk">
+                      <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -244,7 +245,7 @@
                     
                   {% endif %}
                   {% if i.stars == 2 %}
-                  <form id="rymedit-rating">
+                  <form id="rymedit-rating" action="/edit-rating" method="post">
                     <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
@@ -258,6 +259,7 @@
                       <input type="hidden" name="album_id" value="{{album.id}}">
                       <input type="hidden" name="artist_id" value="N/A">
                       <input type="hidden" name="bunk" value="ratingsBunk">
+                      <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -275,7 +277,7 @@
                     
                   {% endif %}
                   {% if i.stars == 3 %}
-                  <form id="rymedit-rating">
+                  <form id="rymedit-rating" action="/edit-rating" method="post">
                     <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
@@ -289,6 +291,7 @@
                       <input type="hidden" name="album_id" value="{{album.id}}">
                       <input type="hidden" name="artist_id" value="N/A">
                       <input type="hidden" name="bunk" value="ratingsBunk">
+                      <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -306,7 +309,7 @@
                     
                   {% endif %}
                   {% if i.stars == 4 %}
-                  <form id="rymedit-rating">
+                  <form id="rymedit-rating" action="/edit-rating" method="post">
                     <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
@@ -320,6 +323,7 @@
                       <input type="hidden" name="album_id" value="{{album.id}}">
                       <input type="hidden" name="artist_id" value="N/A">
                       <input type="hidden" name="bunk" value="ratingsBunk">
+                      <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -337,7 +341,7 @@
                     
                   {% endif %}
                   {% if i.stars == 5 %}
-                  <form id="rymedit-rating">
+                  <form id="rymedit-rating" action="/edit-rating" method="post">
                     <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
@@ -351,6 +355,7 @@
                       <input type="hidden" name="album_id" value="{{album.id}}">
                       <input type="hidden" name="artist_id" value="N/A">
                       <input type="hidden" name="bunk" value="ratingsBunk">
+                      <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -368,7 +373,7 @@
                     
                   {% endif %}
                   {% if i.stars == 6 %}
-                  <form id="rymedit-rating">
+                  <form id="rymedit-rating" action="/edit-rating" method="post">
                     <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
@@ -382,6 +387,7 @@
                       <input type="hidden" name="album_id" value="{{album.id}}">
                       <input type="hidden" name="artist_id" value="N/A">
                       <input type="hidden" name="bunk" value="ratingsBunk">
+                      <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -399,7 +405,7 @@
                     
                   {% endif %}
                   {% if i.stars == 7 %}
-                  <form id="rymedit-rating">
+                  <form id="rymedit-rating" action="/edit-rating" method="post">
                     <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
@@ -413,6 +419,7 @@
                       <input type="hidden" name="album_id" value="{{album.id}}">
                       <input type="hidden" name="artist_id" value="N/A">
                       <input type="hidden" name="bunk" value="ratingsBunk">
+                      <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -430,7 +437,7 @@
                     
                   {% endif %}
                   {% if i.stars == 8 %}
-                  <form id="rymedit-rating">
+                  <form id="rymedit-rating" action="/edit-rating" method="post">
                     <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
@@ -444,6 +451,7 @@
                       <input type="hidden" name="album_id" value="{{album.id}}">
                       <input type="hidden" name="artist_id" value="N/A">
                       <input type="hidden" name="bunk" value="ratingsBunk">
+                      <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" checked="checked" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -461,7 +469,7 @@
                     
                   {% endif %}
                   {% if i.stars == 9 %}
-                  <form id="rymedit-rating">
+                  <form id="rymedit-rating" action="/edit-rating" method="post">
                     <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
@@ -475,6 +483,7 @@
                       <input type="hidden" name="album_id" value="{{album.id}}">
                       <input type="hidden" name="artist_id" value="N/A">
                       <input type="hidden" name="bunk" value="ratingsBunk">
+                      <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" checked="checked" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
@@ -492,7 +501,7 @@
                     
                   {% endif %}
                   {% if i.stars == 10 %}
-                  <form id="rymedit-rating">
+                  <form id="rymedit-rating" action="/edit-rating" method="post">
                     <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
@@ -506,6 +515,7 @@
                       <input type="hidden" name="album_id" value="{{album.id}}">
                       <input type="hidden" name="artist_id" value="N/A">
                       <input type="hidden" name="bunk" value="ratingsBunk">
+                      <input type="hidden" name="rating_id" value={{i.rating_id}}>
                         <input type="radio" checked="checked" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
                         <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
                         <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>

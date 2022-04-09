@@ -106,7 +106,7 @@ class User:
 
     def get_user_who_posted(cls):
 
-        query = 'SELECT * FROM rym.ratings LEFT JOIN users ON rym.ratings.user_id = users.id LEFT JOIN favartistsalbums ON rym.ratings.album =  favartistsalbums.albums_items_name ORDER BY ratings.created_at DESC'
+        query = 'SELECT * FROM rym.ratings LEFT JOIN users ON rym.ratings.user_id = users.id LEFT JOIN favartistsalbums ON rym.ratings.album =  favartistsalbums.albums_items_name ORDER BY ratings.updated_at DESC'
 
         results = connectToMySQL(cls.db).query_db(query)
         print(results)
@@ -147,7 +147,7 @@ class User:
 
     def get_user_ratings(cls, data):
 
-        query = 'SELECT * FROM users LEFT JOIN ratings ON users.id = ratings.user_id WHERE users.id = %(id)s ORDER BY ratings.created_at DESC' 
+        query = 'SELECT * FROM users LEFT JOIN ratings ON users.id = ratings.user_id WHERE users.id = %(id)s ORDER BY ratings.updated_at DESC' 
 
         results = connectToMySQL(cls.db).query_db(query, data)
         print(results)
