@@ -132,14 +132,14 @@ def sos_midwest():
 
     return render_template('s_o_s_midwestemo.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_midwest(), user = User.get_by_id(data))
 
-@app.route('/sos/italian-disco')
-def sos_italiandisco(): 
+# @app.route('/sos/italian-disco')
+# def sos_italiandisco(): 
 
-    data = {
-        'id': session['user_id'] 
-    }
+#     data = {
+#         'id': session['user_id'] 
+#     }
 
-    return render_template('s_o_s_italiandisco.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_italiandisco(), user = User.get_by_id(data))
+#     return render_template('s_o_s_italiandisco.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_italiandisco(), user = User.get_by_id(data))
 
 @app.route('/sos/pop-punk')
 def sos_poppunk(): 
