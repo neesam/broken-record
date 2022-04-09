@@ -114,7 +114,7 @@ class User:
 
         for row in results:
             rating_info = {
-                'rating_id': row['id'],
+                'rating_id': row['rating_id'],
                 'stars': row['stars'],
                 'artist': row['artist'],
                 'album': row['album'],

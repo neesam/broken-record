@@ -2311,14 +2311,15 @@ background: linear-gradient(143deg, rgba(0,0,0,1) 20%, rgba(0,68,23,1) 80%) fixe
 
 #delete-rating-btn {
   position: relative;
-  padding: 5px;
   border-radius: 5px;
   opacity: .8;
-  top: 280px;
-  right: 10px;
+  left: .6vw;
   font-size: 17px;
   opacity: .5;
   color: white;
+  margin-top: 34%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 
