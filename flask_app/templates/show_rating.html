@@ -80,13 +80,14 @@
         <img class="card-img-top" src={{album.image}} alt="Card image cap">
       </div>
       <div class="cards">
-        <div id="mydata1" class="card card-1 mydata">
+        <div id="album-card" class="card card-1 mydata">
           <div id="yearly-card-htags">
             <h2 class="card__title"><a target="_blank" style="color: black;" href={{album.album_link}}>{{album.Title}}</a></h2>
             <h3 class="card__title">{{album.Name}}</h3>
           </div>
+          <p class="my-rating-tag">My rating:</p>
           <form id="my-rating">
-            <p class="my-rating-tag">My rating:</p>
+            
             <fieldset class="my-rate2">
                 {% if album.Rating == 0 %}
                 <form action="/edit-rating" method="post">
@@ -118,74 +119,74 @@
                   </form>
                 {% endif %}
                 {% if album.Rating == 1 %}
-                <i class="fa fa-star-half-stroke" style="font-size:34px; position: relative; bottom: 31px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
+                <i class="fa fa-star-half-stroke" style="font-size:2rem; position: relative; bottom: 31px;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
                 {% endif %}
                 {% if album.Rating == 2 %}
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
                 {% endif %}
                 {% if album.Rating == 3 %}
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star-half-stroke" style="font-size:34px; position: relative; bottom: 31px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size: 35.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size: 35.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size: 35.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star-half-stroke" style="font-size:2rem; position: relative; bottom: 31px;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size: 2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size: 2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size: 2rem;color:gold"></i>
                 {% endif %}
                 {% if album.Rating == 4 %}
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
                 {% endif %}
                 {% if album.Rating == 5 %}
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star-half-stroke" style="font-size:34px; position: relative; bottom: 31px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star-half-stroke" style="font-size:2rem; position: relative; bottom: 31px;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
                 {% endif %}
                 {% if album.Rating == 6 %}
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
                 {% endif %}
                 {% if album.Rating == 7 %}
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star-half-stroke" style="font-size:34px; position: relative; bottom: 31px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star-half-stroke" style="font-size:2rem; position: relative; bottom: 31px;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
                 {% endif %}
                 {% if album.Rating == 8 %}
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa-regular fa-star" style="font-size:32.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa-regular fa-star" style="font-size:2rem;color:gold"></i>
                 {% endif %}
                 {% if album.Rating == 9 %}
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star-half-stroke" style="font-size:34px; position: relative; bottom: 31px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star-half-stroke" style="font-size:2rem; position: relative; bottom: 31px;color:gold"></i>
                 {% endif %}
                 {% if album.Rating == 10 %}
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
-                <i class="fa fa-star" style="font-size:35.5px;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
+                <i class="fa fa-star" style="font-size:2rem;color:gold"></i>
                 {% endif %}
             </fieldset>
             </form>
@@ -505,7 +506,7 @@
                   {% endif %}
                   {% if allUserRatings|length == 0 %}
                   <form action="/create-rating" method="post" class="rating-form" id="rating">
-                    <fieldset class="rate2">
+                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">

@@ -118,7 +118,12 @@ def favartists_album(id):
         'id': id
     }
 
-    return render_template('show_album.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = favArtistAlbum.get_by_id(idData))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_album.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = favArtistAlbum.get_by_id(idData), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/sundial')
 def sundial():
