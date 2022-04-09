@@ -1150,7 +1150,7 @@ iframe{
     position: relative;
     top: 8vh;
     height: fit-content;
-
+    right: 3vw;
   }
   
 
@@ -1708,18 +1708,19 @@ grid-column: 1/3;
 margin-top: 3%;
 } 
 
-#album-card #edit-rating {
-  display: flex;
-  flex-direction: column;
+#album-card #edit-rating fieldset {
   position: relative;
-  right: 3.3%;
-  padding-bottom: 18%;
-  } 
+  right: 2%;
+} 
+
+#album-card #edit-rating {
+  padding-bottom: 9%;
+}
 
 #album-card #edit-rating #submit-btn {
   position: relative;
-  top: 7vh;
-  right: 11.9vw;
+  top: 7.5vh;
+  right: 12.4vw;
 }
 
 
@@ -1736,7 +1737,7 @@ margin-top: 20px;
 #album-card #edit-rating fieldset {
   margin-bottom: -20px;
   position: relative;
-  margin-left: 1.4%;
+  margin-left: 2.4%;
 }
 
 #album-card #rating fieldset {
@@ -2083,6 +2084,8 @@ box-shadow: 5px 5px 5px gray;
     position: absolute;
     padding-right: 0;
 }
+
+
 
 /* Click + hover color */
 input:checked ~ label, /* color current and previous stars on checked */

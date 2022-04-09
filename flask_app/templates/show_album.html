@@ -380,7 +380,7 @@
 
               {% if allUserRatings|length == 0 %}
               <form action="/create-rating" method="post" id="rating">
-                <fieldset class="rate">
+                <fieldset class="favartistrate">
                   <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
                   <input type="hidden" value="{{album.albums_items_name}}" name="title">
                   <input type="hidden" value={{album.albums_items_images_0_url}} name="cover">

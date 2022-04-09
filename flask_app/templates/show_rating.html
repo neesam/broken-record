@@ -226,10 +226,8 @@
             {% if allUserRatings|length > 0 %}
               {% for i in allUserRatings %}
               <form id="edit-rating">
-                <fieldset class="my-rate">
+                <fieldset class="rate">
                   {% if i.stars == 1 %}
-                  <form action="/edit-rating" method="post">
-                    <fieldset class="rate">
                      <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -259,8 +257,6 @@
                     
                   {% endif %}
                   {% if i.stars == 2 %}
-                  <form action="/edit-rating" method="post" id="edit-rating">
-                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -290,8 +286,6 @@
                     
                   {% endif %}
                   {% if i.stars == 3 %}
-                  <form action="/edit-rating" method="post" id="edit-rating">
-                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -321,8 +315,6 @@
                     
                   {% endif %}
                   {% if i.stars == 4 %}
-                  <form action="/edit-rating" method="post" id="edit-rating">
-                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -352,8 +344,6 @@
                     
                   {% endif %}
                   {% if i.stars == 5 %}
-                  <form action="/edit-rating" method="post" id="edit-rating">
-                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -383,8 +373,6 @@
                     
                   {% endif %}
                   {% if i.stars == 6 %}
-                  <form action="/edit-rating" method="post" id="edit-rating">
-                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -414,8 +402,6 @@
                     
                   {% endif %}
                   {% if i.stars == 7 %}
-                  <form action="/edit-rating" method="post" id="edit-rating">
-                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -445,8 +431,6 @@
                     
                   {% endif %}
                   {% if i.stars == 8 %}
-                  <form action="/edit-rating" method="post" id="edit-rating">
-                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -476,8 +460,6 @@
                     
                   {% endif %}
                   {% if i.stars == 9 %}
-                  <form action="/edit-rating" method="post" id="edit-rating">
-                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -507,8 +489,6 @@
                     
                   {% endif %}
                   {% if i.stars == 10 %}
-                  <form action="/edit-rating" method="post" id="edit-rating">
-                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
