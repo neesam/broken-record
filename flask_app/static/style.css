@@ -1150,6 +1150,7 @@ iframe{
     position: relative;
     top: 8vh;
     height: fit-content;
+
   }
   
 
@@ -1710,18 +1711,18 @@ margin-top: 3%;
 #album-card #edit-rating {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
   position: relative;
-  top: -1vh;
-  margin-top: 3%;
-  right: 2%;
+  right: 3.3%;
+  padding-bottom: 18%;
   } 
 
-#album-card #edit-rating button {
+#album-card #edit-rating #submit-btn {
   position: relative;
-  margin-left: 1%;
+  top: 7vh;
+  right: 11.9vw;
 }
+
+
 
 #album-card #submit-btn {
 border-radius: 10%;
@@ -1735,7 +1736,7 @@ margin-top: 20px;
 #album-card #edit-rating fieldset {
   margin-bottom: -20px;
   position: relative;
-  margin-left: 1%;
+  margin-left: 1.4%;
 }
 
 #album-card #rating fieldset {
@@ -2055,6 +2056,7 @@ box-shadow: 5px 5px 5px gray;
 .rate {
     display: inline-block;
     border: 0;
+    height: fit-content
 }
 /* Hide radio */
 .rate > input {
@@ -2068,7 +2070,7 @@ box-shadow: 5px 5px 5px gray;
 .rate > label:before {
     display: inline-block;
     font-size: 2rem;
-    padding: .3rem .13rem;
+    padding: .3rem .18rem;
     margin: 0;
     cursor: pointer;
     font-family: FontAwesome;
@@ -2143,15 +2145,17 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     height: 100px;
 }
 
+
+
 #my-rating {
     position: relative;
     background: rgb(240, 240, 240);
-    height: fit-content;
+    height: 60px;
     border-radius: 15px;
     width: 203px;
     width: fit-content;
-    padding: 5px 10px 25px 10px;
     right: 1%;
+    padding: 0px 5px;
 }
 
 #my-rating .my-rating-tag {
@@ -2175,14 +2179,10 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     border: 0;
     gap: 6px;
     position: relative;
-    left: .9%;
     bottom: 55%;
 }
 
-.my-rate2 {
-  position: relative;
-  bottom: 30%;
-}
+
 
 /* Hover highlights */
 input:checked + label:hover, input:checked ~ label:hover, /* highlight current and previous stars */
