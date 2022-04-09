@@ -82,8 +82,8 @@
             {% if allUserRatings|length > 0 %}
             <div id="album-card" class="card card-1 mydata">
               <div id="yearly-card-htags">
-                <h2 class="card__title"><a style="color: black" href={{album.items_track_album_external_urls_spotify}}>{{album.items_track_album_name}}</a></h2>
-                <h3 class="card__title"><a style="color: black" href={{album.items_artists_track_album_external_urls_spotify}}>{{album.items_track_album_artists_name}}</a></h3>
+                <h2 class="card__title"><a target="_blank" style="color: black" href={{album.items_track_album_external_urls_spotify}}>{{album.items_track_album_name}}</a></h2>
+                <h3 class="card__title"><a target="_blank" style="color: black" href={{album.items_artists_track_album_external_urls_spotify}}>{{album.items_track_album_artists_name}}</a></h3>
               </div>
               {% for i in allUserRatings %}
               <form id="rating">
@@ -355,8 +355,8 @@
               {% if allUserRatings|length == 0 %}
               <div id="album-card" class="card card-1 mydata">
                 <div id="yearly-card-htags">
-                  <h2 class="card__title"><a style="color: black" href={{album.items_track_album_external_urls_spotify}}>{{album.items_track_album_name}}</a></h2>
-                <h3 class="card__title"><a style="color: black" href={{album.items_track_album_artists_external_urls_spotify}}>{{album.items_track_album_artists_name}}</a></h3>
+                  <h2 class="card__title"><a target="_blank" style="color: black" href={{album.items_track_album_external_urls_spotify}}>{{album.items_track_album_name}}</a></h2>
+                <h3 class="card__title"><a target="_blank" style="color: black" href={{album.items_track_album_artists_external_urls_spotify}}>{{album.items_track_album_artists_name}}</a></h3>
                 </div>
 
                 <form action="/create-rating" method="post" id="rating">
