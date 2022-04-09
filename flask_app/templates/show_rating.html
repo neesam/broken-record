@@ -89,145 +89,134 @@
           <form id="my-rating">
             
                 <fieldset class="rate">
-                 <input type="hidden" value="{{album.Title}}" name="title">
-                  <input type="hidden" value="{{album.Name}}" name="name">
-                  <input type="hidden" value="{{album.image}}" name="cover">
-                  <input type="hidden" value={{album.album_link}} name="album_link">
-  
-                  <input type="hidden" value={{album.artist_link}} name="artist_link">
-                  <input type="hidden" value="33" name="tracks">
-                  <input type="hidden" value="{{album.Release_Date}}" name="release_date">
-                  <input type="hidden" name="year" value="9898">
-                  <input type="hidden" name="album_id" value="{{album.id}}">
-                  <input type="hidden" name="artist_id" value="N/A">
-                  <input type="hidden" name="bunk" value="ratingsBunk">
                     {% if album.Rating == 1%}
-                      <input disabled="disabled" type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                      <input disabled="disabled" type="radio" checked="checked" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                      <input disabled="disabled"  type="radio" name="your-rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input disabled="disabled"  type="radio" checked="checked"  name="your-rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 {% endif %}
                 {% if album.Rating == 2 %}
-                <input disabled="disabled" type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                      <input disabled="disabled" checked="checked" type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                      <input disabled="disabled" type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                <input disabled="disabled"  type="radio" name="your-rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input checked="checked"  disabled="disabled"  type="radio"  name="your-rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input disabled="disabled"  type="radio"   name="your-rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 {% endif %}
                 {% if album.Rating == 3 %}
-                <input disabled="disabled" type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                      <input disabled="disabled" checked="checked" type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                      <input disabled="disabled" type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                <input disabled="disabled"  type="radio" name="your-rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input checked="checked"  disabled="disabled"  type="radio"  name="your-rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input disabled="disabled"  type="radio" name="your-rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 {% endif %}
                 {% if album.Rating == 4 %}
-                <input disabled="disabled" type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                      <input disabled="disabled" checked="checked" type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                      <input disabled="disabled" type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                <input disabled="disabled"  type="radio" name="your-rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input checked="checked"  disabled="disabled"  type="radio"  name="your-rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 {% endif %}
                 {% if album.Rating == 5 %}
-                <input disabled="disabled" type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                      <input disabled="disabled" checked="checked" type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                      <input disabled="disabled" type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                rating3" title="1 1/2 stars"></label>
+                <input disabled="disabled"  type="radio" name="your-rating" value="10" /><label for="rating10" title="5 stars"></label>
+                <input disabled="disabled"  type="radio"  name="your-rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                <input disabled="disabled"  type="radio"  name="your-rating" value="8" /><label for="rating8" title="4 stars"></label>
+                <input disabled="disabled"  type="radio"  name="your-rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                <input disabled="disabled"  type="radio"  name="your-rating" value="6" /><label for="rating6" title="3 stars"></label>
+                <input checked="checked"  disabled="disabled"  type="radio"  name="your-rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                <input disabled="disabled"  type="radio"  name="your-rating" value="4" /><label for="rating4" title="2 stars"></label>
+                <input disabled="disabled"  type="radio"  name="your-rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                <input disabled="disabled"  type="radio"  name="your-rating" value="2" /><label for="rating2" title="1 star"></label>
+                <input disabled="disabled"  type="radio"   name="your-rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 {% endif %}
                 {% if album.Rating == 6 %}
-                <input disabled="disabled" type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                <input disabled="disabled" type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                <input disabled="disabled" type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                <input disabled="disabled" type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                <input disabled="disabled" checked="checked" type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                <input disabled="disabled" type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                <input disabled="disabled" type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                <input disabled="disabled" type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                <input disabled="disabled" type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                <input disabled="disabled" type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                <input disabled="disabled"  type="radio" name="your-rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input checked="checked"  disabled="disabled"  type="radio"  name="your-rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input disabled="disabled"  type="radio" name="your-rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 {% endif %}
                 {% if album.Rating == 7 %}
-                <input disabled="disabled" type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                      <input disabled="disabled" checked="checked" type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                      <input disabled="disabled" type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                <input disabled="disabled"  type="radio" name="your-rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input checked="checked"  disabled="disabled"  type="radio"  name="your-rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input disabled="disabled"  type="radio" name="your-rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 {% endif %}
                 {% if album.Rating == 8 %}
-                <input disabled="disabled" type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                      <input disabled="disabled" checked="checked" type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                      <input disabled="disabled" type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                <input disabled="disabled"  type="radio" name="your-rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input checked="checked"  disabled="disabled"  type="radio"  name="your-rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input disabled="disabled"  type="radio" name="your-rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 {% endif %}
                 {% if album.Rating == 9 %}
-                <input disabled="disabled" type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                <input disabled="disabled" checked="checked" type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                <input disabled="disabled" type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                <input disabled="disabled" type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                <input disabled="disabled" type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                <input disabled="disabled" type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                <input disabled="disabled" type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                <input disabled="disabled" type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                <input disabled="disabled" type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                <input disabled="disabled" type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                <input disabled="disabled"  type="radio" name="your-rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input checked="checked"  disabled="disabled"  type="radio"  name="your-rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input disabled="disabled"  type="radio" name="your-rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 {% endif %}
                 {% if album.Rating == 10 %}
-                <input disabled="disabled" checked="checked" type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating8" name="rating" value="8" /><label for="rating8" title="4 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating6" name="rating" value="6" /><label for="rating6" title="3 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating4" name="rating" value="4" /><label for="rating4" title="2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
-                      <input disabled="disabled" type="radio" id="rating2" name="rating" value="2" /><label for="rating2" title="1 star"></label>
-                      <input disabled="disabled" type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
+                <input checked="checked"  disabled="disabled"  type="radio" name="your-rating" value="10" /><label for="rating10" title="5 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="9" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="8" /><label for="rating8" title="4 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="7" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="6" /><label for="rating6" title="3 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="4" /><label for="rating4" title="2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="3" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="2" /><label for="rating2" title="1 star"></label>
+                      <input disabled="disabled"  type="radio"  name="your-rating" value="1" /><label class="half" for="rating1" title="1/2 star"></label>
                 {% endif %}
             </fieldset>
             </form>
             {% if allUserRatings|length > 0 %}
               {% for i in allUserRatings %}
-              <form id="edit-rating">
-                <fieldset class="rate">
                   {% if i.stars == 1 %}
+                  <form id="edit-rating">
+                    <fieldset class="rate">
                      <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -257,6 +246,8 @@
                     
                   {% endif %}
                   {% if i.stars == 2 %}
+                  <form id="edit-rating">
+                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -286,6 +277,8 @@
                     
                   {% endif %}
                   {% if i.stars == 3 %}
+                  <form id="edit-rating">
+                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -315,6 +308,8 @@
                     
                   {% endif %}
                   {% if i.stars == 4 %}
+                  <form id="edit-rating">
+                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -344,6 +339,8 @@
                     
                   {% endif %}
                   {% if i.stars == 5 %}
+                  <form id="edit-rating">
+                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -373,6 +370,8 @@
                     
                   {% endif %}
                   {% if i.stars == 6 %}
+                  <form id="edit-rating">
+                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -402,6 +401,8 @@
                     
                   {% endif %}
                   {% if i.stars == 7 %}
+                  <form id="edit-rating">
+                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -431,6 +432,8 @@
                     
                   {% endif %}
                   {% if i.stars == 8 %}
+                  <form id="edit-rating">
+                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -460,6 +463,8 @@
                     
                   {% endif %}
                   {% if i.stars == 9 %}
+                  <form id="edit-rating">
+                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -489,6 +494,8 @@
                     
                   {% endif %}
                   {% if i.stars == 10 %}
+                  <form id="edit-rating">
+                    <fieldset class="rate">
                       <input type="hidden" value="{{album.Title}}" name="title">
                       <input type="hidden" value="{{album.Name}}" name="name">
                       <input type="hidden" value="{{album.image}}" name="cover">
@@ -517,6 +524,8 @@
                     {% endif %}
                     {% endfor %}
                   {% endif %}
+
+                  
                   {% if allUserRatings|length == 0 %}
                   <form action="/create-rating" method="post" class="rating-form" id="rating">
                     <fieldset class="rate">

@@ -105,11 +105,9 @@
 
               {% if allUserRatings|length > 0 %}
               {% for i in allUserRatings %}
-              <form id="edit-rating">
-                <fieldset class="my-rate">
+              <form id="yearlyedit-rating">
+                <fieldset class="rate">
                   {% if i.stars == 1 %}
-                  <form action="/edit-rating" method="post">
-                    <fieldset class="rate">
                       <input type="hidden" name="year" value={{album.input_query}}>
                       <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
                       <input type="hidden" value="{{album.albums_items_name}}" name="title">
@@ -139,8 +137,6 @@
                     
                   {% endif %}
                   {% if i.stars == 2 %}
-                  <form action="/edit-rating" method="post" id="rating">
-                    <fieldset class="rate">
                        <input type="hidden" name="year" value={{album.input_query}}>
                       <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
                       <input type="hidden" value="{{album.albums_items_name}}" name="title">
@@ -170,8 +166,6 @@
                     
                   {% endif %}
                   {% if i.stars == 3 %}
-                  <form action="/edit-rating" method="post" id="rating">
-                    <fieldset class="rate">
                        <input type="hidden" name="year" value={{album.input_query}}>
                       <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
                       <input type="hidden" value="{{album.albums_items_name}}" name="title">
@@ -201,8 +195,6 @@
                     
                   {% endif %}
                   {% if i.stars == 4 %}
-                  <form action="/edit-rating" method="post" id="rating">
-                    <fieldset class="rate">
                        <input type="hidden" name="year" value={{album.input_query}}>
                       <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
                       <input type="hidden" value="{{album.albums_items_name}}" name="title">
@@ -232,8 +224,6 @@
                     
                   {% endif %}
                   {% if i.stars == 5 %}
-                  <form action="/edit-rating" method="post" id="rating">
-                    <fieldset class="rate">
                        <input type="hidden" name="year" value={{album.input_query}}>
                       <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
                       <input type="hidden" value="{{album.albums_items_name}}" name="title">
@@ -263,8 +253,6 @@
                     
                   {% endif %}
                   {% if i.stars == 6 %}
-                  <form action="/edit-rating" method="post" id="rating">
-                    <fieldset class="rate">
                        <input type="hidden" name="year" value={{album.input_query}}>
                       <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
                       <input type="hidden" value="{{album.albums_items_name}}" name="title">
@@ -294,8 +282,6 @@
                     
                   {% endif %}
                   {% if i.stars == 7 %}
-                  <form action="/edit-rating" method="post" id="rating">
-                    <fieldset class="rate">
                        <input type="hidden" name="year" value={{album.input_query}}>
                       <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
                       <input type="hidden" value="{{album.albums_items_name}}" name="title">
@@ -325,8 +311,6 @@
                     
                   {% endif %}
                   {% if i.stars == 8 %}
-                  <form action="/edit-rating" method="post" id="rating">
-                    <fieldset class="rate">
                        <input type="hidden" name="year" value={{album.input_query}}>
                       <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
                       <input type="hidden" value="{{album.albums_items_name}}" name="title">
@@ -356,8 +340,6 @@
                     
                   {% endif %}
                   {% if i.stars == 9 %}
-                  <form action="/edit-rating" method="post" id="rating">
-                    <fieldset class="rate">
                        <input type="hidden" name="year" value={{album.input_query}}>
                       <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
                       <input type="hidden" value="{{album.albums_items_name}}" name="title">
@@ -387,8 +369,6 @@
                     
                   {% endif %}
                   {% if i.stars == 10 %}
-                  <form action="/edit-rating" method="post" id="rating">
-                    <fieldset class="rate">
                        <input type="hidden" name="year" value={{album.input_query}}>
                       <input type="hidden" value="{{album.albums_items_artists_0_name}}" name="name">
                       <input type="hidden" value="{{album.albums_items_name}}" name="title">

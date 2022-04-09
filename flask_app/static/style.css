@@ -1139,19 +1139,6 @@ iframe{
       left: 10px;
   }
 
-  #mydata1 #edit-rating {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-top: 2%;
-  }
-
-  #mydata1 #edit-rating button {
-    position: relative;
-    top: 8vh;
-    height: fit-content;
-    right: 3vw;
-  }
   
 
   #mydata1 #submit-btn {
@@ -1710,7 +1697,7 @@ margin-top: 3%;
 
 #album-card #edit-rating fieldset {
   position: relative;
-  right: 2%;
+  right: 3%;
 } 
 
 #album-card #edit-rating {
@@ -1719,8 +1706,38 @@ margin-top: 3%;
 
 #album-card #edit-rating #submit-btn {
   position: relative;
-  top: 7.5vh;
+  top: 5.5vh;
   right: 12.4vw;
+}
+
+#album-card #yearlyedit-rating fieldset {
+  position: relative;
+  right: 1%;
+} 
+
+#album-card #yearlyedit-rating {
+  padding-bottom: 9%;
+}
+
+#album-card #yearlyedit-rating #submit-btn {
+  position: relative;
+  top: 4.5vh;
+  right: 14vw;
+}
+
+#album-card #sosedit-rating fieldset {
+  position: relative;
+  right: 1%;
+} 
+
+#album-card #sosedit-rating {
+  padding-bottom: 9%;
+}
+
+#album-card #sosedit-rating #submit-btn {
+  position: relative;
+  top: 4.5vh;
+  right: 14vw;
 }
 
 
@@ -2176,15 +2193,6 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     height: fit-content;
 }
 
-/* Ratings widget */
-.my-rate {
-    display: flex;
-    border: 0;
-    gap: 6px;
-    position: relative;
-    bottom: 55%;
-}
-
 
 
 /* Hover highlights */
@@ -2264,15 +2272,7 @@ background: linear-gradient(143deg, rgba(0,0,0,1) 20%, rgba(0,68,23,1) 80%) fixe
 }
 
 
-/* Ratings widget */
-.my-rate {
-    display: flex;
-    border: 0;
-    gap: 6px;
-    position: relative;
-    left: .9%;
-    bottom: 55%;
-}
+
 
 .my-rating-tag {
     position: relative;
@@ -2280,6 +2280,10 @@ background: linear-gradient(143deg, rgba(0,0,0,1) 20%, rgba(0,68,23,1) 80%) fixe
     font-weight: bold;
     margin-bottom: 20px;
     margin-top: 10px;
+}
+
+#my-rate fieldset {
+  border: 1px solid red;
 }
 
 /* Hover highlights */
@@ -2294,16 +2298,6 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
 
 .mydata {
     height: 290px;
-}
-
-/* Ratings widget */
-.my-rate {
-    display: flex;
-    border: 0;
-    gap: 6px;
-    position: relative;
-    left: .9%;
-    bottom: 55%;
 }
 
 
