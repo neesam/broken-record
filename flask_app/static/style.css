@@ -2333,10 +2333,6 @@ background: linear-gradient(143deg, rgba(0,0,0,1) 20%, rgba(0,68,23,1) 80%) fixe
     margin-top: 10px;
 }
 
-#my-rate fieldset {
-  border: 1px solid red;
-}
-
 /* Hover highlights */
 input:checked + label:hover, input:checked ~ label:hover, /* highlight current and previous stars */
 input:checked ~ label:hover ~ label, /* highlight previous selected stars for new rating */
