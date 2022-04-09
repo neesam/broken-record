@@ -1695,6 +1695,23 @@ grid-column: 1/3;
 margin-top: 3%;
 } 
 
+ .rymrating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  position: relative;
+  top: 3vh !important;
+  grid-column: 1/3;
+  margin-top: 6%;
+  border: 1px solid red;
+  padding-bottom: 5%;
+  } 
+
+#album-card #rating .rymrating {
+  padding-bottom: 5%;
+}
+
 #album-card #edit-rating fieldset {
   position: relative;
   right: 3%;
@@ -1708,6 +1725,36 @@ margin-top: 3%;
   position: relative;
   top: 5.5vh;
   right: 12.4vw;
+}
+
+#album-card #rym-rating fieldset {
+  position: relative;
+  right: 3%;
+} 
+
+#album-card #rym-rating {
+  padding-bottom: 9%;
+}
+
+#album-card #rym-rating #submit-btn {
+  position: relative;
+  top: 5.5vh;
+  right: 12.4vw;
+}
+
+#album-card #rymedit-rating fieldset {
+  position: relative;
+} 
+
+#album-card #rymedit-rating {
+  padding-bottom: 7%;
+  margin-top: 6%;
+}
+
+#album-card #rymedit-rating #submit-btn {
+  position: relative;
+  top: 4.5vh;
+  right: 11.9vw;
 }
 
 #album-card #yearlyedit-rating fieldset {
@@ -2166,6 +2213,9 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
 }
 
 
+#my-rating #edit-rating {
+  margin-top: 5%;
+}
 
 #my-rating {
     position: relative;
@@ -2176,6 +2226,7 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
     width: fit-content;
     right: 1%;
     padding: 0px 5px;
+    margin-top: -3%;
 }
 
 #my-rating .my-rating-tag {
