@@ -1362,7 +1362,7 @@ def twothousandseven_individual(id):
         'id2': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandseven_by_id(data))
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandseven_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/2008')
 def twothousandeight():
@@ -1386,7 +1386,7 @@ def twothousandeight_individual(id):
         'id': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandeight_by_id(data))
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandeight_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/2009')
 def twothousandnine():
@@ -1410,7 +1410,12 @@ def twothousandnine_individual(id):
         'id': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandnine_by_id(data))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandnine_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/2010')
 def twothousandten():
@@ -1434,7 +1439,12 @@ def twothousandten_individual(id):
         'id': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandten_by_id(data))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandten_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/2011')
 def twothousandeleven():
@@ -1458,7 +1468,12 @@ def twothousandeleven_individual(id):
         'id': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandeleven_by_id(data))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandeleven_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/2012')
 def twothousandtwelve():
@@ -1482,7 +1497,12 @@ def twothousandtwelve_individual(id):
         'id': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandtwelve_by_id(data))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandtwelve_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/2013')
 def twothousandthirteen():
@@ -1506,7 +1526,12 @@ def twothousandthirteen_individual(id):
         'id': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandthirteen_by_id(data))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandthirteen_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/2014')
 def twothousandfourteen():
@@ -1530,7 +1555,12 @@ def twothousandfourteen_individual(id):
         'id': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandfourteen_by_id(data))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandfourteen_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/2015')
 def twothousandfifteen():
@@ -1554,7 +1584,12 @@ def twothousandfifteen_individual(id):
         'id': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandfifteen_by_id(data))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandfifteen_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/2016')
 def twothousandsixteen():
@@ -1578,7 +1613,12 @@ def twothousandsixteen_individual(id):
         'id': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandsixteen_by_id(data))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandsixteen_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/2017')
 def twothousandseventeen():
@@ -1602,7 +1642,12 @@ def twothousandseventeen_individual(id):
         'id': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandseventeen_by_id(data))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandseventeen_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/2018')
 def twothousandeighteen():
@@ -1626,7 +1671,12 @@ def twothousandeighteen_individual(id):
         'id': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandeighteen_by_id(data))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandeighteen_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 @app.route('/2019')
 def twothousandnineteen():
@@ -1650,5 +1700,10 @@ def twothousandnineteen_individual(id):
         'id': id
     }
 
-    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandnineteen_by_id(data))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandnineteen_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
