@@ -255,7 +255,12 @@ def solo_topalbums(id):
         'id': session['user_id']
     }
 
-    return render_template('show_topalbum.html', userRatings = User.get_user_ratings(data), album = SOS2.get_top_by_id(albumID), user = User.get_by_id(data))
+    both = {
+        'id': session['user_id'],
+        'id2': id
+    }
+
+    return render_template('show_topalbum.html', userRatings = User.get_user_ratings(data), album = SOS2.get_top_by_id(albumID), user = User.get_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
 
 @app.route('/discover')
