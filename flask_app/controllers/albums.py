@@ -313,7 +313,7 @@ def seventy():
 
     return render_template('yearly_page.html', userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), albums = Seventy.get_seventy())
 
-@app.route('/1969/<id>')
+@app.route('/1970/<id>')
 def solo_seventy(id):
 
     userID = {
