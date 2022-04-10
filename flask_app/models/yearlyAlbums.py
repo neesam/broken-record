@@ -41,6 +41,14 @@ class yearlyAlbums:
 
         return results
 
+    @classmethod
+
+    def get_random_from_all(cls):
+
+        query = 'SELECT * FROM all_albums LIMIT 1'
+
+        return connectToMySQL(cls.db).query_db(query)
+
     @classmethod 
 
     def get_twothousand_by_id(cls, data):

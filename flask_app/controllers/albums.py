@@ -6,6 +6,7 @@ from flask_app.models.user import User
 from flask_app.models.yearlyAlbums import yearlyAlbums
 from flask_app.models.allTheYears import allTheYear 
 from flask_app.models.seventy import Seventy
+from flask_app.models.allAlbums import allAlbum
 
 @app.route('/album/<id>')
 def show_album(id):
@@ -1707,3 +1708,11 @@ def twothousandnineteen_individual(id):
 
     return render_template('show_yearly.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = Seventy.get_twothousandnineteen_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both))
 
+@app.route('/random')
+def random_album():
+
+    userID = {
+        'id': session['user_id']
+    }
+
+    return render_template('random_album.html',  userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), album = allAlbum.get_random_from_all())
