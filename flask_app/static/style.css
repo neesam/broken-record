@@ -359,6 +359,10 @@ background: linear-gradient(111deg, rgba(119,119,119,1) 16%, rgba(43,13,13,1) 89
   border-radius: 10px 0px 0px 10px;
 }
 
+#individual-song-midwest h5 {
+  font-size: 40px;
+}
+
 
 #individual-song-synthpop h5 {
   font-size: 40px;
