@@ -917,7 +917,7 @@ iframe{
     position: relative;
     top: 70px;
     margin-left: 50%;
-    -webkit-box-reflect:below -42px linear-gradient(transparent, transparent, #0004);
+    -webkit-box-reflect:below .1px linear-gradient(transparent, transparent, rgba(0, 0, 0, .1));
 
   }
   .side-container:hover img {
@@ -949,7 +949,7 @@ iframe{
     transform-origin:center;
     transform:perspective(800px) rotateY(17deg);
     transition:0.5s;
-    -webkit-box-reflect:below -1px linear-gradient(transparent, transparent, #0004);
+    -webkit-box-reflect:below -14px linear-gradient(transparent, transparent, #0004);
     color: white;
     font-family: 'Noto Sans';
 }
@@ -2824,6 +2824,26 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
 #review-content {
   position: relative;
   top: 40%;
+}
+
+#show-brookfield-body {
+ background: url('https://film-grab.com/wp-content/uploads/photo-gallery/Death_Become_Her_001.jpg?bwg=1593343316') no-repeat;
+ background-size: cover;
+}
+
+#brookfield-body {
+  background: url('https://film-grab.com/wp-content/uploads/photo-gallery/Death_Become_Her_001.jpg?bwg=1593343316') no-repeat fixed;
+ background-size: 100% 100%;
+}
+
+#sundial-body {
+  background: url('https://film-grab.com/wp-content/uploads/photo-gallery/The_Mothman_Prophecies_055.jpg?bwg=1569594548') no-repeat fixed;
+ background-size: 100% 100%;
+}
+
+#show-sundial-body {
+  background: url('https://film-grab.com/wp-content/uploads/photo-gallery/The_Mothman_Prophecies_055.jpg?bwg=1569594548') no-repeat fixed;
+ background-size: 100% 100%;
 }
 
 /* Top tracks */
