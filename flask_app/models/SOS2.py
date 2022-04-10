@@ -143,6 +143,54 @@ class SOS2:
 
         return connectToMySQL(cls.db).query_db(query)
 
+    @classmethod 
+
+    def get_all_replay2019(cls):
+
+        query = 'SELECT * FROM replay_2019'
+
+        return connectToMySQL(cls.db).query_db(query)
+
+    @classmethod 
+
+    def get_all_replay2015(cls):
+
+        query = 'SELECT * FROM replay_2015'
+
+        return connectToMySQL(cls.db).query_db(query)
+
+    @classmethod 
+
+    def get_all_replay2016(cls):
+
+        query = 'SELECT * FROM replay_2016'
+
+        return connectToMySQL(cls.db).query_db(query)
+
+    @classmethod 
+
+    def get_all_replay2020(cls):
+
+        query = 'SELECT * FROM replay_2020'
+
+        return connectToMySQL(cls.db).query_db(query)
+
+    @classmethod 
+
+    def get_all_replay2017(cls):
+
+        query = 'SELECT * FROM replay_2017'
+
+        return connectToMySQL(cls.db).query_db(query)
+
+    @classmethod 
+
+    def get_all_replay2021(cls):
+
+        query = 'SELECT * FROM replay_2021'
+
+        return connectToMySQL(cls.db).query_db(query)
+
     @classmethod
 
     def get_all_top_albums(cls):

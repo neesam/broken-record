@@ -235,6 +235,60 @@ def replay2018():
 
     return render_template('replay2018.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_replay2018(), user = User.get_by_id(data))
 
+@app.route('/replay/2017')
+def replay2017():
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('replay2017.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_replay2017(), user = User.get_by_id(data))
+
+@app.route('/replay/2019')
+def replay2019():
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('replay2019.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_replay2019(), user = User.get_by_id(data))
+
+@app.route('/replay/2015')
+def replay2015():
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('replay2015.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_replay2015(), user = User.get_by_id(data))
+
+@app.route('/replay/2016')
+def replay2016():
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('replay2016.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_replay2016(), user = User.get_by_id(data))
+
+@app.route('/replay/2020')
+def replay2020():
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('replay2020.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_replay2020(), user = User.get_by_id(data))
+
+@app.route('/replay/2021')
+def replay2021():
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('replay2021.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_replay2021(), user = User.get_by_id(data))
+
 @app.route('/top-albums')
 def topalbums():
 

@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a57f5fccbf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bigfolder/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="icon" href="https://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2022-04-08/7bca850bbff15ef43ff8dab9811fdfa8.ico.png">
-    <title>sixties | broken record</title>
+    <title>Document</title>
 </head>
-<body>
+<body id="replay2018body">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/dashboard">broken record</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,100 +92,27 @@
  {% endif %}
   </nav>
   
-  <div class="years-body">
-    <a href="/1960">
-  <div class="years-wrapper">
-    <div class="sixties-years-card">
-      <h1>
-        <span class="years-year">19</span>60
-   </h1>
+  <div id="all-2">
+    <h1 id="sos_name" class="year">andy's Replay 2016</h1>
+    <div id="songs-container">
+        {% for i in songs %}
+        <div id="individual-song-replay2018">
+            <a target="_blank" href={{i.items_track_album_external_urls_spotify}}><img src={{i.items_track_album_images_0_url}}></a>
+            <div id="individual-song-rightside">
+              <div id="sos_track">
+                <h5><b><a target="_blank" href={{i.items_track_external_urls_spotify}}>{{i.items_track_name}}</a></b></h5>
+              </div>
+              <div id="sos_artist">
+                <h5><b><a target="_blank" href="https://open.spotify.com/artist/{{i.items_track_artists_0_id}}">{{i.items_track_artists_0_name}}</a></b></h5>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-  </div>
-</a>
-<a href="/1961">
-  <div class="years-wrapper">
-    <div class="sixties-years-card">
-      <h1>
-        <span class="years-year">19</span>61
-      </h1>
-    </div>
-  </div>
-</a>
-<a href="/1962">
-  <div class="years-wrapper">
-    <div class="sixties-years-card">
-      <h1>
-        <span class="years-year">19</span>62
-      </h1>
-    </div>
-  </div>
-</a>
-<a href="/1963">
-  <div class="years-wrapper">
-    <div class="sixties-years-card">
-      <h1>
-        <span class="years-year">19</span>63
-      </h1>
-    </div>
-  </div>
-</a>
-<a href="/1964">
-  <div class="years-wrapper">
-    <div class="sixties-years-card">
-      <h1>
-        <span class="years-year">19</span>64
-      </h1>
-    </div>
-  </div>
-</a>
-<a href="/1965">
-  <div class="years-wrapper">
-    <div class="sixties-years-card">
-      <h1>
-        <span class="years-year">19</span>65
-      </h1>
-    </div>
-  </div>
-</a>
-<a href="/1966">
-  <div class="years-wrapper">
-    <div class="sixties-years-card">
-      <h1>
-        <span class="years-year">19</span>66
-      </h1>
-    </div>
-  </div>
-</a>
-<a href="/1967">
-  <div class="years-wrapper">
-    <div class="sixties-years-card">
-      <h1>
-        <span class="years-year">19</span>67
-      </h1>
-    </div>
-  </div>
-</a>
-<a href="/1968">
-  <div class="years-wrapper">
-    <div class="sixties-years-card">
-      <h1>
-        <span class="years-year">19</span>68
-      </h1>
-    </div>
-  </div>
-</a>
-<a href="/1969">
-  <div class="years-wrapper">
-    <div class="sixties-years-card">
-      <h1>
-        <span class="years-year">19</span>69
-      </h1>
-    </div>
-  </div>
-</a>
-</div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/static/js.js"></script>
 </body>
 </html>
