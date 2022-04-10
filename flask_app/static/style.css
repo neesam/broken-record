@@ -1116,6 +1116,77 @@ iframe{
   opacity:1;
 }
 
+.favsalbums-card {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  transform-origin:center;
+  transform:perspective(800px) rotateY(17deg);
+  transition:0.5s;
+  color: white;
+  font-family: 'Noto Sans';
+}
+
+
+.favsalbums-card h5 {
+  margin-top: 10px;
+  text-shadow: 5px 5px 5px black;
+}
+
+.favsalbums-card h6 {
+  text-shadow: 5px 5px 5px black;
+}
+
+.favsalbums-card img {
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  transform-origin:center;
+  transform:perspective(800px) rotateY(25deg);
+  transition:0.5s;
+}
+
+.favsalbums-card img:hover {
+  transform:perspective(800px)       rotateY(0deg);
+  opacity:1;
+}
+
+.favartistalbums-card {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  transform-origin:center;
+  transform:perspective(800px) rotateY(17deg);
+  transition:0.5s;
+  color: white;
+  font-family: 'Noto Sans';
+}
+
+
+.favartistalbums-card h5 {
+  margin-top: 10px;
+  text-shadow: 5px 5px 5px black;
+}
+
+.favartistalbums-card h6 {
+  text-shadow: 5px 5px 5px black;
+}
+
+.favartistalbums-card img {
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  transform-origin:center;
+  transform:perspective(800px) rotateY(25deg);
+  transition:0.5s;
+  margin-bottom: 20%;
+}
+
+.favartistalbums-card img:hover {
+  transform:perspective(800px)       rotateY(0deg);
+  opacity:1;
+}
+
 .other-albums-container {
     max-width:600px;
     max-height:350px;
@@ -2507,7 +2578,6 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
   transform-origin:center;
   transform:perspective(800px) rotateY(17deg);
   transition:0.5s;
-  -webkit-box-reflect:below 0 linear-gradient(transparent, transparent, #0004);
   color: white;
   margin-left: 40px;
   padding: 20px 0px 0px;
@@ -2805,13 +2875,14 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
 
 
 .artist-albums-wrap {
-    max-width:600px;
+    max-width:350px;
     max-height:350px;
     display:flex;
     justify-content:center;
     gap:10px;
     margin-top: 50%;
     grid-column: 2 / 3;
+    margin-left: 20%;
 }
 
 #artist-card {
@@ -2992,6 +3063,11 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
 
 #show-sundial-body {
   background: url('https://film-grab.com/wp-content/uploads/photo-gallery/The_Mothman_Prophecies_055.jpg?bwg=1569594548') no-repeat fixed;
+ background-size: 100% 100%;
+}
+
+#favs-body {
+  background: url('https://www.wenatcheevalleymuseum.org/wp-content/uploads/2018/04/red-curtain-animation-background_eybqt-5kg__F0000.png') no-repeat fixed;
  background-size: 100% 100%;
 }
 
