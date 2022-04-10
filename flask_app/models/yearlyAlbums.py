@@ -47,7 +47,9 @@ class yearlyAlbums:
 
         query = 'SELECT * FROM all_albums LIMIT 1'
 
-        return connectToMySQL(cls.db).query_db(query)
+        results = connectToMySQL(cls.db).query_db(query)
+
+        return cls(results[0])
 
     @classmethod 
 

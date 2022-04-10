@@ -3086,6 +3086,13 @@ background: linear-gradient(111deg, rgba(34,195,39,1) 0%, rgba(255,255,255,1) 10
  background-size: 100% 100%;
 }
 
+#random-nav {
+  font-size: 26px;
+  position: relative;
+  bottom: .1vh;
+  margin-top: 2px;
+}
+
 /* Top tracks */
 
 .top-tracks {

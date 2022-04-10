@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
     <link rel="icon" href="https://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2022-04-08/7bca850bbff15ef43ff8dab9811fdfa8.ico.png">
     <title>broken record</title>
     <script>
@@ -84,10 +84,9 @@
               <a class="dropdown-item" href="/replay/2021">2021</a>
             </div>
             </div>
+            <a style="letter-spacing: 3px" id="random-nav" href="/random"><span style="color: rgb(174, 0, 255, .6); font-family: 'Henry Penny'">R</span><span style="color: rgb(0, 85, 255, .8); font-family: 'Rubik Glitch'">A</span><span style="color:rgb(255, 0, 0, .8); font-family: 'Cinzel Decorative'">N</span><span style="color: rgb(68, 253, 96); font-family: 'Limelight'">D</span><span style="color:rgb(247, 253, 68, .8); font-family: 'Stardos Stencil'">O</span><span style="color: orange; font-family: 'Emilys Candy'">M</span></a>
           </div>
         </div>
-        </div>
-    </div>
     <div class="nav-right">
       <li id="logout" class="nav-item">
         <a href="/">logout</a>
@@ -384,7 +383,11 @@
           <h1><a href="/sos/{{i.album_id}}">{{i.album}}</a></h1>
           <h5><a target="_blank" href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
           {% endif %}  
-          {% if i.bunk != 'myfavBunk' and i.bunk != 'ratingsBunk' and i.bunk != 'topBunk' and i.bunk != 'sosBunk' and i.bunk != 'yearlyBunk' %}
+          {% if i.year == 333 %}
+          <h1><a target="_blank" href="https://open.spotify.com/album/{{i.album_id}}">{{i.album}}</a></h1>
+          <h5><a target="_blank" href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+          {% endif %}  
+          {% if i.bunk != 'myfavBunk' and i.bunk != 'ratingsBunk' and i.bunk != 'topBunk' and i.bunk != 'sosBunk' and i.bunk != 'yearlyBunk' and i.bunk != 'N/A' %}
           <h5>{{i.artist}}</h5>
           {% endif%}
           <h6><a href="ratings/{{i.user_id}}">{{i.reviewer.username}}</a></h6>
