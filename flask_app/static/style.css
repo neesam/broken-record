@@ -938,6 +938,16 @@ iframe{
     margin-top: 100px;
 }
 
+.soscard-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 40px;
+  margin-left: 40px;
+  margin-right: 15px;
+  margin-top: 10%;
+}
+
 #left #container {
     grid-column: 2
 }
@@ -1026,6 +1036,17 @@ iframe{
     flex-direction: column;
     margin-top: 20%;
     margin-bottom: 20%;
+}
+
+.sosother-albums-container {
+  max-width:600px;
+  max-height:350px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+  flex-direction: column;
+  margin-bottom: 20%;
 }
 
 .other-albums-container2 {
