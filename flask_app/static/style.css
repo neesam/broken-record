@@ -3093,6 +3093,19 @@ background: linear-gradient(111deg, rgba(34,195,39,1) 0%, rgba(255,255,255,1) 10
   margin-top: 2px;
 }
 
+.dropdown-menu .dropdown-submenu {
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+.dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
+}
+
 /* Top tracks */
 
 .top-tracks {
