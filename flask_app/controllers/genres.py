@@ -306,7 +306,7 @@ def topalbums():
         'id': session['user_id']
     }
 
-    return render_template('top_albums.html', userRatings = User.get_user_ratings(data), albums = myList.get_all_top_albums(), user = User.get_by_id(data))
+    return render_template('top_albums.html', userRatings = User.get_user_ratings(data), albums = SOS2.get_all_top_albums(), user = User.get_by_id(data))
 
 
 @app.route('/my-list')
