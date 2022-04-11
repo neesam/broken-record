@@ -42,15 +42,20 @@
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="/albums">andy's ratings</a>
             <a class="dropdown-item" href="/favartists">andy's favorites</a>
+            <a class="dropdown-item" href="/playalot">andy's big playlist</a>
+            <a class="dropdown-item" href="/my-list">andy's list</a>
+
+            <a class="dropdown-item" href="/brookfield">brookfield corp</a>
+              <a class="dropdown-item" href="/sundial">sundial</a>
           </div>
           </div>
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              my music
+              {{user.username}}'s stuff
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/brookfield">brookfield corp</a>
-              <a class="dropdown-item" href="/sundial">sundial</a>
+              <a class="dropdown-item" href="/messages">inbox</a>
+              <a class="dropdown-item" href="/ratings/{{user.id}}">my ratings</a>
             </div>
           </div>
           <div class="dropdown">

@@ -193,6 +193,14 @@ class SOS2:
 
     @classmethod
 
+    def get_all_playalot(cls):
+
+        query = 'SELECT * FROM playalot'
+
+        return connectToMySQL(cls.db).query_db(query)
+
+    @classmethod
+
     def get_all_top_albums(cls):
 
         query = 'SELECT * FROM top_albums_playlists ORDER BY RAND() LIMIT 250'

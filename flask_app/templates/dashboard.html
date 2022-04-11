@@ -60,15 +60,20 @@
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="/albums">andy's ratings</a>
             <a class="dropdown-item" href="/favartists">andy's favorites</a>
+            <a class="dropdown-item" href="/playalot">andy's big playlist</a>
+            <a class="dropdown-item" href="/my-list">andy's list</a>
+
+            <a class="dropdown-item" href="/brookfield">brookfield corp</a>
+              <a class="dropdown-item" href="/sundial">sundial</a>
           </div>
           </div>
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              my music
+              {{user.username}}'s stuff
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/brookfield">brookfield corp</a>
-              <a class="dropdown-item" href="/sundial">sundial</a>
+              <a class="dropdown-item" href="/messages">inbox</a>
+              <a class="dropdown-item" href="/ratings/{{user.id}}">my ratings</a>
             </div>
           </div>
           <div class="dropdown">
@@ -85,9 +90,11 @@
               <a class="dropdown-item" href="/replay/2021">2021</a>
             </div>
             </div>
-            <a style="letter-spacing: 2px" id="random-nav" href="/random"><span style="color: rgb(174, 0, 255, .6); font-family: 'Henry Penny'">R</span><span style="color: rgb(0, 85, 255, .8); font-family: 'Rubik Glitch'">A</span><span style="color:rgb(255, 0, 0, .8); font-family: 'Cinzel Decorative'">N</span><span style="color: rgb(68, 253, 96); font-family: 'Limelight'">D</span><span style="color:rgb(247, 253, 68, .8); font-family: 'Stardos Stencil'">O</span><span style="color: orange; font-family: 'Emilys Candy'">M</span></a>
+            <a style="letter-spacing: 3px" id="random-nav" href="/random"><span style="color: rgb(174, 0, 255, .6); font-family: 'Henry Penny'">R</span><span style="color: rgb(0, 85, 255, .8); font-family: 'Rubik Glitch'">A</span><span style="color:rgb(255, 0, 0, .8); font-family: 'Cinzel Decorative'">N</span><span style="color: rgb(68, 253, 96); font-family: 'Rock 3D'">D</span><span style="color:rgb(247, 253, 68, .8); font-family: 'Stardos Stencil'">O</span><span style="color: orange; font-family: 'Emilys Candy'">M</span></a>
           </div>
         </div>
+        </div>
+    </div>
     <div class="nav-right">
       <li id="logout" class="nav-item">
         <a href="/">logout</a>

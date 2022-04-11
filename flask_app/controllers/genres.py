@@ -244,6 +244,15 @@ def replay2017():
 
     return render_template('replay2017.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_replay2017(), user = User.get_by_id(data))
 
+@app.route('/playalot')
+def playalot():
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('playalot.html', userRatings = User.get_user_ratings(data), songs = SOS2.get_all_playalot(), user = User.get_by_id(data))
+
 @app.route('/replay/2019')
 def replay2019():
 
