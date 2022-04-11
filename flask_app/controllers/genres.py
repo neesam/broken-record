@@ -309,32 +309,32 @@ def topalbums():
     return render_template('top_albums.html', userRatings = User.get_user_ratings(data), albums = SOS2.get_all_top_albums(), user = User.get_by_id(data))
 
 
-@app.route('/my-list')
-def mylist():
+# @app.route('/my-list')
+# def mylist():
 
-    data = {
-        'id': session['user_id']
-    }
+#     data = {
+#         'id': session['user_id']
+#     }
 
-    return render_template('mylist.html', userRatings = User.get_user_ratings(data), albums = myList.get_all_mylist(), user = User.get_by_id(data))
+#     return render_template('mylist.html', userRatings = User.get_user_ratings(data), albums = myList.get_all_mylist(), user = User.get_by_id(data))
 
-@app.route('/my-list/<id>')
-def solo_mylist(id):
+# @app.route('/my-list/<id>')
+# def solo_mylist(id):
 
-    albumID = {
-        'id': id
-    }
+#     albumID = {
+#         'id': id
+#     }
 
-    data = {
-        'id': session['user_id']
-    }
+#     data = {
+#         'id': session['user_id']
+#     }
 
-    both = {
-        'id': session['user_id'],
-        'id2': id
-    }
+#     both = {
+#         'id': session['user_id'],
+#         'id2': id
+#     }
 
-    return render_template('show_mylist.html', userRatings = User.get_user_ratings(data), album = myList.get_mylist_by_id(albumID), user = User.get_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both)) 
+#     return render_template('show_mylist.html', userRatings = User.get_user_ratings(data), album = myList.get_mylist_by_id(albumID), user = User.get_by_id(data), allUserRatings = User.get_user_ratings_for_one_album_page(both)) 
 
 @app.route('/top-albums/<id>')
 def solo_topalbums(id):
