@@ -17,8 +17,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="icon" href="https://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2022-04-08/7bca850bbff15ef43ff8dab9811fdfa8.ico.png">
     <title>{{ratingProfile.username}} | broken record</title>
+    <script>
+      $(window).scroll(function(){
+    if ($(window).scrollTop() >= 65) {
+        $('#left').addClass('fixed-header');
+    }
+    else {
+        $('#left').removeClass('fixed-header');
+    }
+});
+    </script>
 </head>
 
 <body>
@@ -99,18 +110,17 @@
         <img id="user-prof-img" class="card-img-top" src={{ratingProfile.avatar}} alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{ratingProfile.username}}</h5>
-          <h6>I'm listening to <strong>{{ratingProfile.listening_to}}</strong></h6>
           <form action="/listening/submit" method="post">
+            {% if ratingProfile.listening_to != None %}
+                <p class="card-text">I'm listening to <b>{{ratingProfile.listening_to}}</b></p>
+                {% endif %}
+            {% if ratingProfile.listening_to == None %}
+                <h6>I'm not listening to anything right now.</h6>
+                {% endif %}
             {% if ratingProfile.id == session['user_id'] %}
             <div class="form-group">
+              <label id="listening-question" for="listening_to">What are you listening to?</label>
                 <input type="hidden" value={{user.username}} name="username">
-                <label id="listening-question" for="listening_to">What are you listening to?</label>
-                {% if user.listening_to == None %}
-                <p class="card-text"><b>Nothing</b></p>
-                {% endif %}
-                {% if user.listening_to != None %}
-                <p class="card-text"><b>{{user.listening_to}}</b></p>
-                {% endif %}
                 <textarea class="form-control" name="listening_to" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <button id="user-prof-submit" class="btn btn-light">Submit</button>
@@ -122,12 +132,12 @@
 
   
       <div id="reviews-dashboard">
-        {% if userRatings.rating_id == NULL %}
+        {% if userRatings[0].rating_id == None %}
     <div id="container">
       <div class="product-details">
           <h1 style="color: white;">Add some ratings!</h1>
     {% endif %}
-        {% if userRatings.rating_id != NULL %}
+        {% if userRatings[0].rating_id != None %}
         {% for i in userRatings %}
         <div id="container">
           <div class="product-details">

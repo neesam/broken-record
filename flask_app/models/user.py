@@ -58,7 +58,9 @@ class User:
 
         results = connectToMySQL(cls.db).query_db(query, data)
 
-        return results
+        if len(results) < 0:
+            return False
+        return cls(results[0])
 
     @staticmethod
 

@@ -39,7 +39,7 @@ def logout():
 @app.route('/login/user', methods=['POST'])
 def login_user():
 
-    user = User.get_by_username(request.form['username'])
+    user = User.get_by_username(request.form)
 
     if not user:
         flash('Invalid username/password', 'login')
