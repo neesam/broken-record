@@ -58,9 +58,7 @@ class User:
 
         results = connectToMySQL(cls.db).query_db(query, data)
 
-        if len(results) < 0:
-            return False
-        return cls(results[0])
+        return results
 
     @staticmethod
 
@@ -88,6 +86,12 @@ class User:
             is_valid = False
         if len(user['avatar']) == 0:
             flash('Please include an avatar', 'register')
+            is_valid = False
+        if len(user['username']) == 0:
+            flash('Please choose a username', 'register')
+            is_valid = False
+        if len(user['password']) < 6:
+            flash('Password must be at least six characters', 'register')
             is_valid = False
         return is_valid
         

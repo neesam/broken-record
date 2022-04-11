@@ -39,13 +39,13 @@ def logout():
 @app.route('/login/user', methods=['POST'])
 def login_user():
 
-    user = User.get_by_username(request.form)
+    user = User.get_by_username(request.form['username'])
 
     if not user:
-        flash('Invalid username/password')
+        flash('Invalid username/password', 'login')
         return redirect('/')
     if not bcrypt.check_password_hash(user.password, request.form['password']):
-        flash('Invalid username/password')
+        flash('Invalid username/password', 'login')
         return redirect('/')
 
     session['user_id'] = user.id

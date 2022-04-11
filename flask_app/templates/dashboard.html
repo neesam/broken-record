@@ -8,6 +8,9 @@
     <script src="https://kit.fontawesome.com/a57f5fccbf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/style.css">
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
     <script src="jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,16 +102,9 @@
       <li id="logout" class="nav-item">
         <a href="/">logout</a>
       </li>
-      {% if userRatings|length < 2 %}
       <div class="user-nav">
-<img src={{user.avatar}} alt="">     
- </div>
- {% endif %}
- {% if userRatings|length > 1 %}
-      <div class="user-nav">
-<a href="/ratings/{{user.id}}"><img src={{user.avatar}} alt=""></a>     
- </div>
- {% endif %}
+        <a href="/ratings/{{user.id}}"><img src={{user.avatar}} alt=""></a>     
+         </div>
   </nav>
   
   <div id="all">
@@ -133,12 +129,10 @@
             <button id="user-prof-submit" class="btn btn-light">Submit</button>
         </form>
         </div>
-        {% if userRatings|length > 1 %}
         <div id="side-prof-ratingsnreviews" class="card-body">
           <a href="ratings/{{user.id}}" class="card-link">Ratings</a>
           <!-- <a id="prof-reviews" href="#" class="card-link">Reviews</a> -->
         </div>
-        {% endif %}
       </div>
       </div>
 

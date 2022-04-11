@@ -16,6 +16,15 @@
 <body id="login-page">
     <div id="login-form-container">
         <h1>broken record</h1>
+        <div id="login-message">
+        {% with messages = get_flashed_messages(category_filter = ['login'])%}
+                {% if messages %}
+                    {% for message in messages %}
+                    {{message}}
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
         <form id="login-form" action="/login/user" method="post">
             <div class="form-group">
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" placeholder="Username">

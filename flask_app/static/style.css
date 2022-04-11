@@ -1018,6 +1018,16 @@ iframe{
     opacity:1;
   }
 
+  #login-message {
+    margin-bottom: 10px;
+  }
+
+  #registration-form-container {
+    color: white;
+  }
+
+  #registration-form-container
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -3097,7 +3107,7 @@ background: linear-gradient(111deg, rgba(34,195,39,1) 0%, rgba(255,255,255,1) 10
   position: relative;
   bottom: .1vh;
   margin-top: 2px;
-  text-shadow: 0 0 1px black;
+  text-shadow: 0 0 1px tan;
 }
 
 .dropdown-menu .dropdown-submenu {

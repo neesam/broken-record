@@ -87,16 +87,9 @@
       <li id="logout" class="nav-item">
         <a href="/">logout</a>
       </li>
-      {% if userRatings|length < 2 %}
-      <div class="user-nav">
-<img src={{user.avatar}} alt="">     
- </div>
- {% endif %}
- {% if userRatings|length > 1 %}
       <div class="user-nav">
 <a href="/ratings/{{user.id}}"><img src={{user.avatar}} alt=""></a>     
  </div>
- {% endif %}
   </nav>
   
   <div id="all">
@@ -107,25 +100,35 @@
         <div class="card-body">
           <h5 class="card-title">{{ratingProfile.username}}</h5>
           <h6>I'm listening to <strong>{{ratingProfile.listening_to}}</strong></h6>
+          <form action="/listening/submit" method="post">
+            {% if ratingProfile.id == session['user_id'] %}
+            <div class="form-group">
+                <input type="hidden" value={{user.username}} name="username">
+                <label id="listening-question" for="listening_to">What are you listening to?</label>
+                {% if user.listening_to == None %}
+                <p class="card-text"><b>Nothing</b></p>
+                {% endif %}
+                {% if user.listening_to != None %}
+                <p class="card-text"><b>{{user.listening_to}}</b></p>
+                {% endif %}
+                <textarea class="form-control" name="listening_to" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button id="user-prof-submit" class="btn btn-light">Submit</button>
         </form>
+        {% endif %}
         </div>
       </div>
-      <h4 id="messages-tag">Messages</h4>
-      <div id="people-to-message">
-        {% for u in users %}
-        {% if u.id != session['user_id'] %}
-          <div id="message-this-person">
-            <img src={{u.avatar}} alt="">
-            <a href="/messages/{{u.id}}"><p>{{u.username}}</p></a>
-          </div>
-        {% endif %}
-        {% endfor %}
-        </div>
       </div>
 
   
       <div id="reviews-dashboard">
-        {% for i in ratings %}
+        {% if userRatings.rating_id == NULL %}
+    <div id="container">
+      <div class="product-details">
+          <h1 style="color: white;">Add some ratings!</h1>
+    {% endif %}
+        {% if userRatings.rating_id != NULL %}
+        {% for i in userRatings %}
         <div id="container">
           <div class="product-details">
               {% if i.year == 1960 %}
@@ -452,6 +455,7 @@
       </div> 
     </div>
     {% endfor %}
+    {% endif %}
   </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
