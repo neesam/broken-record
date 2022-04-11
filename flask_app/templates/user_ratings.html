@@ -127,6 +127,12 @@
         </form>
         {% endif %}
         </div>
+        {% if ratingProfile.id != session['user_id'] %}
+        <div id="side-prof-ratingsnreviews" class="card-body">
+          <a href="/messages/{{ratingProfile.id}}" class="card-link">Message</a>
+          <!-- <a id="prof-reviews" href="#" class="card-link">Reviews</a> -->
+        </div>
+        {% endif %}
       </div>
       </div>
 
