@@ -240,7 +240,7 @@ class User:
 
     def get_all_users(cls):
 
-        query = 'SELECT * FROM users'
+        query = 'SELECT * FROM users ORDER BY RAND()'
 
         results = connectToMySQL(cls.db).query_db(query)
 

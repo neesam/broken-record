@@ -60,7 +60,7 @@
               {{user.username}}'s stuff
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/messages">inbox</a>
+              <a class="dropdown-item"  href="/find-friends">find friends</a>
               <a class="dropdown-item" href="/ratings/{{user.id}}">my ratings</a>
             </div>
           </div>
@@ -370,6 +370,10 @@
               {% endif %}
               {% if i.year == 2223 %}
               <h1><a href="/sos/{{i.album_id}}">{{i.album}}</a></h1>
+              <h5><a target="_blank" href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+              {% endif %}  
+              {% if i.year == 4222 %}
+              <h1><a href="/my-list/{{i.album_id}}">{{i.album}}</a></h1>
               <h5><a target="_blank" href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
               {% endif %}  
               {% if i.bunk != 'myfavBunk' and i.bunk != 'ratingsBunk' and i.bunk != 'topBunk' and i.bunk != 'sosBunk' and i.bunk != 'yearlyBunk' %}

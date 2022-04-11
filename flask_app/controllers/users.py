@@ -51,3 +51,12 @@ def login_user():
     session['user_id'] = user.id
 
     return redirect('/dashboard') 
+
+@app.route('/find-friends')
+def friends():
+
+    data = {
+        'id': session['user_id']
+    }
+
+    return render_template('findfriends.html', user = User.get_by_id(data), users = User.get_all_users())
