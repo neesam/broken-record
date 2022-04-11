@@ -400,7 +400,11 @@
               <h1><a href="/my-list/{{i.album_id}}">{{i.album}}</a></h1>
               <h5><a target="_blank" href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
               {% endif %}  
-              {% if i.bunk != 'myfavBunk' and i.bunk != 'ratingsBunk' and i.bunk != 'topBunk' and i.bunk != 'sosBunk' and i.bunk != 'yearlyBunk' %}
+              {% if i.year == 333 %}
+              <h1><a href="https://open.spotify.com/album/{{i.album_id}}">{{i.album}}</a></h1>
+              <h5><a target="_blank" href="https://open.spotify.com/artist/{{i.artist_id}}">{{i.artist}}</a></h5>
+              {% endif %}  
+              {% if i.bunk != 'myfavBunk' and i.bunk != 'ratingsBunk' and i.bunk != 'topBunk' and i.bunk != 'sosBunk' and i.bunk != 'yearlyBunk' and i.year != 333 %}
               <h5>{{i.artist}}</h5>
               {% endif%}
               <h6><a href="ratings/{{i.user_id}}">{{i.reviewer.username}}</a></h6>
