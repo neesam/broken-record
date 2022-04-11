@@ -138,7 +138,12 @@
 
   
       <div id="reviews-dashboard">
-        {% if userRatings[0].rating_id == None %}
+        {% if userRatings[0].rating_id == None and ratingProfile.id != session['user_id'] %}
+    <div id="container">
+      <div class="product-details">
+          <h1 style="color: white;">No ratings right now...</h1>
+    {% endif %}
+        {% if userRatings[0].rating_id == None and ratingProfile.id == session['user_id'] %}
     <div id="container">
       <div class="product-details">
           <h1 style="color: white;">Add some ratings!</h1>
