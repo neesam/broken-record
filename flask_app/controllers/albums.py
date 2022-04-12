@@ -889,7 +889,7 @@ def ninetyone():
         'id': session['user_id']
     }
 
-    return render_template('yearly_page.html', userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), albums = Seventy.get_ninety())
+    return render_template('yearly_page.html', userRatings = User.get_user_ratings(userID), user = User.get_by_id(userID), albums = Seventy.get_ninetyone())
 
 @app.route('/1991/<id>')
 def solo_ninetyone(id):
