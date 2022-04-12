@@ -33,6 +33,236 @@ body {
     font-size: 100px;
     text-shadow: 9px 5px black;
     margin-bottom: -80px;
+    animation-name: moveyears;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    width: 1200px;
+}
+
+.yearsostitle {
+  color: white;
+  padding: 30px 40px 0px 40px;
+  font-size: 100px;
+  text-shadow: 9px 5px black;
+  margin-bottom: -70px;
+}
+
+@keyframes moveyears {
+  frpm {
+    color: white;
+    text-shadow: -1px -1px 1px #aaa,
+    0px 4px 1px rgba(0,0,0,0.5),
+    4px 4px 5px rgba(0,0,0,0.7),
+    0px 0px 7px rgba(0,0,0,0.4);
+    transform: skewX(3deg);
+
+  }
+  to {
+    color: #ada2e6;
+    text-shadow: 0 1px #808d93,
+       	              -1px 0 #cdd2d5,
+       	              -1px 2px #808d93,
+       	              -2px 1px #cdd2d5,
+       	              -2px 3px #808d93,
+       	              -3px 2px #cdd2d5,
+       	              -3px 4px #808d93,
+       	              -4px 3px #cdd2d5,
+       	              -4px 5px #808d93,
+       	              -5px 4px #cdd2d5,
+       	              -5px 6px #808d93,
+       	              -6px 5px #cdd2d5,
+       	              -6px 7px #808d93,
+       	              -7px 6px #cdd2d5,
+       	              -7px 8px #808d93,
+       	              -8px 7px #cdd2d5;
+transform: translate(1px, 20%);
+  }
+}
+
+.yearreplay {
+  color: white;
+  padding: 10px 40px 0px 40px;
+  font-size: 100px;
+  text-shadow: 9px 5px black;
+  margin-bottom: -80px;
+  animation-name: movereplay;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes movereplay {
+  from {
+    color: white;
+    text-shadow: -1px -1px 1px #aaa,
+    0px 4px 1px rgba(0,0,0,0.5),
+    4px 4px 5px rgba(0,0,0,0.7),
+    0px 0px 7px rgba(0,0,0,0.4);
+    transform: translate(1px, 2%);
+  }
+  to {
+    color: #B9ABCB;
+    text-shadow: 0 1px #808d93,
+       	              -1px 0 #cdd2d5,
+       	              -1px 2px #808d93,
+       	              -2px 1px #cdd2d5,
+       	              -2px 3px #808d93,
+       	              -3px 2px #cdd2d5,
+       	              -3px 4px #808d93,
+       	              -4px 3px #cdd2d5,
+       	              -4px 5px #808d93,
+       	              -5px 4px #cdd2d5,
+       	              -5px 6px #808d93,
+       	              -6px 5px #cdd2d5,
+       	              -6px 7px #808d93,
+       	              -7px 6px #cdd2d5,
+       	              -7px 8px #808d93,
+       	              -8px 7px #cdd2d5;
+transform: translate(50px, 1%);
+  }
+}
+
+.yearfavs {
+  color: white;
+  padding: 10px 40px 0px 40px;
+  font-size: 100px;
+  text-shadow: 9px 5px black;
+  margin-bottom: -80px;
+  animation-name: movefavs;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  width: 1000px;
+}
+
+@keyframes movefavs {
+  frpm {
+    color: white;
+    text-shadow: -1px -1px 1px #aaa,
+    0px 4px 1px rgba(0,0,0,0.5),
+    4px 4px 5px rgba(0,0,0,0.7),
+    0px 0px 7px rgba(0,0,0,0.4);
+    transform: skewX(3deg);
+
+  }
+  to {
+    color: gold;
+    text-shadow: 0 1px rgb(236, 223, 154),
+       	              -1px 0 rgb(103, 93, 39),
+       	              -1px 2px rgb(243, 221, 97),
+       	              -2px 1px rgb(103, 93, 39),
+       	              -2px 3px rgb(243, 221, 97),
+       	              -3px 2px rgb(103, 93, 39),
+       	              -3px 4px rgb(243, 221, 97),
+       	              -4px 3px rgb(103, 93, 39),
+       	              -4px 5px rgb(243, 221, 97),
+       	              -5px 4px rgb(103, 93, 39),
+       	              -5px 6px rgb(243, 221, 97),
+       	              -6px 5px rgb(103, 93, 39),
+       	              -6px 7px rgb(243, 221, 97),
+       	              -7px 6px rgb(103, 93, 39),
+       	              -7px 8px rgb(243, 221, 97),
+       	              -8px 7px rgb(103, 93, 39);
+transform: translate(1px, 20%);
+  }
+}
+
+.yearrym {
+  color: white;
+  padding: 10px 40px 0px 40px;
+  font-size: 100px;
+  text-shadow: 9px 5px black;
+  margin-bottom: -80px;
+  animation-name: moverym;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes moverym {
+  from {
+    color: white;
+    text-shadow: -1px -1px 1px #aaa,
+    0px 4px 1px rgba(0,0,0,0.5),
+    4px 4px 5px rgba(0,0,0,0.7),
+    0px 0px 7px rgba(0,0,0,0.4);
+    transform: skewX(3deg);
+
+  }
+  to {
+    color: #95D790;
+    text-shadow: 0 1px #808d93,
+       	              -1px 0 #cdd2d5,
+       	              -1px 2px #808d93,
+       	              -2px 1px #cdd2d5,
+       	              -2px 3px #808d93,
+       	              -3px 2px #cdd2d5,
+       	              -3px 4px #808d93,
+       	              -4px 3px #cdd2d5,
+       	              -4px 5px #808d93,
+       	              -5px 4px #cdd2d5,
+       	              -5px 6px #808d93,
+       	              -6px 5px #cdd2d5,
+       	              -6px 7px #808d93,
+       	              -7px 6px #cdd2d5,
+       	              -7px 8px #808d93,
+       	              -8px 7px #cdd2d5;
+transform: translate(1px, 20%);
+
+  }
+}
+
+.yearsos {
+  color: white;
+  padding: 10px 40px 0px 40px;
+  font-size: 100px;
+  text-shadow: 9px 5px black;
+  margin-bottom: -10px;
+  margin-top: 30px;
+  animation-name: movesos;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  width: 200px;
+}
+
+@keyframes movesos {
+  from {
+    color: white;
+    text-shadow: -1px -1px 1px #aaa,
+    0px 4px 1px rgba(0,0,0,0.5),
+    4px 4px 5px rgba(0,0,0,0.7),
+    0px 0px 7px rgba(0,0,0,0.4);
+    transform: skewX(3deg);
+
+  }
+  to {
+    color: #ada2e6;
+    text-shadow: 0 1px #808d93,
+       	              -1px 0 #cdd2d5,
+       	              -1px 2px #808d93,
+       	              -2px 1px #cdd2d5,
+       	              -2px 3px #808d93,
+       	              -3px 2px #cdd2d5,
+       	              -3px 4px #808d93,
+       	              -4px 3px #cdd2d5,
+       	              -4px 5px #808d93,
+       	              -5px 4px #cdd2d5,
+       	              -5px 6px #808d93,
+       	              -6px 5px #cdd2d5,
+       	              -6px 7px #808d93,
+       	              -7px 6px #cdd2d5,
+       	              -7px 8px #808d93,
+       	              -8px 7px #cdd2d5;
+transform: translate(1px, 10%);
+
+  }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
@@ -1044,6 +1274,15 @@ iframe{
   margin-left: 40px;
   margin-right: 15px;
   margin-top: 10%;
+
+}
+
+.sosother {
+  margin-right: 100px;
+}
+
+.sosyearother {
+  margin-left:30px;
 }
 
 #left #container {
