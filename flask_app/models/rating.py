@@ -69,7 +69,10 @@ class Rating:
 
         query = 'DELETE FROM ratings WHERE ratings.rating_id = %(id)s'
 
-        return connectToMySQL(cls.db).query_db(query, data)
+        results = connectToMySQL(cls.db).query_db(query, data)
+        print(results)
+
+        return results
 
     @classmethod
     

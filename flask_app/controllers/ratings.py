@@ -47,8 +47,12 @@ def delete_rating(id):
         'id': id
     }
 
+    userID = {
+        'id': session['user_id']
+    }
+
     Rating.destroy(data) 
-    return redirect('/dashboard')
+    return redirect(f"/ratings/{session['user_id']}")
 
 @app.route('/edit-rating', methods=['POST'])
 def create_rating_yearly():

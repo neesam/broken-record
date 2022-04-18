@@ -472,7 +472,9 @@
                     <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
                     <i class="fa fa-star" style="font-size:29.5px;color:gold"></i>
                     {% endif %}
-            <!-- <p class="information">"{{i.content}}"</p> -->
+                    {% if i.user_id == session['user_id'] %}
+            <a style="position: relative; bottom: 30px; opacity: .2" href="/destroy/{{i.rating_id}}"><p style="opacity: .5" class="information">delete</p></a>
+                    {% endif %}
         </div>
         </div>
       <div class="product-image">
