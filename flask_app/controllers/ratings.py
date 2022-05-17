@@ -20,6 +20,9 @@ def add_rating():
 @app.route('/create-rating', methods=['POST'])
 def create_rating():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'stars': int(request.form['rating']),
         'artist': request.form['name'],
@@ -43,6 +46,9 @@ def create_rating():
 @app.route('/destroy/<id>')
 def delete_rating(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': id
     }
@@ -57,6 +63,9 @@ def delete_rating(id):
 @app.route('/edit-rating', methods=['POST'])
 def create_rating_yearly():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'stars': int(request.form['rating']),
         'rating_id': request.form['rating_id']
@@ -68,6 +77,9 @@ def create_rating_yearly():
     
 @app.route('/ratings/<int:id>')
 def user_ratings(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': id

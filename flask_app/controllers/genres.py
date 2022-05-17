@@ -10,6 +10,9 @@ from flask_app.models.mylist import myList
 @app.route('/genres/alternative-emo')
 def alternative_emo():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -18,6 +21,9 @@ def alternative_emo():
 
 @app.route('/genres/pop-punk')
 def pop_punk():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id']
@@ -28,6 +34,9 @@ def pop_punk():
 @app.route('/genres/midwest-emo')
 def midwest_emo(): 
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -36,6 +45,9 @@ def midwest_emo():
 
 @app.route('/genres/indie-rock')
 def indie_rock():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id']
@@ -46,6 +58,9 @@ def indie_rock():
 @app.route('/genres/glitchcore')
 def glitchcore():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -54,6 +69,9 @@ def glitchcore():
 
 @app.route('/genres/math-rock')
 def mathrock():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id']
@@ -64,6 +82,9 @@ def mathrock():
 @app.route('/genres/plugg')
 def plugg():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -72,6 +93,9 @@ def plugg():
 
 @app.route('/genres/vaporwave')
 def vaporwave():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id']
@@ -82,6 +106,9 @@ def vaporwave():
 @app.route('/sos/synthpop')
 def sos_synthpop():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -90,6 +117,9 @@ def sos_synthpop():
 
 @app.route('/sos/<id>')
 def solo_altemo(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     albumID = {
         'id': id
@@ -109,6 +139,9 @@ def solo_altemo(id):
 @app.route('/sos')
 def sos():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -117,6 +150,9 @@ def sos():
     
 @app.route('/sos/electro')
 def sos_electro():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id']
@@ -127,6 +163,9 @@ def sos_electro():
 @app.route('/sos/midwest-emo')
 def sos_midwest(): 
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -135,6 +174,9 @@ def sos_midwest():
 
 # @app.route('/sos/italian-disco')
 # def sos_italiandisco(): 
+
+    if 'user_id' not in session:
+        return redirect('/')
 
 #     data = {
 #         'id': session['user_id'] 
@@ -145,6 +187,9 @@ def sos_midwest():
 @app.route('/sos/pop-punk')
 def sos_poppunk(): 
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id'] 
     }
@@ -154,6 +199,9 @@ def sos_poppunk():
 @app.route('/sos/instrumental-post-rock') 
 def sos_instrumentalpostrock(): 
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -162,6 +210,9 @@ def sos_instrumentalpostrock():
 
 @app.route('/electro/<id>')
 def solo_electro(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     albumID = {
         'id': id
@@ -176,6 +227,9 @@ def solo_electro(id):
 @app.route('/sos/alternative-emo')
 def sos_altemo():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -184,6 +238,9 @@ def sos_altemo():
 
 @app.route('/sos/sophisti-pop')
 def sos_sophisti():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id']
@@ -194,6 +251,9 @@ def sos_sophisti():
 @app.route('/sos/new-romantic')
 def sos_newromantic():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -202,6 +262,9 @@ def sos_newromantic():
 
 @app.route('/sos/dance-rock')
 def sos_dancerock():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id']
@@ -212,6 +275,9 @@ def sos_dancerock():
 @app.route('/sos/freestyle')
 def sos_freestyle():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -220,6 +286,9 @@ def sos_freestyle():
 
 @app.route('/sos/math-rock')
 def sos_mathrock():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id'] 
@@ -230,6 +299,9 @@ def sos_mathrock():
 @app.route('/replay/2018')
 def replay2018():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -238,6 +310,9 @@ def replay2018():
 
 @app.route('/replay/2017')
 def replay2017():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id']
@@ -248,6 +323,9 @@ def replay2017():
 @app.route('/playalot')
 def playalot():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -256,6 +334,9 @@ def playalot():
 
 @app.route('/replay/2019')
 def replay2019():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id']
@@ -266,6 +347,9 @@ def replay2019():
 @app.route('/replay/2015')
 def replay2015():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -274,6 +358,9 @@ def replay2015():
 
 @app.route('/replay/2016')
 def replay2016():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id']
@@ -284,6 +371,9 @@ def replay2016():
 @app.route('/replay/2020')
 def replay2020():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -293,6 +383,9 @@ def replay2020():
 @app.route('/replay/2021')
 def replay2021():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -301,6 +394,9 @@ def replay2021():
 
 @app.route('/top-albums')
 def topalbums():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id']
@@ -312,6 +408,9 @@ def topalbums():
 # @app.route('/my-list')
 # def mylist():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
 #     data = {
 #         'id': session['user_id']
 #     }
@@ -320,6 +419,9 @@ def topalbums():
 
 # @app.route('/my-list/<id>')
 # def solo_mylist(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
 #     albumID = {
 #         'id': id
@@ -339,6 +441,9 @@ def topalbums():
 @app.route('/top-albums/<id>')
 def solo_topalbums(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     albumID = {
         'id': id
     }
@@ -357,6 +462,9 @@ def solo_topalbums(id):
 
 @app.route('/discover')
 def sounds_of_spotify():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     data = {
         'id': session['user_id']

@@ -55,6 +55,9 @@ def login_user():
 @app.route('/find-friends')
 def friends():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }

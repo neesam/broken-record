@@ -51,6 +51,9 @@ def albums():
 @app.route('/brookfield')
 def brookfield():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -59,6 +62,9 @@ def brookfield():
 
 @app.route('/brookfield/<int:id>')
 def brookfield_individual(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -74,6 +80,9 @@ def brookfield_individual(id):
 @app.route('/years')
 def years():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -83,6 +92,9 @@ def years():
 @app.route('/favartists')
 def favartists():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     data = {
         'id': session['user_id']
     }
@@ -91,6 +103,9 @@ def favartists():
 
 @app.route('/favartists/<id>')
 def individual_artist(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -110,6 +125,9 @@ def individual_artist(id):
 @app.route('/favartists/albums/<id>')
 def favartists_album(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -128,6 +146,9 @@ def favartists_album(id):
 @app.route('/sundial')
 def sundial():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -136,6 +157,9 @@ def sundial():
 
 @app.route('/sundial/<int:id>')
 def sundial_individual(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']

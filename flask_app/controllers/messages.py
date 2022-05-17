@@ -11,6 +11,9 @@ from flask_app.models.message import Message
 @app.route('/messages/<id>')
 def messages(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     dataForSender = {
         'id': id
     }
@@ -42,6 +45,10 @@ def post_message():
 
 @app.route('/destroy/message/<int:id>')
 def destroy_message(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
+        
     data = {
         "id": id
     }

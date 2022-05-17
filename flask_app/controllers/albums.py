@@ -11,6 +11,9 @@ from flask_app.models.allAlbums import allAlbum
 @app.route('/album/<id>')
 def show_album(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -32,6 +35,9 @@ def show_album(id):
 @app.route('/1960')
 def sixty():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -40,6 +46,9 @@ def sixty():
 
 @app.route('/1960/<id>')
 def solo_sixty(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -59,6 +68,9 @@ def solo_sixty(id):
 @app.route('/1961')
 def sixtyone():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -67,6 +79,9 @@ def sixtyone():
 
 @app.route('/1961/<id>')
 def solo_sixtyone(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -86,6 +101,9 @@ def solo_sixtyone(id):
 @app.route('/1962')
 def sixtytwo():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -94,6 +112,9 @@ def sixtytwo():
 
 @app.route('/1962/<id>')
 def solo_sixtytwo(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -114,6 +135,9 @@ def solo_sixtytwo(id):
 @app.route('/1963')
 def sixtythree():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -122,6 +146,9 @@ def sixtythree():
 
 @app.route('/1963/<id>')
 def solo_sixtythree(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -141,6 +168,9 @@ def solo_sixtythree(id):
 @app.route('/1964')
 def sixtyfour():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -149,6 +179,9 @@ def sixtyfour():
 
 @app.route('/1964/<id>')
 def solo_sixtyfour(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -169,6 +202,9 @@ def solo_sixtyfour(id):
 @app.route('/1965')
 def sixtyfive():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -177,6 +213,9 @@ def sixtyfive():
 
 @app.route('/1965/<id>')
 def solo_sixtyfive(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -197,6 +236,9 @@ def solo_sixtyfive(id):
 @app.route('/1966')
 def sixtysix():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -205,6 +247,9 @@ def sixtysix():
 
 @app.route('/1966/<id>')
 def solo_sixtysix(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -225,6 +270,9 @@ def solo_sixtysix(id):
 @app.route('/1967')
 def sixtyseven():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -233,6 +281,9 @@ def sixtyseven():
 
 @app.route('/1967/<id>')
 def solo_sixtyseven(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -253,6 +304,9 @@ def solo_sixtyseven(id):
 @app.route('/1968')
 def sixtyeight():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -261,6 +315,9 @@ def sixtyeight():
 
 @app.route('/1968/<id>')
 def solo_sixtyeight(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -281,6 +338,9 @@ def solo_sixtyeight(id):
 @app.route('/1969')
 def sixtynine():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -289,6 +349,9 @@ def sixtynine():
 
 @app.route('/1969/<id>')
 def solo_sixtynine(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -308,6 +371,9 @@ def solo_sixtynine(id):
 @app.route('/1970')
 def seventy():
 
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -317,6 +383,9 @@ def seventy():
 @app.route('/1970/<id>')
 def solo_seventy(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -335,6 +404,9 @@ def solo_seventy(id):
 @app.route('/1971')
 def seventyone():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -344,6 +416,9 @@ def seventyone():
 @app.route('/1971/<id>')
 def solo_seventyone(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -362,6 +437,9 @@ def solo_seventyone(id):
 @app.route('/1972')
 def seventytwo():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -371,6 +449,9 @@ def seventytwo():
 @app.route('/1972/<id>')
 def solo_seventytwo(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -389,6 +470,9 @@ def solo_seventytwo(id):
 @app.route('/1973')
 def seventythree():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -398,6 +482,9 @@ def seventythree():
 @app.route('/1973/<id>')
 def solo_seventythree(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -416,6 +503,9 @@ def solo_seventythree(id):
 @app.route('/1974')
 def seventyfour():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -425,6 +515,9 @@ def seventyfour():
 @app.route('/1974/<id>')
 def solo_seventyfour(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -444,6 +537,9 @@ def solo_seventyfour(id):
 @app.route('/1975')
 def seventyfive():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -453,6 +549,9 @@ def seventyfive():
 @app.route('/1975/<id>')
 def solo_seventyfive(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -472,6 +571,9 @@ def solo_seventyfive(id):
 @app.route('/1976')
 def seventysix():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -481,6 +583,9 @@ def seventysix():
 @app.route('/1976/<id>')
 def solo_seventysix(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -500,6 +605,9 @@ def solo_seventysix(id):
 @app.route('/1977')
 def seventyseven():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -509,6 +617,9 @@ def seventyseven():
 @app.route('/1977/<id>')
 def solo_seventyseven(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -528,6 +639,9 @@ def solo_seventyseven(id):
 @app.route('/1978')
 def seventyeight():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -537,6 +651,9 @@ def seventyeight():
 @app.route('/1978/<id>')
 def solo_seventyeight(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -556,6 +673,9 @@ def solo_seventyeight(id):
 @app.route('/1979')
 def seventynine():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -565,6 +685,9 @@ def seventynine():
 @app.route('/1979/<id>')
 def solo_seventynine(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -583,6 +706,9 @@ def solo_seventynine(id):
 @app.route('/1980')
 def eighty():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -592,6 +718,9 @@ def eighty():
 @app.route('/1980/<id>')
 def solo_eighty(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -610,6 +739,9 @@ def solo_eighty(id):
 @app.route('/1981')
 def eightyone():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -619,6 +751,9 @@ def eightyone():
 @app.route('/1981/<id>')
 def solo_eightyone(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -637,6 +772,9 @@ def solo_eightyone(id):
 @app.route('/1982')
 def eightytwo():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -646,6 +784,9 @@ def eightytwo():
 @app.route('/1982/<id>')
 def solo_eightytwo(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -664,6 +805,9 @@ def solo_eightytwo(id):
 @app.route('/1983')
 def eightythree():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -673,6 +817,9 @@ def eightythree():
 @app.route('/1983/<id>')
 def solo_eightythree(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -691,6 +838,9 @@ def solo_eightythree(id):
 @app.route('/1984')
 def eightyfour():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -700,6 +850,9 @@ def eightyfour():
 @app.route('/1984/<id>')
 def solo_eightyfour(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -719,6 +872,9 @@ def solo_eightyfour(id):
 @app.route('/1985')
 def eightyfive():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -728,6 +884,9 @@ def eightyfive():
 @app.route('/1985/<id>')
 def solo_eightyfive(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -747,6 +906,9 @@ def solo_eightyfive(id):
 @app.route('/1986')
 def eightysix():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -756,6 +918,9 @@ def eightysix():
 @app.route('/1986/<id>')
 def solo_eightysix(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -775,6 +940,9 @@ def solo_eightysix(id):
 @app.route('/1987')
 def eightyseven():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -784,6 +952,9 @@ def eightyseven():
 @app.route('/1987/<id>')
 def solo_eightyseven(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -803,6 +974,9 @@ def solo_eightyseven(id):
 @app.route('/1988')
 def eightyeight():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -812,6 +986,9 @@ def eightyeight():
 @app.route('/1988/<id>')
 def solo_eightyeight(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -831,6 +1008,9 @@ def solo_eightyeight(id):
 @app.route('/1989')
 def eightynine():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -840,6 +1020,9 @@ def eightynine():
 @app.route('/1989/<id>')
 def solo_eightynine(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -858,6 +1041,12 @@ def solo_eightynine(id):
 @app.route('/1990')
 def ninety():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
+    if 'user_id' not in session:
+        return redirect('/')
+
     userID = {
         'id': session['user_id']
     }
@@ -866,6 +1055,12 @@ def ninety():
 
 @app.route('/1990/<id>')
 def solo_ninety(id):
+
+    if 'user_id' not in session:
+        return redirect('/')
+        
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
@@ -885,6 +1080,9 @@ def solo_ninety(id):
 @app.route('/1991')
 def ninetyone():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -894,6 +1092,9 @@ def ninetyone():
 @app.route('/1991/<id>')
 def solo_ninetyone(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -912,6 +1113,9 @@ def solo_ninetyone(id):
 @app.route('/1992')
 def ninetytwo():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -921,6 +1125,9 @@ def ninetytwo():
 @app.route('/1992/<id>')
 def solo_ninetytwo(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -939,6 +1146,9 @@ def solo_ninetytwo(id):
 @app.route('/1993')
 def ninetythree():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -948,6 +1158,9 @@ def ninetythree():
 @app.route('/1993/<id>')
 def solo_ninetythree(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -966,6 +1179,9 @@ def solo_ninetythree(id):
 @app.route('/1994')
 def ninetyfour():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -975,6 +1191,9 @@ def ninetyfour():
 @app.route('/1994/<id>')
 def solo_ninetyfour(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -994,6 +1213,9 @@ def solo_ninetyfour(id):
 @app.route('/1995')
 def ninetyfive():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1003,6 +1225,9 @@ def ninetyfive():
 @app.route('/1995/<id>')
 def solo_ninetyfive(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1022,6 +1247,9 @@ def solo_ninetyfive(id):
 @app.route('/1996')
 def ninetysix():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1031,6 +1259,9 @@ def ninetysix():
 @app.route('/1996/<id>')
 def solo_ninetysix(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1050,6 +1281,9 @@ def solo_ninetysix(id):
 @app.route('/1997')
 def ninetyseven():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1059,6 +1293,9 @@ def ninetyseven():
 @app.route('/1997/<id>')
 def solo_ninetyseven(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1078,6 +1315,9 @@ def solo_ninetyseven(id):
 @app.route('/1998')
 def ninetyeight():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1087,6 +1327,9 @@ def ninetyeight():
 @app.route('/1998/<id>')
 def solo_ninetyeight(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1106,6 +1349,9 @@ def solo_ninetyeight(id):
 @app.route('/1999')
 def ninetynine():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1115,6 +1361,9 @@ def ninetynine():
 @app.route('/1999/<id>')
 def solo_ninetynine(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1136,6 +1385,9 @@ def solo_ninetynine(id):
 @app.route('/2000')
 def twothousand():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1146,6 +1398,9 @@ def twothousand():
 @app.route('/2000/<id>')
 def twothousand_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1165,6 +1420,9 @@ def twothousand_individual(id):
 @app.route('/2001')
 def twothousandone():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1175,6 +1433,9 @@ def twothousandone():
 @app.route('/2001/<id>')
 def twothousandone_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1194,6 +1455,9 @@ def twothousandone_individual(id):
 @app.route('/2002')
 def twothousandtwo():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1204,6 +1468,9 @@ def twothousandtwo():
 @app.route('/2002/<id>')
 def twothousandtwo_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1223,6 +1490,9 @@ def twothousandtwo_individual(id):
 @app.route('/2003')
 def twothousandthree():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1233,6 +1503,9 @@ def twothousandthree():
 @app.route('/2003/<id>')
 def twothousandthree_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1252,6 +1525,9 @@ def twothousandthree_individual(id):
 @app.route('/2004')
 def twothousandfour():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1262,6 +1538,9 @@ def twothousandfour():
 @app.route('/2004/<id>')
 def twothousandfour_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1281,6 +1560,9 @@ def twothousandfour_individual(id):
 @app.route('/2005')
 def twothousandfive():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1291,6 +1573,9 @@ def twothousandfive():
 @app.route('/2005/<id>')
 def twothousandfive_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1310,6 +1595,9 @@ def twothousandfive_individual(id):
 @app.route('/2006')
 def twothousandsix():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1320,6 +1608,9 @@ def twothousandsix():
 @app.route('/2006/<id>')
 def twothousandsix_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1339,6 +1630,9 @@ def twothousandsix_individual(id):
 @app.route('/2007')
 def twothousandseven():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1349,6 +1643,9 @@ def twothousandseven():
 @app.route('/2007/<id>')
 def twothousandseven_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1368,6 +1665,9 @@ def twothousandseven_individual(id):
 @app.route('/2008')
 def twothousandeight():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1378,6 +1678,9 @@ def twothousandeight():
 @app.route('/2008/<id>')
 def twothousandeight_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1392,6 +1695,9 @@ def twothousandeight_individual(id):
 @app.route('/2009')
 def twothousandnine():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1402,6 +1708,9 @@ def twothousandnine():
 @app.route('/2009/<id>')
 def twothousandnine_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1421,6 +1730,9 @@ def twothousandnine_individual(id):
 @app.route('/2010')
 def twothousandten():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1431,6 +1743,9 @@ def twothousandten():
 @app.route('/2010/<id>')
 def twothousandten_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1450,6 +1765,9 @@ def twothousandten_individual(id):
 @app.route('/2011')
 def twothousandeleven():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1460,6 +1778,9 @@ def twothousandeleven():
 @app.route('/2011/<id>')
 def twothousandeleven_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1479,6 +1800,9 @@ def twothousandeleven_individual(id):
 @app.route('/2012')
 def twothousandtwelve():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1489,6 +1813,9 @@ def twothousandtwelve():
 @app.route('/2012/<id>')
 def twothousandtwelve_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1508,6 +1835,9 @@ def twothousandtwelve_individual(id):
 @app.route('/2013')
 def twothousandthirteen():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1518,6 +1848,9 @@ def twothousandthirteen():
 @app.route('/2013/<id>')
 def twothousandthirteen_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1537,6 +1870,9 @@ def twothousandthirteen_individual(id):
 @app.route('/2014')
 def twothousandfourteen():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1547,6 +1883,9 @@ def twothousandfourteen():
 @app.route('/2014/<id>')
 def twothousandfourteen_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1566,6 +1905,9 @@ def twothousandfourteen_individual(id):
 @app.route('/2015')
 def twothousandfifteen():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1576,6 +1918,9 @@ def twothousandfifteen():
 @app.route('/2015/<id>')
 def twothousandfifteen_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1595,6 +1940,9 @@ def twothousandfifteen_individual(id):
 @app.route('/2016')
 def twothousandsixteen():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1605,6 +1953,9 @@ def twothousandsixteen():
 @app.route('/2016/<id>')
 def twothousandsixteen_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1624,6 +1975,9 @@ def twothousandsixteen_individual(id):
 @app.route('/2017')
 def twothousandseventeen():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1634,6 +1988,9 @@ def twothousandseventeen():
 @app.route('/2017/<id>')
 def twothousandseventeen_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1653,6 +2010,9 @@ def twothousandseventeen_individual(id):
 @app.route('/2018')
 def twothousandeighteen():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1663,6 +2023,9 @@ def twothousandeighteen():
 @app.route('/2018/<id>')
 def twothousandeighteen_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1682,6 +2045,9 @@ def twothousandeighteen_individual(id):
 @app.route('/2019')
 def twothousandnineteen():
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1692,6 +2058,9 @@ def twothousandnineteen():
 @app.route('/2019/<id>')
 def twothousandnineteen_individual(id):
 
+    if 'user_id' not in session:
+        return redirect('/')
+        
     userID = {
         'id': session['user_id']
     }
@@ -1710,6 +2079,9 @@ def twothousandnineteen_individual(id):
 
 @app.route('/random')
 def random_album():
+
+    if 'user_id' not in session:
+        return redirect('/')
 
     userID = {
         'id': session['user_id']
