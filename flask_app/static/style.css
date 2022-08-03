@@ -278,6 +278,10 @@ transform: translate(1px, 10%);
     display: flex;
     justify-content: center;
   }
+
+  #login-form-container button {
+    width: 300px;
+  }
 }
 
 #login-page {
