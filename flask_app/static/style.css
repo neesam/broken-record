@@ -308,6 +308,8 @@ transform: translate(1px, 10%);
   display: inline;
   background: white;
   margin-right: 3px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 #login-btn {
