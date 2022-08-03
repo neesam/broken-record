@@ -296,8 +296,12 @@ transform: translate(1px, 10%);
   width: 300px;
 }
 
+#test-account h2 {
+  margin-bottom: 20px;
+}
+
 #test-account {
-  padding: 90px;
+  margin: 200px;
 }
 
 #login-btn {
