@@ -307,6 +307,7 @@ transform: translate(1px, 10%);
   left: 150px;
   display: inline;
   background: white;
+  margin-right: 3px;
 }
 
 #login-btn {
