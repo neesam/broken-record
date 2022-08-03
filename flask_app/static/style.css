@@ -273,6 +273,10 @@ transform: translate(1px, 10%);
   #test-account {
     visibility: hidden;
   }
+
+  #login-form-container {
+    grid-column: 2;
+  }
 }
 
 #login-page {
