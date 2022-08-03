@@ -271,7 +271,7 @@ transform: translate(1px, 10%);
 
 #login-page {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: auto auto auto auto;
   grid-template-rows: 1fr 1fr;
 }
 
@@ -289,7 +289,7 @@ transform: translate(1px, 10%);
     align-items: center;
     margin-top: 180px;
     color: white;
-    grid-column: 2 / 2;
+    grid-column: 2;
 }
 
     #login-form-container a {
