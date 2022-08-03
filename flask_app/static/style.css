@@ -292,6 +292,14 @@ transform: translate(1px, 10%);
         width: 300px;
     }
 
+#test-account input {
+  width: 300px;
+}
+
+#test-account {
+  padding: 90px;
+}
+
 #login-btn {
     margin-top: 10px;
 }
