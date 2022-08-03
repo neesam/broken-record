@@ -302,7 +302,7 @@ transform: translate(1px, 10%);
 }
 
 #test-account {
-  position: absolute;
+  position: relative;
   top: 200px;
   left: 150px;
   display: inline;
