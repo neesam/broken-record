@@ -281,7 +281,7 @@ transform: translate(1px, 10%);
 
 #login-page {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto;
 }
 
 
@@ -298,7 +298,7 @@ transform: translate(1px, 10%);
     align-items: center;
     margin-top: 180px;
     color: white;
-    grid-column: 3/4;
+    grid-column: 2;
 }
 
     #login-form-container a {
@@ -315,7 +315,7 @@ transform: translate(1px, 10%);
 
 #test-account h2 {
   margin-bottom: 20px;
-  grid-column: 1 / 2;
+  grid-column: 1;
 }
 
 #test-account {
