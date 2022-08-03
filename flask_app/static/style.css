@@ -272,7 +272,6 @@ transform: translate(1px, 10%);
 #login-page {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-template-rows: 1fr 1fr;
 }
 
 
