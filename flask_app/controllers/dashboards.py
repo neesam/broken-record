@@ -1,7 +1,6 @@
 from flask_app.models.favartistalbum import favArtistAlbum
 from flask_app import app
 from flask import redirect, render_template, request, session, flash, jsonify
-import requests
 from flask_bcrypt import Bcrypt
 from flask_app.models.user import User
 from flask_app.models.rating import Rating 
