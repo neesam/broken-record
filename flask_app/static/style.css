@@ -269,6 +269,13 @@ transform: translate(1px, 10%);
 
 /* Login */
 
+#login-page {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+
 #login-page h1 {
     font-family: 'Libre Barcode 39 Text';
     font-size: 70px;
@@ -282,7 +289,7 @@ transform: translate(1px, 10%);
     align-items: center;
     margin-top: 180px;
     color: white;
-
+    grid-column: 2 / 3;
 }
 
     #login-form-container a {
@@ -299,6 +306,7 @@ transform: translate(1px, 10%);
 
 #test-account h2 {
   margin-bottom: 20px;
+  grid-column: 1 / 2;
 }
 
 #test-account {
