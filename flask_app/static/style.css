@@ -311,10 +311,6 @@ transform: translate(1px, 10%);
         width: 300px;
     }
 
-    #login-form-container button {
-      width: 300px;
-    }
-
 #test-account input {
   width: 300px;
 }
