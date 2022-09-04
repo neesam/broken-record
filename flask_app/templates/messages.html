@@ -92,7 +92,7 @@
             <input type="hidden" name="sender_id" value={{session.user_id}}>
             <input type="hidden" name="receiver_id" value={{otherUser.id}}>
             <textarea style="position: relative; top: 55px;" class="form-control" name="content" id="" cols="30" rows="3"></textarea>
-            <input style="position: relative; top: 30px;"  type="submit" value="Message" class="btn btn-warning">
+            <input style="position: relative; top: 50px;"  type="submit" value="Message" class="btn btn-warning">
         </form>
         <div id="message-card" class="card card-1 mydata message">
           {% for message in myMessages %}
